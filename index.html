@@ -12,8 +12,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
 <style>
 
 *{
@@ -29,22 +27,22 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
+background:
+linear-gradient(
+180deg,
+#000000,
+#0a0a0a,
+#111111,
+#000000
+);
+
 color:#fff;
 overflow-x:hidden;
 min-height:100vh;
+position:relative;
 }
 
-/* PARTICLES */
 
-#particles-js{
-position:fixed;
-inset:0;
-z-index:1;
-
-background:
-radial-gradient(circle at top,#111827,#050505 70%);
-}
 
 /* MAIN SITE */
 
@@ -54,7 +52,7 @@ z-index:5;
 min-height:100vh;
 display:none;
 flex-direction:column;
-padding-bottom:30px;
+padding-bottom:0px;
 }
 
 /* LOADER */
@@ -186,15 +184,18 @@ padding:4px;
 background:
 linear-gradient(
 135deg,
-#6d6dff,
-#00e5ff
+#ffffff,
+#f1f5f9
 );
 
 box-shadow:
-0 0 35px rgba(109,109,255,.6);
+0 0 18px rgba(255,255,255,.55),
+0 0 35px rgba(255,255,255,.45),
+0 0 60px rgba(255,255,255,.25);
 
 animation:pulse 2s infinite;
 z-index:5;
+position:relative;
 }
 
 .loader-logo img{
@@ -259,7 +260,11 @@ backdrop-filter:blur(12px);
 }
 
 .tag i{
-color:#6d6dff;
+color:#ffffff;
+
+filter:
+drop-shadow(0 0 6px rgba(255,255,255,.8))
+drop-shadow(0 0 12px rgba(255,255,255,.5));
 }
 
 .loader-bar{
@@ -270,6 +275,13 @@ overflow:hidden;
 
 background:
 rgba(255,255,255,.08);
+
+border:
+1px solid rgba(255,255,255,.12);
+
+box-shadow:
+inset 0 0 8px rgba(255,255,255,.08),
+0 0 12px rgba(255,255,255,.08);
 
 margin-top:28px;
 z-index:5;
@@ -282,12 +294,57 @@ height:100%;
 background:
 linear-gradient(
 90deg,
-#6d6dff,
-#00e5ff
+#ffffff,
+#f8fafc,
+#ffffff
 );
 
+box-shadow:
+0 0 10px rgba(255,255,255,.8),
+0 0 20px rgba(255,255,255,.55),
+0 0 35px rgba(255,255,255,.3);
+
 animation:load 3s linear forwards;
+
+position:relative;
+overflow:hidden;
 }
+
+
+.loader-fill::before{
+content:"";
+
+position:absolute;
+top:0;
+left:-40%;
+
+width:40%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.95),
+transparent
+);
+
+animation:shineMove 1.2s linear infinite;
+}
+
+@keyframes shineMove{
+
+0%{
+left:-40%;
+}
+
+100%{
+left:120%;
+}
+
+}
+
+
 
 @keyframes load{
 
@@ -304,19 +361,22 @@ width:100%;
 /* HEADER */
 
 .header{
-width:100%;
-padding:15px;
 
 background:
 linear-gradient(
 135deg,
-#111827,
-#1e293b
+#0f0f0f,
+#1b1b1b,
+#242424
 );
+
+border:1px solid #303030;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
+
+padding:12px 15px;
 
 position:sticky;
 top:0;
@@ -327,7 +387,8 @@ border-bottom-left-radius:24px;
 border-bottom-right-radius:24px;
 
 box-shadow:
-0 8px 25px rgba(0,0,0,.3);
+0 8px 25px rgba(0,0,0,.45);
+
 }
 
 .left{
@@ -384,7 +445,7 @@ position:absolute;
 left:18px;
 top:50%;
 transform:translateY(-50%);
-color:#9ca3af;
+color:#d1d5db;
 }
 
 .search-box input{
@@ -393,20 +454,17 @@ height:54px;
 border:none;
 outline:none;
 border-radius:18px;
-
-background:
-linear-gradient(
-135deg,
-#111827,
-#1e293b
+background:linear-gradient(
+145deg,
+#0f0f0f,
+#1b1b1b,
+#242424
 );
-
+border:1px solid #303030;
 color:#fff;
 padding-left:50px;
 font-size:16px;
-
-border:
-1px solid rgba(255,255,255,.12);
+box-shadow:0 4px 15px rgba(0,0,0,.25);
 }
 
 /* BOOKS */
@@ -416,13 +474,33 @@ display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:15px;
 padding:12px;
-z-index:5;
+
+position:relative;
+z-index:10;
 }
 
 .book-card{
-background:#151515;
+
+background:
+linear-gradient(
+145deg,
+#0f0f0f,
+#1b1b1b,
+#242424
+);
+
+border:1px solid #303030;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.35);
+
+
 border-radius:22px;
 overflow:hidden;
+
+position:relative;
+z-index:10;
+
 
 border:
 1px solid rgba(255,255,255,.08);
@@ -458,10 +536,19 @@ border-radius:14px;
 
 background:
 linear-gradient(
-135deg,
-#111827,
-#334155
+145deg,
+#1a1a1a,
+#2b2b2b,
+#3a3a3a
 );
+
+border:
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 6px 15px rgba(0,0,0,.25);
+
+
 
 color:#fff;
 font-size:15px;
@@ -494,12 +581,15 @@ border-radius:28px;
 background:
 linear-gradient(
 145deg,
-rgba(15,23,42,.92),
-rgba(30,41,59,.72)
+#0f0f0f,
+#1b1b1b,
+#242424
 );
 
-border:
-1px solid rgba(255,255,255,.06);
+border:1px solid #303030;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.35);
 
 backdrop-filter:blur(18px);
 }
@@ -535,83 +625,32 @@ color:#94a3b8;
 /* FOOTER */
 
 .main-footer-text{
-width:92%;
-height:52px;
 
-margin:25px auto 20px;
+width:100%;
+height:42px;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-padding:0 14px;
-
-text-align:center;
-
 font-size:10px;
 font-weight:700;
 
-letter-spacing:.5px;
+color:#9ca3af;
 
 white-space:nowrap;
-
-color:#e2e8f0;
-
-border-radius:18px;
-
-background:
-linear-gradient(
-135deg,
-rgba(20,20,25,.88),
-rgba(35,35,45,.65)
-);
-
-border:
-1px solid rgba(255,255,255,.07);
-
-backdrop-filter:blur(14px);
-
-position:relative;
 overflow:hidden;
+text-overflow:ellipsis;
 
-flex-shrink:0;
-}
+background:#0a0a0a;
 
-.main-footer-text::before{
-content:"";
+margin:25px auto 0;
+padding:10px 14px;
 
-position:absolute;
-
-top:-120%;
-left:-40%;
-
-width:60%;
-height:300%;
-
-background:
-linear-gradient(
-to right,
-transparent,
-rgba(255,255,255,.08),
-transparent
-);
-
-transform:rotate(25deg);
-
-animation:footerShine 5s linear infinite;
-}
-
-@keyframes footerShine{
-
-0%{
-left:-60%;
-}
-
-100%{
-left:140%;
-}
+border-top:1px solid rgba(255,255,255,.08);
 
 }
+
 
 /* DOWNLOAD PAGE */
 
@@ -622,10 +661,13 @@ inset:0;
 background:
 linear-gradient(
 180deg,
-#050505,
-#0f172a,
-#050505
+#000000,
+#0a0a0a,
+#111111,
+#000000
 );
+
+background-attachment:fixed;
 
 z-index:99999;
 
@@ -635,6 +677,24 @@ overflow-y:auto;
 padding:18px;
 
 display:none;
+
+flex-direction:column;
+min-height:100vh;
+}
+
+
+.download-page::before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+
+background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.03),transparent 30%),
+radial-gradient(circle at 80% 40%,rgba(255,255,255,.03),transparent 30%),
+radial-gradient(circle at 50% 80%,rgba(255,255,255,.03),transparent 30%);
+
+z-index:-1;
 }
 
 .download-top{
@@ -652,16 +712,37 @@ border-radius:18px;
 
 background:
 linear-gradient(
-135deg,
-#1e293b,
-#0f172a
+145deg,
+#0f0f0f,
+#1b1b1b,
+#242424
 );
 
-color:#fff;
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.35),
+0 0 12px rgba(255,255,255,.04);
+
 font-size:22px;
 cursor:pointer;
+
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
+.close-btn i{
+
+color:#ffffff;
+
+-webkit-text-fill-color:#ffffff;
+
+background:none;
+
+filter:none;
+
+}
 .download-logo{
 font-size:22px;
 font-weight:900;
@@ -674,12 +755,22 @@ object-fit:contain;
 
 border-radius:28px;
 
-background:#111827;
+background:
+linear-gradient(
+145deg,
+#0f0f0f,
+#1b1b1b,
+#242424
+);
 
 padding:10px;
 
 border:
-1px solid rgba(255,255,255,.18);
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 0 15px rgba(255,255,255,.04),
+0 10px 25px rgba(0,0,0,.35);
 }
 
 .preview-title{
@@ -786,43 +877,22 @@ SHOW ONLY AT BOTTOM
 ========================= */
 
 .copyright-text{
-
-position:relative;
-
 width:100%;
 
-margin-top:40px;
-
-padding:18px 10px;
+padding:15px 10px;
 
 text-align:center;
 
 font-size:10px;
 font-weight:700;
 
-letter-spacing:.5px;
+color:#9ca3af;
 
-color:#cbd5e1;
+border-top:1px solid rgba(255,255,255,.08);
 
-background:
-linear-gradient(
-180deg,
-rgba(5,5,5,.82),
-rgba(15,23,42,.96)
-);
-
-backdrop-filter:blur(14px);
-
-/* TOP WHITE LINE */
-
-border-top:
-1px solid rgba(255,255,255,0.14);
-
-box-shadow:
-0 -6px 20px rgba(255,255,255,0.03);
-
+margin-top:15px;
+margin-bottom:0;
 }
-
 /* PAGE BOTTOM SPACING */
 
 .download-page{
@@ -856,9 +926,11 @@ height:100vh;
 
 background:
 linear-gradient(
-to bottom,
-#0f172a,
-#111827
+180deg,
+#000000,
+#0a0a0a,
+#111111,
+#000000
 );
 
 z-index:999999;
@@ -914,6 +986,8 @@ min-height:68px;
 margin-top:16px;
 padding:0 20px;
 
+
+
 border-radius:22px;
 
 display:flex;
@@ -931,15 +1005,21 @@ cursor:pointer;
 background:
 linear-gradient(
 145deg,
-rgba(15,23,42,.95),
-rgba(30,41,59,.82)
+#0f0f0f,
+#1b1b1b,
+#242424
 );
 
 border:
-1px solid rgba(255,255,255,.07);
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.35),
+0 0 12px rgba(255,255,255,.04);
 
 transition:.3s;
 }
+
 
 .menu-item:hover{
 transform:translateX(6px);
@@ -968,8 +1048,9 @@ align-items:center;
 background:
 linear-gradient(
 145deg,
-#1e293b,
-#0f172a
+#1a1a1a,
+#2b2b2b,
+#3a3a3a
 );
 
 border:
@@ -1045,11 +1126,6 @@ left:140%;
 
 }
 
-/* =========================
-APK WEBSITE CARD
-SAME AS CONTACT STYLE
-========================= */
-
 .menu-item.apk-card{
 
 display:flex;
@@ -1059,20 +1135,19 @@ gap:18px;
 background:
 linear-gradient(
 145deg,
-rgba(15,23,42,0.95),
-rgba(30,41,59,0.82)
+#0f0f0f,
+#1b1b1b,
+#242424
 );
 
 border:
-1px solid rgba(255,255,255,0.07);
+1px solid rgba(255,255,255,.08);
 
 box-shadow:
-0 10px 25px rgba(0,0,0,0.45),
-inset 0 1px 0 rgba(255,255,255,0.06),
-0 0 12px rgba(0,229,255,0.05);
+0 10px 25px rgba(0,0,0,.35),
+0 0 12px rgba(255,255,255,.04);
 
 color:#ffffff;
-
 }
 
 /* LEFT LINE */
@@ -1366,7 +1441,7 @@ font-size:11px;
 font-weight:800;
 letter-spacing:2px;
 
-background:#111827;
+background:#0a0a0a;
 color:#cbd5e1;
 }
 
@@ -1383,9 +1458,10 @@ height:100vh;
 background:
 linear-gradient(
 180deg,
-#02040a,
-#0f172a,
-#02040a
+#000000,
+#0a0a0a,
+#111111,
+#000000
 );
 
 z-index:999999;
@@ -1559,41 +1635,21 @@ margin-top:2px;
 /* =========================
 ABOUT PAGE BOTTOM FOOTER
 ========================= */
-
 .about-footer-bottom{
-
 width:100%;
 
-margin-top:40px;
+margin-top:auto;
 
-padding:18px 10px;
+padding:15px 10px;
 
 text-align:center;
 
 font-size:10px;
 font-weight:700;
 
-letter-spacing:.5px;
+color:#9ca3af;
 
-color:#cbd5e1;
-
-background:
-linear-gradient(
-180deg,
-rgba(5,5,5,.82),
-rgba(15,23,42,.96)
-);
-
-backdrop-filter:blur(14px);
-
-/* TOP WHITE LINE */
-
-border-top:
-1px solid rgba(255,255,255,0.14);
-
-box-shadow:
-0 -6px 20px rgba(255,255,255,0.03);
-
+border-top:1px solid rgba(255,255,255,.08);
 }
 
 /* POPUP */
@@ -1603,9 +1659,9 @@ position:fixed;
 inset:0;
 
 background:
-rgba(0,0,0,.84);
+rgba(0,0,0,35);
 
-backdrop-filter:blur(18px);
+
 
 display:none;
 justify-content:center;
@@ -1614,10 +1670,9 @@ align-items:center;
 z-index:9999999;
 padding:18px;
 }
-
 .popup{
 width:100%;
-max-width:340px;
+max-width:640px;
 
 padding:34px 22px 24px;
 
@@ -1677,83 +1732,82 @@ width:52px;
 }
 
 .popup h1{
+
+color:#fff;
+
 font-size:24px;
+
 font-weight:800;
+
 margin-top:24px;
+
+letter-spacing:.5px;
+
+white-space:nowrap;
 }
 
 .popup p{
-font-size:15px;
-line-height:1.8;
-margin-top:14px;
+
 color:#b8b8b8;
+
+font-size:15px;
+
+line-height:1.8;
+
+margin-top:14px;
 }
-
-
 
 
 
 /* =========================
 3D WHATSAPP BUTTON
 ========================= */
+/* ULTRA PREMIUM BUTTON */
 
 .join-btn{
 
-position:relative;
-
 width:100%;
-height:70px;
+height:68px;
 
 margin-top:30px;
 
 border:none;
-outline:none;
-
 border-radius:24px;
-
-cursor:pointer;
-
-display:flex;
-justify-content:center;
-align-items:center;
-gap:12px;
-
-font-size:20px;
-font-weight:800;
-
-color:#ffffff;
-
-/* 3D GREEN */
 
 background:
 linear-gradient(
-180deg,
-#52ff9d 0%,
-#1ed760 35%,
-#09b44b 70%,
-#058a38 100%
-);
+135deg,
+#6dff9c 0%,
+#32ff7e 25%,
+#14d85c 55%,
+#08b848 100%);
 
-/* DEPTH */
+color:#fff;
 
-box-shadow:
-0 10px 0 #04682a,
-0 16px 28px rgba(0,255,115,.28),
-0 0 24px rgba(109,255,156,.22),
-inset 0 2px 4px rgba(255,255,255,.35),
-inset 0 -4px 6px rgba(0,0,0,.22);
+font-size:20px;
+font-weight:700;
 
-transform-style:preserve-3d;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
 
-transition:
-transform .15s ease,
-box-shadow .15s ease;
+cursor:pointer;
+
+position:relative;
 
 overflow:hidden;
 
-}
+transition:.35s ease;
 
-/* TOP GLOSS */
+box-shadow:
+0 7px 0 #06792f,
+0 12px 24px rgba(0,255,115,.28),
+0 0 18px rgba(109,255,156,.35),
+0 0 42px rgba(0,255,115,.48),
+inset 0 2px 10px rgba(255,255,255,.38),
+inset 0 -4px 8px rgba(0,0,0,.18);
+}
 
 .join-btn::before{
 
@@ -1762,113 +1816,83 @@ content:"";
 position:absolute;
 
 top:0;
-left:0;
+left:-130%;
 
-width:100%;
-height:50%;
-
-background:
-linear-gradient(
-180deg,
-rgba(255,255,255,.28),
-transparent
-);
-
-border-radius:24px 24px 50% 50%;
-
-}
-
-/* SHINE */
-
-.join-btn::after{
-
-content:"";
-
-position:absolute;
-
-top:-120%;
-left:-40%;
-
-width:50%;
-height:300%;
+width:80%;
+height:100%;
 
 background:
 linear-gradient(
-to right,
+90deg,
 transparent,
-rgba(255,255,255,.20),
-transparent
-);
+rgba(255,255,255,.45),
+transparent);
 
-transform:rotate(25deg);
+transform:skewX(-25deg);
 
-animation:buttonShine 4s linear infinite;
-
+transition:.7s;
 }
 
-/* PRESS EFFECT */
-
-.join-btn:active{
-
-transform:
-translateY(7px)
-scale(.98);
-
-box-shadow:
-0 3px 0 #04682a,
-0 8px 16px rgba(0,255,115,.18);
-
+.join-btn:hover::before{
+left:130%;
 }
-
-/* HOVER */
 
 .join-btn:hover{
 
 transform:
-translateY(-2px)
-scale(1.01);
+translateY(-4px)
+scale(1.02);
 
+background:
+linear-gradient(
+135deg,
+#85ffad 0%,
+#43ff88 25%,
+#1be66a 55%,
+#0ac94f 100%);
+
+box-shadow:
+0 10px 0 #056b2a,
+0 18px 35px rgba(0,255,115,.40),
+0 0 25px rgba(109,255,156,.45),
+0 0 55px rgba(0,255,115,.72),
+inset 0 2px 12px rgba(255,255,255,.45);
 }
-
-/* ICON */
 
 .join-btn img{
 
 width:26px;
 
 filter:
-drop-shadow(0 0 8px rgba(255,255,255,.25));
-
+brightness(125%)
+drop-shadow(0 0 6px rgba(255,255,255,.45));
 }
 
-/* ANIMATION */
-
-@keyframes buttonShine{
-
-0%{
-left:-60%;
-}
-
-100%{
-left:140%;
-}
-
-}
-
-.join-btn img{
-width:26px;
-}
 
 .later{
+
 margin-top:18px;
 
-font-size:11px;
+color:#333333;
+
+font-size:1px;
+
 font-weight:700;
+
 letter-spacing:2px;
 
-color:#8a8a8a;
-
 cursor:pointer;
+
+opacity:.82;
+
+transition:.3s;
+}
+
+.later:hover{
+
+color:#d0d0d0;
+
+opacity:1;
 }
 
 
@@ -1981,37 +2005,52 @@ DOWNLOAD PAGE QUOTE
 ========================= */
 
 .image-quote{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+width:fit-content;
+max-width:fit-content;
+
+padding:10px 18px;
+margin:14px auto 18px;
 
 background:
 linear-gradient(
 145deg,
-rgba(0,229,255,0.10),
-rgba(109,109,255,0.08)
+rgba(255,255,255,.06),
+rgba(255,255,255,.02)
 );
 
 border:
-1px solid rgba(0,229,255,0.14);
+1px solid rgba(255,255,255,.08);
 
-color:#dbeafe;
+color:#f8fafc;
 
 text-shadow:
-0 0 10px rgba(0,229,255,.20);
+0 0 8px rgba(255,255,255,.15);
 
+box-shadow:
+0 0 12px rgba(255,255,255,.04);
+
+border-radius:16px;
+
+font-size:11px;
+font-weight:800;
+letter-spacing:1px;
 }
 
 .image-quote::before{
-
 background:
 linear-gradient(
 180deg,
-#00e5ff,
-#6d6dff,
-#818cf8
+#ffffff,
+#d1d5db,
+#94a3b8
 );
 
 box-shadow:
-0 0 12px rgba(0,229,255,.55);
-
+0 0 12px rgba(255,255,255,.25);
 }
 
 /* =========================
@@ -2020,21 +2059,12 @@ NOT FOUND QUOTE
 
 .notfound-quote{
 margin-top:24px;
-background:
-linear-gradient(
-145deg,
-rgba(99,102,241,0.12),
-rgba(0,229,255,0.06)
-);
 
-border:
-1px solid rgba(129,140,248,0.14);
+background:rgba(255,255,255,.04);
 
-color:#e0e7ff;
+border:1px solid rgba(255,255,255,.08);
 
-text-shadow:
-0 0 10px rgba(129,140,248,.20);
-
+color:#e5e7eb;
 }
 
 .notfound-quote::before{
@@ -2042,15 +2072,260 @@ text-shadow:
 background:
 linear-gradient(
 180deg,
-#818cf8,
-#6d6dff,
-#00e5ff
+#6b7280,
+#9ca3af,
+#d1d5db
 );
 
 box-shadow:
-0 0 12px rgba(109,109,255,.55);
+0 0 12px rgba(255,255,255,.15);
 
 }
+
+
+.review-time{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+
+/* =========================
+DMCA PAGE
+========================= */
+
+.hero{
+text-align:center;
+margin-bottom:35px;
+}
+
+.hero-title{
+font-size:38px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#d1d5db,
+#9ca3af
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-subtitle{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:12px;
+}
+
+.hero-badge{
+padding:6px 12px;
+border-radius:999px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+font-size:11px;
+font-weight:700;
+
+color:#d1d5db;
+}
+
+.divider{
+height:1px;
+margin:28px 0;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.15),
+transparent
+);
+}
+
+.section{
+text-align:center;
+margin-bottom:30px;
+}
+
+.section-title{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+
+font-size:24px;
+font-weight:800;
+
+margin-bottom:15px;
+}
+
+.section p{
+line-height:1.9;
+color:#cbd5e1;
+}
+
+.mini-icon{
+width:38px;
+height:38px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:12px;
+color:#fff;
+}
+
+.book-icon{
+background:linear-gradient(
+135deg,
+#3b82f6,
+#2563eb
+);
+}
+
+.copyright-icon{
+background:linear-gradient(
+135deg,
+#8b5cf6,
+#7c3aed
+);
+}
+
+.shield-icon{
+background:linear-gradient(
+135deg,
+#f59e0b,
+#ea580c
+);
+}
+
+.card{
+margin-top:22px;
+padding:24px;
+
+border-radius:24px;
+
+background:linear-gradient(
+145deg,
+#0f0f0f,
+#1b1b1b,
+#242424
+);
+
+border:1px solid #303030;
+}
+
+.card-title{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+
+font-size:22px;
+font-weight:800;
+
+margin-bottom:15px;
+}
+
+.contact-title{
+color:#60a5fa;
+}
+
+.notice-title{
+color:#fbbf24;
+}
+
+.responsibility-title{
+color:#f87171;
+}
+
+.card p{
+text-align:center;
+line-height:1.9;
+color:#e5e7eb;
+}
+
+.contact-links{
+text-align:center;
+line-height:2.2;
+}
+
+.telegram-link{
+color:#60a5fa;
+font-weight:700;
+text-decoration:none;
+}
+
+.telegram-link:hover{
+color:#93c5fd;
+}
+
+@media(max-width:768px){
+
+.hero-title{
+font-size:24px;
+}
+
+.section-title,
+.card-title{
+font-size:19px;
+}
+
+}
+/* =========================
+INSTAGRAM CARD
+========================= */
+
+.menu-item.instagram{
+
+background:
+linear-gradient(
+145deg,
+rgba(255,0,128,0.14),
+rgba(25,10,25,0.95)
+);
+
+border:
+1px solid rgba(255,105,180,0.25);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.45),
+0 0 22px rgba(255,0,128,0.12);
+
+color:#f9a8d4;
+
+}
+
+
+/* ICON */
+
+.menu-item.instagram i{
+
+background:
+linear-gradient(
+135deg,
+#f58529,
+#dd2a7b,
+#8134af,
+#515bd4
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+filter:
+drop-shadow(0 0 10px rgba(221,42,123,.45));
+
+}
+
 
 
 </style>
@@ -2059,7 +2334,7 @@ box-shadow:
 
 <body>
 
-<div id="particles-js"></div>
+
 
 <!-- LOADER -->
 
@@ -2187,20 +2462,19 @@ placeholder="Search Books...">
 </div>
 
 <!-- NOT FOUND -->
-
 <div class="not-found" id="notFound">
 
-<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-book-open"></i>
 
-<h2>NOT FOUND</h2>
+<h2>BOOK NOT FOUND</h2>
 
 <p>
-No books matched your search.
-Try another keyword.
+Sorry, we couldn't find any book matching your search.
+Please try another keyword.
 </p>
 
 <div class="notfound-quote quote-style">
-POWERED BY MADxPRINCE
+POWERED BY : MADxPRINCE
 </div>
 
 </div>
@@ -2208,140 +2482,10 @@ POWERED BY MADxPRINCE
 <!-- BOOKS -->
 
 <div class="book-container" id="bookContainer">
-
-<!-- BOOK -->
-
-<div class="book-card">
-
-<img src="https://i.postimg.cc/j2dbzTzD/6300764848152842146.jpg"
-class="book-image">
-
-<div class="book-details">
-
-<div class="book-title">
-NCERT Geography Class 6-12
-</div>
-
-<button class="download-btn"
-
-onclick="openDownloadPage(
-'NCERT Geography Class 6-12',
-'https://i.postimg.cc/j2dbzTzD/6300764848152842146.jpg',
-'247 MB',
-'https://example.com/book1.pdf',
-'https://youtube.com/'
-)">
-
-<i class="fa-solid fa-download"></i>
-
-Download
-
-</button>
-
-</div>
-
-</div>
-
-<!-- BOOK -->
-
-<div class="book-card">
-
-<img src="https://i.postimg.cc/vZjZb453/6316773020193722106.jpg"
-class="book-image">
-
-<div class="book-details">
-
-<div class="book-title">
-Physics Notes Class 11
-</div>
-
-<button class="download-btn"
-
-onclick="openDownloadPage(
-'Physics Notes Class 11',
-'https://i.postimg.cc/vZjZb453/6316773020193722106.jpg',
-'180 MB',
-'https://example.com/book2.pdf',
-'https://youtube.com/'
-)">
-
-<i class="fa-solid fa-download"></i>
-
-Download
-
-</button>
-
-</div>
-
 </div>
 <!-- BOOK -->
 
-<div class="book-card">
-
-<img src="https://i.postimg.cc/j2dbzTzD/6300764848152842146.jpg"
-class="book-image">
-
-<div class="book-details">
-
-<div class="book-title">
-NCERT Geography Class 6-12
-</div>
-
-<button class="download-btn"
-
-onclick="openDownloadPage(
-'NCERT Geography Class 6-12',
-'https://i.postimg.cc/j2dbzTzD/6300764848152842146.jpg',
-'247 MB',
-'https://example.com/book1.pdf',
-'https://youtube.com/'
-)">
-
-<i class="fa-solid fa-download"></i>
-
-Download
-
-</button>
-
-</div>
-
-</div>
-
-<!-- BOOK -->
-
-<div class="book-card">
-
-<img src="https://i.postimg.cc/vZjZb453/6316773020193722106.jpg"
-class="book-image">
-
-<div class="book-details">
-
-<div class="book-title">
-Physics Notes Class 11
-</div>
-
-<button class="download-btn"
-
-onclick="openDownloadPage(
-'Physics Notes Class 11',
-'https://i.postimg.cc/vZjZb453/6316773020193722106.jpg',
-'180 MB',
-'https://example.com/book2.pdf',
-'https://youtube.com/'
-)">
-
-<i class="fa-solid fa-download"></i>
-
-Download
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
+    <!-- ye footer khatir baa -->
 <div class="main-footer-text">
 
 © MULTIVERSE BOOKS | 2022-25 | DEVELOPER : MADxPRINCE
@@ -2402,48 +2546,65 @@ class="menu-item">
 Contact
 
 </a>
-<!-- APK WEBSITE CARD -->
 
-<a href="#"
-class="menu-item apk-card">
+<!--  -->
+<div class="menu-item apk-card"
+onclick="openDisclaimerPage()">
+
 
 <div class="apk-logo">
 
-<i class="fa-solid fa-file"></i>
+<i class="fa-solid fa-shield-halved"></i>
 
-<span>APK</span>
+<span>DMCA</span>
 
 </div>
 
-APK WEBSITE
+DMCA Request
 
-</a>
 
+</div>
+<!--  -->
 <div class="connect-divider">
 <span>CONNECT WITH US</span>
 </div>
 
-<a href="https://whatsapp.com/channel/0029Vb6NBZx1yT2GByTTVf2A"
+<a href="..."
 target="_blank"
 class="menu-item whatsapp">
 
+<div class="menu-icon-box">
 <i class="fa-brands fa-whatsapp"></i>
+</div>
 
-WhatsApp Channel
+WHATSAPP
 
 </a>
 <!-- TELEGRAM -->
 
-<a href="https://t.me/YOUR_TELEGRAM_LINK"
+<a href="..."
 target="_blank"
 class="menu-item telegram">
 
+<div class="menu-icon-box">
 <i class="fa-brands fa-telegram"></i>
+</div>
 
-Telegram Channel
+TELEGRAM
 
 </a>
 
+<a href="..."
+target="_blank"
+class="menu-item instagram">
+
+<div class="menu-icon-box">
+<i class="fa-brands fa-instagram"></i>
+</div>
+
+INSTAGRAM
+
+</a>
 </div>
 
 <!-- ABOUT PAGE -->
@@ -2500,7 +2661,7 @@ Education
 </div>
 
 <div class="detail">
-Class 11th (PCMB) | 2026-28
+𝐂ʟᴀss 𝟏𝟏𝐭𝐡 (PCMB) | 𝐁ᴀᴛᴄʜ: 𝟐𝟎𝟐𝟔-𝟐𝟖
 </div>
 
 </div>
@@ -2520,7 +2681,7 @@ Location
 </div>
 
 <div class="detail">
-Bihar, India 🚩
+ʙɪʜᴀʀ , 𝐈ɴᴅɪᴀ 🚩
 </div>
 
 </div>
@@ -2540,7 +2701,7 @@ Birthday
 </div>
 
 <div class="detail">
-6 December 💐
+ 𝟲 ᴅᴇᴄᴇᴍʙᴇʀ 💐❤️‍🩹
 </div>
 
 </div>
@@ -2560,7 +2721,7 @@ Skills
 </div>
 
 <div class="detail">
-Learning Developer ☠️
+𝐇𝐞𝐡𝐞... 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 ☠️
 </div>
 
 </div>
@@ -2576,6 +2737,186 @@ Learning Developer ☠️
 </div>
 
 </div>
+
+<!-- DISCLAIMER PAGE -->
+
+<div class="about-page" id="disclaimerPage">
+
+<div class="download-top">
+
+<button class="close-btn"
+onclick="closeDisclaimerPage()">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</button>
+
+<div class="download-logo">
+DMCA REQUEST
+</div>
+
+</div>
+
+
+
+<!-- YAHI PAR APNA POORA DISCLAIMER HTML PASTE KARNA HAI -->
+
+<div class="container">
+
+    <!-- Hero -->
+
+    <div class="hero">
+
+        <h1 class="hero-title">COPYRIGHT DISCLAIMER</h1>
+
+        <p class="hero-subtitle">
+
+    <span class="hero-badge">
+        <i class="fa-solid fa-graduation-cap"></i>
+        Educational
+    </span>
+
+    <span class="hero-badge">
+        <i class="fa-solid fa-flask"></i>
+        Research
+    </span>
+
+    <span class="hero-badge">
+        <i class="fa-solid fa-book-open"></i>
+        Reference
+    </span>
+
+</p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Content Ownership -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            <span class="mini-icon book-icon">
+                <i class="fa-solid fa-book"></i>
+            </span>
+            Content Ownership
+        </h2>
+
+        <p>
+            This website/channel is created solely for educational,
+            informational and archival purposes.
+
+            We do not claim ownership of any copyrighted material
+            shared on this platform. All copyrights, trademarks and
+            intellectual property rights belong to their respective
+            authors, publishers and owners.
+        </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Copyright Concerns -->
+
+    <div class="section">
+
+        <h2 class="section-title">
+            <span class="mini-icon copyright-icon">
+                <i class="fa-solid fa-copyright"></i>
+            </span>
+            Copyright Concerns
+        </h2>
+
+        <p>
+            If you are the copyright owner of any material available
+            here and believe that your content has been shared without
+            proper authorization, please contact us with proof of
+            ownership.
+        </p>
+
+    </div>
+
+ <!-- Contact -->
+
+<div class="card">
+
+    <h2 class="card-title contact-title">
+        <span class="mini-icon book-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </span>
+        Contact Information
+    </h2>
+
+    <div class="contact-links">
+
+        <a href="https://t.me/Multiverse_Contact_Bot"
+           target="_blank"
+           class="telegram-link">
+
+            <i class="fa-brands fa-telegram"></i>
+            @Multiverse_Contact_Bot
+
+        </a>
+
+        <br>
+
+        <span class="review-time">
+            ⏱ Review Time: 24–48 Hours
+        </span>
+
+    </div>
+
+</div>
+
+    <!-- Important Notice -->
+
+    <div class="card">
+
+        <h2 class="card-title notice-title">
+            <span class="mini-icon shield-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            Important Notice
+        </h2>
+
+        <p>
+            The materials shared on this platform are intended for
+            educational, research, review and reference purposes only.
+
+            Users are encouraged to support authors and publishers
+            by purchasing original books whenever possible.
+        </p>
+
+    </div>
+
+    <!-- User Responsibility -->
+
+    <div class="card">
+
+        <h2 class="card-title responsibility-title">
+            <span class="mini-icon copyright-icon">
+                <i class="fa-solid fa-user-shield"></i>
+            </span>
+            User Responsibility
+        </h2>
+
+        <p>
+            Users are solely responsible for how they access,
+            download, share or use any content available through
+            this platform.
+
+            This website/channel and its administrators cannot be
+            held responsible for any misuse, redistribution or
+            unauthorized use of the materials by users.
+        </p>
+
+    </div>
+
+
+</div>
+</div>
+
 
 <!-- DOWNLOAD PAGE -->
 
@@ -2600,8 +2941,10 @@ MULTIVERSE BOOKS
 <img id="previewImage"
 class="preview-image">
 
-<div class="image-quote quote-style">
-POWERED BY : MADxPRINCE
+<div style="text-align:left;">
+    <div class="image-quote quote-style">
+        POWERED BY : MADxPRINCE
+    </div>
 </div>
 
 <h2 class="preview-title"
@@ -2631,11 +2974,11 @@ class="box">
 <div>
 
 <div class="box-title">
-YouTube Link
+Watch Tutorials.
 </div>
 
 <div class="box-sub">
-Open Tutorial Video
+How to download books ?
 </div>
 
 </div>
@@ -2679,7 +3022,6 @@ Compressed PDF File
 
 <div class="file-size"
 id="fileSize">
-247 MB
 </div>
 
 </div>
@@ -2694,38 +3036,7 @@ id="fileSize">
 
 <script>
 
-/* PARTICLES */
 
-particlesJS("particles-js",{
-
-particles:{
-
-number:{value:70},
-
-color:{value:"#6d6dff"},
-
-shape:{type:"circle"},
-
-opacity:{value:.5},
-
-size:{value:3,random:true},
-
-line_linked:{
-enable:true,
-distance:150,
-color:"#6d6dff",
-opacity:.3,
-width:1
-},
-
-move:{
-enable:true,
-speed:4
-}
-
-}
-
-});
 
 /* HEX GRID */
 
@@ -2752,6 +3063,24 @@ hexGrid.appendChild(hex);
 
 window.addEventListener("load",()=>{
 
+if(sessionStorage.getItem("loaderDone")){
+
+document.getElementById("loaderScreen").remove();
+
+document.getElementById("mainSite").style.display="flex";
+
+
+renderBooks();
+
+return;
+
+}
+
+sessionStorage.setItem(
+"loaderDone",
+"true"
+);
+
 setTimeout(()=>{
 
 const loader =
@@ -2764,6 +3093,8 @@ document.getElementById(
 "mainSite"
 ).style.display="flex";
 
+renderBooks();
+
 setTimeout(()=>{
 loader.remove();
 },700);
@@ -2771,6 +3102,171 @@ loader.remove();
 },3000);
 
 });
+ /* BOOKS CARD YAHI SEE ADD KARE LAA BAAA */
+ 
+ const books = [
+ 
+{
+id:"MxP1",
+title:"Mahabharata - महाभारत",
+image:"https://i.postimg.cc/j5KpsYmr/shopping.webp",
+size:"247 MB",
+pdf:"https://example.com/book1.pdf",
+youtube:"https://youtube.com/"
+},
+
+
+
+{
+id:"MxP2",
+title:"Ramayana - रामायण",
+image:"https://i.postimg.cc/N060SDPp/ramayan-c77a1f6e-9928-40f8-acf9-e3c14bbc0707.jpg",
+size:"15 MB",
+pdf:"https://example.com/chem.pdf",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP3",
+title:"Bhagavad Gita - श्रीमद्भगवद्गीता",
+image:"https://i.postimg.cc/2j0sfJxG/shopping-(2).webp",
+size:"50 MB",
+pdf:"https://example.com/chem.pdf",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP4",
+title:"Hanuman Chalisa - हनुमान चालीसा",
+image:"https://i.postimg.cc/6qz2HwsS/Hanuman-Chalisa-2361-2344-2369-2350-2366-2344-2330-2366-2354-2368-2360-2366-Paperback-9789394598836.jpg",
+size:"10 MB",
+pdf:"https://example.com/chem.pdf",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP5",
+title:"Vishnu Purana — विष्णु पुराण",
+image:"https://i.postimg.cc/QdwqK7g2/1000098816.jpg",
+size:"10 MB",
+pdf:"https://example.com/chem.pdf",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP6",
+title:"Shiva Purana — शिव पुराण",
+image:"https://i.postimg.cc/wj7VB2NX/1000098815.jpg",
+size:"10 MB",
+pdf:"https://example.com/chem.pdf",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP7",
+title:"ज्ञान बिन्दु जी. एस. एकेडमी - BIOLOGY by Raushan anand sir",
+image:"https://i.postimg.cc/TY310Zt4/1000098933.jpg",
+size:"18.8 MB",
+pdf:"https://arolinks.com/xZxe",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP8",
+title:"ज्ञान बिन्दु जी. एस. एकेडमी - Chemistry by Raushan anand sir",
+image:"https://i.postimg.cc/6pDQ9Ttb/1000098934.jpg",
+size:"19.9 MB",
+pdf:"https://arolinks.com/bif90B",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP9",
+title:"ज्ञान बिन्दु जी. एस. एकेडमी - Physics by Raushan anand sir",
+image:"https://i.postimg.cc/mryW0rD8/IMG-20260530-WA0021.jpg",
+size:"10 MB",
+pdf:"https://arolinks.com/WPly",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP10",
+title:"भारतीय अर्थव्यवस्था By Raushan Anand Sir",
+image:"https://i.postimg.cc/0yfbC9vv/IMG-20260521-121655-296.jpg",
+size:"10 MB",
+pdf:"https://arolinks.com/eoPn",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP11",
+title:"भारत का भुगोल By Raushan Anand Sir",
+image:"https://i.postimg.cc/7LHqPzjR/1000098768.jpg",
+size:"10 MB",
+pdf:"https://arolinks.com/ZY7oW",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+{
+id:"MxP12",
+title:"भारतीय राज्य व्यवस्था By Raushan Anand Sir",
+image:"https://i.postimg.cc/sfqfPvZD/IMG-20260530-WA0027.jpg",
+size:"10 MB",
+pdf:"https://arolinks.com/c6ig",
+youtube:"https://youtube.com/watch?v=abc"
+},
+
+];
+
+/* BOOKS CARD ISS SE UPPAR ADD KARE LAA BAA */
+
+
+
+function renderBooks(){
+
+const container =
+document.getElementById("bookContainer");
+
+container.innerHTML = "";
+
+books.forEach(book => {
+
+container.innerHTML += `
+<div class="book-card">
+
+<img src="${book.image}"
+class="book-image">
+
+<div class="book-details">
+
+<div class="book-title">
+${book.title}
+</div>
+
+<button class="download-btn"
+onclick="openDownloadPage(
+'${book.title}',
+'${book.image}',
+'${book.size}',
+'${book.pdf}',
+'${book.youtube}',
+'${book.id}'
+)">
+
+<i class="fa-solid fa-download"></i>
+
+Download
+
+</button>
+
+</div>
+
+</div>
+`;
+
+});
+
+}
 
 /* SEARCH */
 
@@ -2820,17 +3316,20 @@ found ? "none" : "flex";
 let currentBookTitle="";
 let currentPdfLink="";
 
+let currentBookId = "";
+
 function openDownloadPage(
 title,
 image,
 size,
 pdf,
-youtube
+youtube,
+bookId
 ){
 
 document.getElementById(
 "downloadPage"
-).style.display="block";
+).style.display="flex";
 
 document.body.style.overflow="hidden";
 
@@ -2854,8 +3353,17 @@ document.getElementById(
 "youtubeLink"
 ).href=youtube;
 
-currentBookTitle=title;
-currentPdfLink=pdf;
+currentBookTitle = title;
+currentPdfLink = pdf;
+currentBookId = bookId;
+
+history.pushState(
+ { page: "download" },
+ "",
+ window.location.pathname +
+ "?book=" +
+ bookId
+);
 
 }
 
@@ -2867,23 +3375,38 @@ document.getElementById(
 
 document.body.style.overflow="auto";
 
+window.history.back();
 }
+
+
 
 /* SHARE */
 
 function shareBook(){
 
+const shareUrl =
+window.location.origin +
+window.location.pathname +
+"?book=" +
+currentBookId;
+
 if(navigator.share){
 
 navigator.share({
 title:currentBookTitle,
-url:currentPdfLink
+text:"Download this book",
+url:shareUrl
 });
 
-}
+}else{
+
+navigator.clipboard.writeText(shareUrl);
+
+alert("Link Copied");
 
 }
 
+}
 /* MENU */
 
 function openMenu(){
@@ -2935,6 +3458,12 @@ document.getElementById(
 "aboutPage"
 ).classList.add("active");
 
+history.pushState(
+{ page: "about" },
+"",
+"#about"
+);
+
 document.body.style.overflow="hidden";
 
 closeMenu();
@@ -2970,6 +3499,48 @@ window.open(
 
 }
 
+
+
+window.addEventListener("popstate", () => {
+
+if(
+document.getElementById("downloadPage").style.display === "flex"
+){
+
+document.getElementById(
+"downloadPage"
+).style.display = "none";
+
+document.body.style.overflow = "auto";
+
+}
+
+if(
+document.getElementById("aboutPage").classList.contains("active")
+){
+
+document.getElementById(
+"aboutPage"
+).classList.remove("active");
+
+document.body.style.overflow = "auto";
+
+}
+
+if(
+document.getElementById("disclaimerPage").classList.contains("active")
+){
+
+document.getElementById(
+"disclaimerPage"
+).classList.remove("active");
+
+document.body.style.overflow = "auto";
+
+}
+
+});
+
 /* AUTO POPUP */
 
 setTimeout(()=>{
@@ -2980,6 +3551,69 @@ document.getElementById(
 
 },3200);
 
+window.addEventListener("load",()=>{
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+const bookId =
+params.get("book");
+
+if(!bookId) return;
+
+const book =
+books.find(
+b => b.id === bookId
+);
+
+if(book){
+
+openDownloadPage(
+book.title,
+book.image,
+book.size,
+book.pdf,
+book.youtube,
+book.id
+);
+
+}
+
+});
+
+function openDisclaimerPage(){
+
+document.getElementById(
+"disclaimerPage"
+).classList.add("active");
+
+history.pushState(
+{ page: "dmca" },
+"",
+"#dmca"
+);
+
+document.body.style.overflow="hidden";
+
+closeMenu();
+
+}
+
+function closeDisclaimerPage(){
+
+document.getElementById(
+"disclaimerPage"
+).classList.remove("active");
+
+document.body.style.overflow="auto";
+
+}
+
+document.querySelector('.telegram-link')?.addEventListener('click', () => {
+    console.log('Telegram Bot Opened');
+});
 </script>
 
 </body>
