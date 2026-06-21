@@ -1,730 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>MULTIVERSE BOOKS</title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-.main-site,body{position:relative;min-height:100vh}.hex,.hex::after,.hex::before{border-right:1px solid rgba(255,255,255,.1)}.book-card,.hex,.loader-bar,.loader-fill,.loader-hex-bg,.loader-logo,.loader-screen,.logo-space{overflow:hidden}.copyright-text,.name,.not-found,.quote{text-align:center}.logo,.main-footer-text,.popup h1{white-space:nowrap}.close-btn,.download-btn,.join-btn,.later,.main-download,.menu,.menu-item{cursor:pointer}*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}body{background:linear-gradient(180deg,#000,#0a0a0a,#111,#000);color:#fff;overflow-x:hidden}.main-site{z-index:5;display:none;flex-direction:column;padding-bottom:0}.header,.hex-grid,.left,.premium-tags,.tag{display:flex}.loader-screen{position:fixed;inset:0;display:flex;justify-content:center;align-items:center;flex-direction:column;background:radial-gradient(circle at top,#111827,#050505 70%);z-index:999999;transition:.6s}.hex span,.hex-grid,.loader-fill::before,.loader-hex-bg,.search-box i{position:absolute}.loader-hex-bg{inset:0}.hex-grid{top:-40px;left:-40px;flex-wrap:wrap;width:120%}.hex,.loader-fill,.loader-logo,.search-box{position:relative}.hex{width:100px;height:57.74px;margin:28.87px 2px;border-left:1px solid rgba(255,255,255,.1)}.hex::after,.hex::before{content:"";position:absolute;width:70.71px;height:70.71px;left:13px;transform:scaleY(.5774) rotate(-45deg);border-top:1px solid rgba(255,255,255,.1)}.hex::before{top:-35px}.hex::after{bottom:-35px}.hex:nth-child(20n+11),.hex:nth-child(20n+12),.hex:nth-child(20n+13),.hex:nth-child(20n+14),.hex:nth-child(20n+15),.hex:nth-child(20n+16),.hex:nth-child(20n+17),.hex:nth-child(20n+18),.hex:nth-child(20n+19),.hex:nth-child(20n+20){transform:translateX(52px)}.hex span{width:2px;height:160px;left:50%;bottom:-180px;transform:translateX(-50%);background:linear-gradient(to top,transparent,rgba(255,255,255,.2),#fff,rgba(255,255,255,.2),transparent);box-shadow:0 0 10px #fff;animation:4s linear infinite moveUp;opacity:0}@keyframes moveUp{0%{bottom:-180px;opacity:0}15%{opacity:1}100%{bottom:180px;opacity:0}}.loader-logo{width:115px;height:115px;border-radius:30px;padding:4px;background:linear-gradient(135deg,#fff,#f1f5f9);box-shadow:0 0 18px rgba(255,255,255,.55),0 0 35px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25);animation:2s infinite pulse;z-index:5}.loader-logo img{width:100%;height:100%;object-fit:cover;border-radius:26px}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}.loader-title{margin-top:20px;font-size:24px;font-weight:900;letter-spacing:1px;z-index:5}.premium-tags{margin-top:18px;gap:10px;flex-wrap:wrap;justify-content:center;z-index:5;padding:0 10px}.tag{padding:8px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);align-items:center;gap:7px;font-size:10px;font-weight:700;backdrop-filter:blur(12px)}.tag i{color:#fff;filter:drop-shadow(0 0 6px rgba(255,255,255,.8)) drop-shadow(0 0 12px rgba(255,255,255,.5))}.loader-bar{width:200px;height:7px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 0 8px rgba(255,255,255,.08),0 0 12px rgba(255,255,255,.08);margin-top:28px;z-index:5}.loader-fill{width:0%;height:100%;background:linear-gradient(90deg,#fff,#f8fafc,#fff);box-shadow:0 0 10px rgba(255,255,255,.8),0 0 20px rgba(255,255,255,.55),0 0 35px rgba(255,255,255,.3);animation:3s linear forwards load}.loader-fill::before{content:"";top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);animation:1.2s linear infinite shineMove}@keyframes shineMove{0%{left:-40%}100%{left:120%}}@keyframes load{0%{width:0%}100%{width:100%}}.header{background:linear-gradient(135deg,#0f0f0f,#1b1b1b,#242424);border:1px solid #303030;justify-content:space-between;align-items:center;padding:12px 15px;position:sticky;top:0;z-index:1000;border-bottom-left-radius:24px;border-bottom-right-radius:24px;box-shadow:0 8px 25px rgba(0,0,0,.45)}.left{align-items:center;gap:14px}.menu{width:30px}.menu div{height:3px;background:#fff;margin:5px 0;border-radius:10px}.book-card,.search-box input{background:linear-gradient(145deg,#0f0f0f,#1b1b1b,#242424)}.logo{font-size:17px;font-weight:900}.book-title,.download-btn{font-size:15px;font-weight:700}.logo-space{width:45px;height:45px;border-radius:50%;border:2px solid rgba(255,255,255,.1)}.logo-space img{width:100%;height:100%;object-fit:cover}.search-box{width:92%;margin:18px auto;z-index:5}.book-card,.book-container{position:relative;z-index:10}.search-box i{left:18px;top:50%;transform:translateY(-50%);color:#d1d5db}.search-box input{width:100%;height:54px;border:1px solid #303030;outline:0;border-radius:18px;color:#fff;padding-left:50px;font-size:16px;box-shadow:0 4px 15px rgba(0,0,0,.25)}.book-container{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;padding:12px}.book-card{border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 25px rgba(0,0,0,.35);border-radius:22px;box-shadow:0 0 12px rgba(255,255,255,.04)}.book-image{width:100%;height:240px;object-fit:cover;display:block}.book-details{padding:12px}.book-title{line-height:24px;margin-bottom:12px;min-height:48px}.download-btn{width:100%;height:48px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(145deg,#1a1a1a,#2b2b2b,#3a3a3a);box-shadow:0 6px 15px rgba(0,0,0,.25);color:#fff;display:flex;justify-content:center;align-items:center;gap:10px}.not-found{width:90%;margin:40px auto;padding:38px 20px;display:none;flex-direction:column;justify-content:center;align-items:center;border-radius:28px;background:linear-gradient(145deg,#0f0f0f,#1b1b1b,#242424);border:1px solid #303030;box-shadow:0 10px 25px rgba(0,0,0,.35);backdrop-filter:blur(18px)}.not-found i{font-size:42px;margin-bottom:18px;background:linear-gradient(135deg,#00e5ff,#6d6dff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.not-found h2{font-size:25px;font-weight:800;margin-bottom:10px}.not-found p{font-size:14px;line-height:26px;color:#94a3b8}.main-footer-text{width:100%;height:42px;display:flex;justify-content:center;align-items:center;font-size:10px;font-weight:700;color:#9ca3af;overflow:hidden;text-overflow:ellipsis;background:#0a0a0a;margin:25px auto 0;padding:10px 14px;border-top:1px solid rgba(255,255,255,.08)}.download-page,.side-menu{position:fixed;overflow-y:auto}.download-page{inset:0;background:linear-gradient(180deg,#000,#0a0a0a,#111,#000);background-attachment:fixed;z-index:99999;-webkit-overflow-scrolling:touch;padding:18px;display:none;flex-direction:column;min-height:100vh}.close-btn,.preview-image{background:linear-gradient(145deg,#0f0f0f,#1b1b1b,#242424)}.box,.box i,.close-btn,.download-top{display:flex}.box,.menu-item{min-height:68px;text-decoration:none}.download-page::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.03),transparent 30%),radial-gradient(circle at 80% 40%,rgba(255,255,255,.03),transparent 30%),radial-gradient(circle at 50% 80%,rgba(255,255,255,.03),transparent 30%);z-index:-1}.download-top{align-items:center;gap:16px;margin-bottom:20px}.close-btn{width:52px;height:52px;border:1px solid rgba(255,255,255,.08);border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.35),0 0 12px rgba(255,255,255,.04);font-size:22px;justify-content:center;align-items:center}.close-btn i{color:#fff;-webkit-text-fill-color:#ffffff;background:0 0;filter:none}.apk-logo i,.hero-title,.menu-icon-box i,.menu-item.instagram i,.menu-item.telegram i,.menu-item.whatsapp i{-webkit-text-fill-color:transparent}.download-logo{font-size:22px;font-weight:900}.preview-image{width:100%;max-height:520px;object-fit:contain;border-radius:28px;padding:10px;border:1px solid rgba(255,255,255,.08);box-shadow:0 0 15px rgba(255,255,255,.04),0 10px 25px rgba(0,0,0,.35)}.preview-title{margin-top:20px;font-size:24px;font-weight:800;line-height:34px}.main-download{width:100%;height:62px;border:none;border-radius:22px;margin-top:22px;background:linear-gradient(135deg,#00c853,#00e676);color:#fff;font-size:18px;font-weight:700;display:flex;justify-content:center;align-items:center;gap:12px}.box,.menu-logo{align-items:center}#pdfLink{text-decoration:none}.box{width:100%;margin-top:14px;padding:14px 16px;border-radius:20px;gap:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.05);color:#fff}.box i{font-size:20px;width:42px;height:42px;justify-content:center;align-items:center;border-radius:14px;background:linear-gradient(135deg,#232323,#303030)}.box-title{font-size:15px;font-weight:700}.box-sub{font-size:12px;color:#bdbdbd;margin-top:2px}.file-size{margin-left:auto;font-size:16px;font-weight:800;color:#00e676}.copyright-text{width:100%;padding:15px 10px;font-size:10px;font-weight:700;color:#9ca3af;border-top:1px solid rgba(255,255,255,.08);margin-top:15px;margin-bottom:0}.download-page{padding-bottom:30px}.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(5px);display:none;z-index:999998}.side-menu{top:0;left:-100%;width:78%;height:100vh;background:linear-gradient(180deg,#000,#0a0a0a,#111,#000);z-index:999999;padding:20px;transition:.4s}.about-page.active,.side-menu.active{left:0}.menu-logo{font-size:20px;font-weight:900;margin-bottom:25px;display:flex;gap:10px}.menu-item,.menu-item.apk-card{gap:18px;box-shadow:0 10px 25px rgba(0,0,0,.35),0 0 12px rgba(255,255,255,.04);color:#fff}.menu-logo-img{width:38px;height:38px;border-radius:50%}.menu-divider{width:100%;height:2px;margin:18px 0;background:linear-gradient(90deg,transparent,#00e5ff,#6d6dff,transparent);border-radius:50px}.menu-item{width:100%;margin-top:16px;padding:0 20px;border-radius:22px;display:flex;align-items:center;font-size:16px;font-weight:700;background:linear-gradient(145deg,#0f0f0f,#1b1b1b,#242424);border:1px solid rgba(255,255,255,.08);transition:.3s}.apk-logo,.menu-icon-box{width:52px;height:52px;min-width:52px;display:flex;box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;position:relative}.menu-item:hover{transform:translateX(6px)}.apk-logo::before,.menu-icon-box::before{top:-120%;left:-40%;width:50%;height:300%;transform:rotate(25deg);content:"";position:absolute}.menu-icon-box{border-radius:18px;justify-content:center;align-items:center;background:linear-gradient(145deg,#1a1a1a,#2b2b2b,#3a3a3a);border:1px solid rgba(255,255,255,.08)}.image-quote,.menu-item.apk-card{border:1px solid rgba(255,255,255,.08)}.menu-icon-box i{font-size:20px;background:linear-gradient(135deg,#fff,#9be7ff);-webkit-background-clip:text;filter:drop-shadow(0 0 8px rgba(0,229,255,.25))}.menu-icon-box::before{background:linear-gradient(to right,transparent,rgba(255,255,255,.12),transparent);animation:4s linear infinite menuIconShine}@keyframes menuIconShine{0%{left:-60%}100%{left:140%}}.menu-item.apk-card{display:flex;align-items:center;background:linear-gradient(145deg,#0f0f0f,#1b1b1b,#242424)}.menu-item.apk-card::before{background:linear-gradient(180deg,#e2e8f0,#94a3b8,#64748b);box-shadow:0 0 12px rgba(255,255,255,.18)}.apk-logo{border-radius:18px;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(145deg,#1e293b,#0f172a);border:1px solid rgba(255,255,255,.08)}.connect-divider,.profile{justify-content:center;display:flex}.apk-logo i{font-size:18px;background:linear-gradient(135deg,#fff,#9be7ff);-webkit-background-clip:text;margin-bottom:1px}.apk-logo span{font-size:9px;font-weight:900;letter-spacing:1px;color:#fff;line-height:1}.name,.popup h1{font-weight:800}.apk-logo::before{background:linear-gradient(to right,transparent,rgba(255,255,255,.12),transparent);animation:4s linear infinite apkShine}@keyframes apkShine{0%{left:-60%}100%{left:140%}}.menu-item.whatsapp{background:linear-gradient(145deg,rgba(0,255,110,.12),rgba(10,20,15,.95));border:1px solid rgba(37,211,102,.24);box-shadow:0 10px 25px rgba(0,0,0,.45),0 0 22px rgba(37,211,102,.12);color:#bbf7d0}.menu-item.whatsapp::before{background:linear-gradient(180deg,#25d366,#00ff95,#00e676);box-shadow:0 0 18px rgba(37,211,102,.8)}.menu-item.whatsapp i{background:linear-gradient(135deg,#fff,#86efac,#22c55e);-webkit-background-clip:text;filter:drop-shadow(0 0 10px rgba(37,211,102,.45))}.menu-item.telegram{background:linear-gradient(145deg,rgba(0,170,255,.14),rgba(10,15,22,.95));border:1px solid rgba(34,158,217,.26);box-shadow:0 10px 25px rgba(0,0,0,.45),0 0 22px rgba(34,158,217,.12);color:#7dd3fc}.menu-item.telegram::before{background:linear-gradient(180deg,#229ed9,#64d8ff,#00e5ff);box-shadow:0 0 18px rgba(34,158,217,.8)}.menu-item.telegram i{background:linear-gradient(135deg,#fff,#7dd3fc,#38bdf8);-webkit-background-clip:text;filter:drop-shadow(0 0 10px rgba(34,158,217,.45))}.connect-divider{position:relative;align-items:center;margin:26px 0 18px}.connect-divider::before{content:"";position:absolute;width:100%;height:2px;background:linear-gradient(90deg,transparent,#fff,transparent);opacity:.15}.connect-divider span{position:relative;padding:0 16px;font-size:11px;font-weight:800;letter-spacing:2px;background:#0a0a0a;color:#cbd5e1}.about-page{position:fixed;top:0;left:100%;width:100%;height:100vh;background:linear-gradient(180deg,#000,#0a0a0a,#111,#000);z-index:999999;overflow-y:auto;-webkit-overflow-scrolling:touch;transition:.5s;padding:18px}.container{width:100%;max-width:1000px;margin:auto}.profile{margin-bottom:25px}.profile-box{position:relative;width:290px;height:290px;border-radius:38px;display:flex;justify-content:center;align-items:center;overflow:hidden}.profile-box::before{content:"";position:absolute;inset:-6px;border-radius:42px;background:conic-gradient(#22c55e,#8b5cf6,#00c2ff,#22c55e);animation:3s linear infinite rotateGlow;filter:blur(6px)}.profile-box::after{content:"";position:absolute;inset:4px;border-radius:39px;background:#02040a}.profile-box img{position:relative;z-index:2;width:100%;height:100%;object-fit:contain;border-radius:28px;padding:8px}@keyframes rotateGlow{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.name{font-size:20px;margin-bottom:8px}.quote{font-size:15px;font-style:italic;margin-bottom:28px;color:#dbeafe}.about-card{width:100%;margin-bottom:16px;padding:16px 18px;border-radius:24px;display:flex;align-items:center;gap:14px;background:linear-gradient(145deg,#0f0f0f,#1b1b1b,#242424);border:1px solid #303030}.icon,.popup-overlay{justify-content:center}.icon{width:50px;height:50px;min-width:50px;border-radius:16px;display:flex;align-items:center;background:linear-gradient(135deg,#1e3a8a,#2563eb,#38bdf8);font-size:18px}.about-footer-bottom,.popup{width:100%;text-align:center}.heading{font-size:16px;font-weight:700}.detail{font-size:14px;color:#cbd5e1;margin-top:2px}.about-footer-bottom{margin-top:auto;padding:15px 10px;font-size:10px;font-weight:700;color:#9ca3af;border-top:1px solid rgba(255,255,255,.08)}.popup-overlay{position:fixed;inset:0;background:#000;display:none;align-items:center;z-index:9999999;padding:18px}.popup{max-width:640px;padding:34px 22px 24px;border-radius:32px;background:linear-gradient(180deg,rgba(0,255,85,.14),rgba(0,0,0,.98));border:1px solid rgba(255,255,255,.14);animation:.35s popupAnim}@keyframes popupAnim{from{transform:scale(.82);opacity:0}to{transform:scale(1);opacity:1}}.popup-logo{width:88px;height:88px;margin:auto;border-radius:28px;background:linear-gradient(145deg,#1a1a1a,#050505);display:flex;justify-content:center;align-items:center}.join-btn,.quote-style{position:relative;align-items:center;overflow:hidden}.popup-logo img{width:52px}.popup h1{color:#fff;font-size:24px;margin-top:24px;letter-spacing:.5px}.popup p{color:#b8b8b8;font-size:15px;line-height:1.8;margin-top:14px}.join-btn{width:100%;height:68px;margin-top:30px;border:none;border-radius:24px;background:linear-gradient(135deg,#6dff9c 0,#32ff7e 25%,#14d85c 55%,#08b848 100%);color:#fff;font-size:20px;font-weight:700;display:flex;justify-content:center;gap:12px;transition:.35s;box-shadow:0 7px 0 #06792f,0 12px 24px rgba(0,255,115,.28),0 0 18px rgba(109,255,156,.35),0 0 42px rgba(0,255,115,.48),inset 0 2px 10px rgba(255,255,255,.38),inset 0 -4px 8px rgba(0,0,0,.18)}.join-btn::before{content:"";position:absolute;top:0;left:-130%;width:80%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-25deg);transition:.7s}.join-btn:hover::before{left:130%}.join-btn:hover{transform:translateY(-4px) scale(1.02);background:linear-gradient(135deg,#85ffad 0,#43ff88 25%,#1be66a 55%,#0ac94f 100%);box-shadow:0 10px 0 #056b2a,0 18px 35px rgba(0,255,115,.4),0 0 25px rgba(109,255,156,.45),0 0 55px rgba(0,255,115,.72),inset 0 2px 12px rgba(255,255,255,.45)}.join-btn img{width:26px;filter:brightness(125%) drop-shadow(0 0 6px rgba(255,255,255,.45))}.later{margin-top:18px;color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;opacity:.82;transition:.3s}.later:hover{color:#d0d0d0;opacity:1}.image-quote,.quote-style{display:inline-flex;font-size:11px;font-weight:800;letter-spacing:1px}.quote-style{padding:10px 18px 10px 16px;border-radius:16px;backdrop-filter:blur(14px)}.quote-style::before{content:"";position:absolute;left:0;top:14%;width:4px;height:72%;border-radius:20px}.popup-powered{margin-top:22px;background:linear-gradient(135deg,rgba(0,255,140,.12),rgba(0,229,255,.06));border:1px solid rgba(0,255,140,.16);color:#b8fff0;box-shadow:0 0 18px rgba(0,255,140,.08);text-shadow:0 0 10px rgba(0,255,170,.25)}.popup-powered::before{background:linear-gradient(180deg,#00ff95,#00e676,#00c853);box-shadow:0 0 12px rgba(0,255,120,.7)}.image-quote{align-items:center;justify-content:center;width:fit-content;max-width:fit-content;padding:10px 18px;margin:14px auto 18px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));color:#f8fafc;text-shadow:0 0 8px rgba(255,255,255,.15);box-shadow:0 0 12px rgba(255,255,255,.04);border-radius:16px}.image-quote::before{background:linear-gradient(180deg,#fff,#d1d5db,#94a3b8);box-shadow:0 0 12px rgba(255,255,255,.25)}.notfound-quote{margin-top:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#e5e7eb}.notfound-quote::before{background:linear-gradient(180deg,#6b7280,#9ca3af,#d1d5db);box-shadow:0 0 12px rgba(255,255,255,.15)}.review-time{color:#cbd5e1;font-size:14px}.hero{text-align:center;margin-bottom:35px}.hero-title{font-size:38px;font-weight:900;letter-spacing:2px;text-transform:uppercase;background:linear-gradient(90deg,#fff,#d1d5db,#9ca3af);-webkit-background-clip:text}.hero-subtitle{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px}.hero-badge{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);font-size:11px;font-weight:700;color:#d1d5db}.divider{height:1px;margin:28px 0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent)}.section{text-align:center;margin-bottom:30px}.card-title,.section-title{display:flex;gap:12px;font-weight:800;margin-bottom:15px}.section-title{justify-content:center;align-items:center;font-size:24px}.section p{line-height:1.9;color:#cbd5e1}.mini-icon{width:38px;height:38px;display:flex;justify-content:center;align-items:center;border-radius:12px;color:#fff}.book-icon{background:linear-gradient(135deg,#3b82f6,#2563eb)}.copyright-icon{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}.shield-icon{background:linear-gradient(135deg,#f59e0b,#ea580c)}.card{margin-top:22px;padding:24px;border-radius:24px;background:linear-gradient(145deg,#0f0f0f,#1b1b1b,#242424);border:1px solid #303030}.card-title{justify-content:center;align-items:center;font-size:22px}.contact-title{color:#60a5fa}.notice-title{color:#fbbf24}.responsibility-title{color:#f87171}.card p{text-align:center;line-height:1.9;color:#e5e7eb}.contact-links{text-align:center;line-height:2.2}.telegram-link{color:#60a5fa;font-weight:700;text-decoration:none}.telegram-link:hover{color:#93c5fd}@media(max-width:768px){.book-image{height:210px}.logo{font-size:15px}.preview-title{font-size:20px;line-height:30px}.hero-title{font-size:24px}.card-title,.section-title{font-size:19px}}.menu-item.instagram{background:linear-gradient(145deg,rgba(255,0,128,.14),rgba(25,10,25,.95));border:1px solid rgba(255,105,180,.25);box-shadow:0 10px 25px rgba(0,0,0,.45),0 0 22px rgba(255,0,128,.12);color:#f9a8d4}.menu-item.instagram i{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);-webkit-background-clip:text;filter:drop-shadow(0 0 10px rgba(221,42,123,.45))}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MULTIVERSE BOOKS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
-
-
-<!-- LOADER -->
-
-<div class="loader-screen" id="loaderScreen">
-
-<div class="loader-hex-bg">
-<div class="hex-grid" id="hexGrid"></div>
-</div>
-
-<div class="loader-logo">
-<img src="https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg">
-</div>
-
-<div class="loader-title">
-MULTIVERSE BOOKS
-</div>
-
-<div class="premium-tags">
-
-<div class="tag">
-<i class="fa-solid fa-file-pdf"></i>
-PDF
-</div>
-
-<div class="tag">
-<i class="fa-solid fa-note-sticky"></i>
-NOTES
-</div>
-
-<div class="tag">
-<i class="fa-solid fa-square-root-variable"></i>
-FORMULA
-</div>
-
-<div class="tag">
-<i class="fa-solid fa-layer-group"></i>
-MORE
-</div>
-
-</div>
-
-<div class="loader-bar">
-<div class="loader-fill"></div>
-</div>
-
-</div>
-
-<!-- POPUP -->
-
-<div class="popup-overlay" id="popupOverlay">
-
-<div class="popup">
-
-<div class="popup-logo">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-
-</div>
-
-<h1>MULTIVERSE BOOKS</h1>
-
-<p>
-Stay updated with latest study materials and get instant notifications.
-</p>
-
-<div class="popup-powered quote-style">
-POWERED BY : MADxPRINCE
-</div>
-
-<button class="join-btn" onclick="joinChannel()">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-
-WhatsApp Channel
-
-</button>
-
-<div class="later" onclick="closePopup()">
-MAYBE LATER
-</div>
-
-</div>
-
-</div>
-
-<!-- MAIN -->
-
-<div class="main-site" id="mainSite">
-
-<!-- HEADER -->
-
-<div class="header">
-
-<div class="left">
-
-<div class="menu" onclick="openMenu()">
-<div></div>
-<div></div>
-<div></div>
-</div>
-
-<div class="logo">
-MULTIVERSE BOOKS
-</div>
-
-</div>
-
-<div class="logo-space">
-<img src="https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg">
-</div>
-
-</div>
-
-<!-- SEARCH -->
-
-<div class="search-box">
-
-<i class="fa-solid fa-magnifying-glass"></i>
-
-<input type="text"
-id="searchInput"
-placeholder="Search Books...">
-
-</div>
-
-<!-- NOT FOUND -->
-<div class="not-found" id="notFound">
-
-<i class="fa-solid fa-book-open"></i>
-
-<h2>BOOK NOT FOUND</h2>
-
-<p>
-Sorry, we couldn't find any book matching your search.
-Please try another keyword.
-</p>
-
-<div class="notfound-quote quote-style">
-POWERED BY : MADxPRINCE
-</div>
-
-</div>
-
-<!-- BOOKS -->
-
-<div class="book-container" id="bookContainer">
-</div>
-<!-- BOOK -->
-
-    <!-- ye footer khatir baa -->
-<div class="main-footer-text">
-
-© MULTIVERSE BOOKS | DESIGNED & DEVELOPED BY MADxPRINCE
-
-</div>
-
-</div>
-
-<!-- MENU -->
-
-<div class="menu-overlay"
-id="menuOverlay"
-onclick="closeMenu()"></div>
-
-<div class="side-menu"
-id="sideMenu">
-
-<div class="menu-logo">
-
-<img src="https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg"
-class="menu-logo-img">
-
-MULTIVERSE BOOKS
-
-</div>
-
-<div class="menu-divider"></div>
-
-<div class="menu-item"
-onclick="goHome()">
-
-<div class="menu-icon-box">
-<i class="fa-solid fa-house"></i>
-</div>
-
-Home
-
-</div>
-
-<div class="menu-item"
-onclick="openAboutPage()">
-
-<div class="menu-icon-box">
-<i class="fa-solid fa-user"></i>
-</div>
-
-About Developer
-
-</div>
-
-<a href="https://t.me/Multiverse_Contact_Bot"
-class="menu-item">
-
-<div class="menu-icon-box">
-<i class="fa-solid fa-address-book"></i>
-</div>
-
-Contact
-
-</a>
-
-<!--  -->
-<div class="menu-item apk-card"
-onclick="openDisclaimerPage()">
-
-
-<div class="apk-logo">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<span>DMCA</span>
-
-</div>
-
-DMCA Request
-
-
-</div>
-<!--  -->
-<div class="connect-divider">
-<span>CONNECT WITH US</span>
-</div>
-
-<a href="https://whatsapp.com/channel/0029Vb6NBZx1yT2GByTTVf2A"
-target="_blank"
-class="menu-item whatsapp">
-
-<div class="menu-icon-box">
-<i class="fa-brands fa-whatsapp"></i>
-</div>
-
-WHATSAPP
-
-</a>
-<!-- TELEGRAM -->
-
-<a href="https://t.me/MultiverseBooks"
-target="_blank"
-class="menu-item telegram">
-
-<div class="menu-icon-box">
-<i class="fa-brands fa-telegram"></i>
-</div>
-
-TELEGRAM
-
-</a>
-
-<a href="https://www.instagram.com/madxprince_3030"
-target="_blank"
-class="menu-item instagram">
-
-<div class="menu-icon-box">
-<i class="fa-brands fa-instagram"></i>
-</div>
-
-INSTAGRAM
-
-</a>
-</div>
-
-<!-- ABOUT PAGE -->
-
-<div class="about-page" id="aboutPage">
-
-<div class="download-top">
-
-<button class="close-btn"
-onclick="closeAboutPage()">
-
-<i class="fa-solid fa-arrow-left"></i>
-
-</button>
-
-<div class="download-logo">
-𝗔ʙᴏᴜᴛ 𝗗ᴇᴠᴇʟᴏᴘᴇʀ
-
-
-</div>
-
-</div>
-
-<div class="container">
-
-<div class="profile">
-
-<div class="profile-box">
-
-<img src="https://i.postimg.cc/D0BF1b77/file-000000000e847207a64f6711d825a859.png">
-
-</div>
-
-</div>
-
-<div class="name">
-Hey there! I'm MADxPRINCE
-</div>
-
-<div class="quote">
-"Dream Big, Hustle Hard, and Never Stop Exploring!"
-</div>
-
-<div class="about-card">
-
-<div class="icon">
-<i class="fa-solid fa-graduation-cap"></i>
-</div>
-
-<div>
-
-<div class="heading">
-Education
-</div>
-
-<div class="detail">
-𝐂ʟᴀss 𝟏𝟏𝐭𝐡 (PCMB) | 𝐁ᴀᴛᴄʜ: 𝟐𝟎𝟐𝟔-𝟐𝟖
-</div>
-
-</div>
-
-</div>
-
-<div class="about-card">
-
-<div class="icon">
-<i class="fa-solid fa-location-dot"></i>
-</div>
-
-<div>
-
-<div class="heading">
-Location
-</div>
-
-<div class="detail">
-ʙɪʜᴀʀ , 𝐈ɴᴅɪᴀ 🚩
-</div>
-
-</div>
-
-</div>
-
-<div class="about-card">
-
-<div class="icon">
-<i class="fa-solid fa-cake-candles"></i>
-</div>
-
-<div>
-
-<div class="heading">
-Birthday
-</div>
-
-<div class="detail">
- 𝟲 ᴅᴇᴄᴇᴍʙᴇʀ 💐❤️‍🩹
-</div>
-
-</div>
-
-</div>
-
-<div class="about-card">
-
-<div class="icon">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-</div>
-
-<div>
-
-<div class="heading">
-Skills
-</div>
-
-<div class="detail">
-𝐇𝐞𝐡𝐞... 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 ☠️
-</div>
-
-</div>
-
-</div>
-
-<div class="about-footer-bottom">
-
-© MULTIVERSE BOOKS | DESIGNED & DEVELOPED BY MADxPRINCE
-
-</div>
-
-</div>
-
-</div>
-
-<!-- DISCLAIMER PAGE -->
-
-<div class="about-page" id="disclaimerPage">
-
-<div class="download-top">
-
-<button class="close-btn"
-onclick="closeDisclaimerPage()">
-
-<i class="fa-solid fa-arrow-left"></i>
-
-</button>
-
-<div class="download-logo">
-DMCA REQUEST
-</div>
-
-</div>
-
-
-
-<!-- YAHI PAR APNA POORA DISCLAIMER HTML PASTE KARNA HAI -->
-
-<div class="container">
-
-    <!-- Hero -->
-
-    <div class="hero">
-
-        <h1 class="hero-title">COPYRIGHT DISCLAIMER</h1>
-
-        <p class="hero-subtitle">
-
-    <span class="hero-badge">
-        <i class="fa-solid fa-graduation-cap"></i>
-        Educational
-    </span>
-
-    <span class="hero-badge">
-        <i class="fa-solid fa-flask"></i>
-        Research
-    </span>
-
-    <span class="hero-badge">
-        <i class="fa-solid fa-book-open"></i>
-        Reference
-    </span>
-
-</p>
-
+    <div class="loader-screen" id="loaderScreen">
+        <canvas id="networkCanvas"></canvas>
+        <div class="loader-logo"><img src="https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg" alt="Logo" oncontextmenu="return false;" draggable="false"></div>
+        <div class="loader-title">MULTIVERSE BOOKS</div>
+        <div class="premium-tags">
+            <div class="tag"><i class="fa-solid fa-file-pdf"></i> PDF</div>
+            <div class="tag"><i class="fa-solid fa-note-sticky"></i> NOTES</div>
+            <div class="tag"><i class="fa-solid fa-square-root-variable"></i> FORMULA</div>
+            <div class="tag"><i class="fa-solid fa-layer-group"></i> MORE</div>
+        </div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+        <div class="loader-powered-text">POWERED BY MADxPRINCE</div>
     </div>
 
-    <div class="divider"></div>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" oncontextmenu="return false;" draggable="false">
+            </div>
+            
+            <h1> 
+                𝗠𝘂𝗹𝘁𝗶𝘃𝗲𝗿𝘀𝗲 𝗕𝗼𝗼𝗸𝘀 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹
+                <svg class="verified-badge-ui" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="pG1" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#55bbf8" />
+                            <stop offset="100%" stop-color="#0a7bd2" />
+                        </linearGradient>
+                    </defs>
+                    <g fill="url(#pG1)">
+                        <circle cx="50" cy="15" r="14" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(30 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(60 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(90 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(120 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(150 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(180 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(210 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(240 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(270 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(300 50 50)" />
+                        <circle cx="50" cy="15" r="14" transform="rotate(330 50 50)" />
+                        <circle cx="50" cy="50" r="33" />
+                    </g>
+                    <path d="M33 52 L43 62 L67 36" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0px 3px 2px rgba(0,0,0,0.3))" />
+                </svg>
+            </h1>
 
-    <!-- Content Ownership -->
-
-    <div class="section">
-
-        <h2 class="section-title">
-            <span class="mini-icon book-icon">
-                <i class="fa-solid fa-book"></i>
-            </span>
-            Content Ownership
-        </h2>
-
-        <p>
-            This website is created solely for educational,
-            informational and archival purposes.
-
-            We do not claim ownership of any copyrighted material
-            shared on this platform. All copyrights, trademarks and
-            intellectual property rights belong to their respective
-            authors, publishers and owners.
-        </p>
-
+            <p> 𝐒𝐭𝐮𝐝𝐲 𝐦𝐚𝐭𝐞𝐫𝐢𝐚𝐥 𝐤𝐞 𝐥𝐢𝐲𝐞 𝐢𝐝𝐡𝐚𝐫-𝐮𝐝𝐡𝐚𝐫 𝐛𝐡𝐚𝐭𝐚𝐤𝐧𝐚 𝐜𝐡𝐡𝐨𝐝𝐨! 📚 𝐀𝐛 𝐦𝐢𝐥𝐞𝐠𝐚 𝐬𝐚𝐚𝐫𝐚 𝐜𝐨𝐧𝐭𝐞𝐧𝐭 𝐛𝐢𝐥𝐤𝐮𝐥 𝐅𝐑𝐄𝐄. 𝐈𝐧𝐬𝐭𝐚𝐧𝐭 𝐮𝐩𝐝𝐚𝐭𝐞𝐬 𝐚𝐮𝐫 𝐛𝐞𝐬𝐭 𝐛𝐨𝐨𝐤𝐬 𝐩𝐚𝐚𝐧𝐞 𝐤𝐞 𝐥𝐢𝐲𝐞 𝐚𝐚𝐣 𝐡𝐢 𝐡𝐮𝐦𝐚𝐫𝐚 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐣𝐨𝐢𝐧 𝐤𝐚𝐫𝐞. ☟☟</p>
+            
+            <button class="join-btn" onclick="joinChannel()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" oncontextmenu="return false;" draggable="false">
+                WhatsApp Channel
+            </button>
+            <div class="later" onclick="closePopup()">MAYBE LATER</div>
+        </div>
     </div>
 
-    <div class="divider"></div>
+    <div class="app-container">
+        <header>
+            <div class="header-left">
+                <div class="icon-box" id="open-menu"><i class="fas fa-bars"></i></div>
+                <span class="header-title">MULTIVERSE BOOKS</span>
+            </div>
+            <div class="header-icons">
+                <div class="icon-box" id="open-search"><i class="fas fa-search"></i></div>
+                <div class="icon-box bell-wrapper" id="open-noti">
+                    <i class="fas fa-bell"></i>
+                    <span class="blink-dot"></span>
+                </div>
+            </div>
+            <div class="search-box-expanded" id="search-box">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-input" id="app-search-input" placeholder="Search books, notes...">
+                </div>
+                <div class="icon-box" id="close-search"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </header>
 
-    <!-- Copyright Concerns -->
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header-new">
+                <img src="https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg" alt="Profile" class="profile-img" oncontextmenu="return false;" draggable="false">
+                <div class="profile-info">
+                    <div class="profile-name">MULTIVERSE BOOKS</div>
+                </div>
+            </div>
 
-    <div class="section">
+            <div class="menu-section">
+                <div class="section-title">MAIN MENU</div>
+                <a href="#" class="menu-item active" id="menu-home"><i class="fas fa-home"></i><span>Home</span></a>
+                <a href="#" class="menu-item normal" id="menu-about-dev"><i class="fas fa-user-tie"></i><span>About Developer</span></a>
+                <a href="https://t.me/MULTIVERSE_CONTACT_BOT" class="menu-item normal" id="menu-contact"><i class="fas fa-address-book"></i><span>Contact</span></a>
+                <a href="#" class="menu-item normal" id="menu-dmca"><i class="fas fa-shield-halved"></i><span>DMCA Request</span></a>
+            </div>
 
-        <h2 class="section-title">
-            <span class="mini-icon copyright-icon">
-                <i class="fa-solid fa-copyright"></i>
-            </span>
-            Copyright Concerns
-        </h2>
+            <div class="menu-section">
+                <div class="section-title">COMMUNITY</div>
+                <a href="https://whatsapp.com/channel/0029Vb6NBZx1yT2GByTTVf2A" class="menu-item card-link card-whatsapp" id="link-whatsapp"><i class="fab fa-whatsapp"></i><span>Join WhatsApp</span><i class="fas fa-external-link-square-alt external"></i></a>
+                <a href="https://t.me/MultiverseBooks" class="menu-item card-link card-telegram" id="link-telegram"><i class="fab fa-telegram-plane"></i><span>Join Telegram</span><i class="fas fa-external-link-square-alt external"></i></a>
+                <a href="https://www.instagram.com/madxprince_3030" class="menu-item card-link card-insta" id="link-insta"><i class="fab fa-instagram"></i><span>Instagram</span><i class="fas fa-external-link-square-alt external"></i></a>
+                <a href="https://youtube.com/@madxprince" class="menu-item card-link card-youtube" id="link-youtube"><i class="fab fa-youtube"></i><span>YouTube Channel</span><i class="fas fa-external-link-square-alt external"></i></a>
+            </div>
 
-        <p>
-            If you are the copyright owner of any material available
-            here and believe that your content has been shared without
-            proper authorization, please contact us.
-        </p>
+            <div class="sidebar-footer">
+                <div class="system-status"><div class="dot"></div>SYSTEM SECURE</div>
+                <div class="credits">MULTIVERSE BOOKS • MADxPRINCE</div>
+            </div>
+        </div>
 
+        <main id="mainContentArea">
+            <section class="quote-card">
+                <div class="welcome-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right: 5px; margin-top: -2px;">
+                        <path fill-rule="evenodd" d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.522 2.522l2.846.813a.75.75 0 0 1 0 1.45l-2.846.813a3.75 3.75 0 0 0-2.522 2.522l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.522-2.522l-2.846-.813a.75.75 0 0 1 0-1.45l2.846-.813a3.75 3.75 0 0 0 2.522-2.522l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z" clip-rule="evenodd" />
+                    </svg>
+                    WELCOME BACK
+                </div>
+                
+                <div class="quote-text" id="daily-quote-text"><i class="fas fa-quote-left" style="color: rgba(255,255,255,0.3); margin-right:5px;"></i> Loading...</div>
+                <div class="quote-author" id="daily-quote-author"></div>
+            </section>
+
+            <div class="section-header-title">
+                <i class="fas fa-book-open" style="color: #10b981;"></i> Trending Books 🔥 
+            </div>
+
+            <div class="book-container" id="bookContainer"></div>
+
+            <div id="no-results-msg">
+                <div class="no-results-card">
+                    <div class="no-results-icon"><i class="fas fa-book-open"></i></div>
+                    <h2>BOOK NOT FOUND</h2>
+                    <p>Sorry, we couldn't find any book matching your search.</p>
+                    <div class="powered-badge">❀ POWERED BY : MADxPRINCE ❀</div>
+                </div>
+            </div>
+
+            <div class="bottom-spinner-container" id="bottomSpinner">
+                <div class="bottom-spinner"></div>
+                <div style="color:#a1a1aa; font-size:13px; font-weight:600;">Loading more...</div>
+            </div>
+
+            <div class="premium-copyright">© 2026 MULTIVERSE BOOKS <span style="margin: 0 5px;">|</span> MADE WITH <i class="fas fa-heart" style="color: #ff4757; margin: 0 3px; filter: drop-shadow(0 0 5px rgba(255,71,87,0.8));"></i> BY MADxPRINCE</div>
+        </main>
+
+        <div class="download-modal" id="downloadModal">
+            <div class="modal-header-fixed">
+                <button class="back-btn" onclick="closeDownloadPage()"><i class="fas fa-arrow-left"></i></button>
+                <h1 class="modal-title">MULTIVERSE BOOKS</h1>
+            </div>
+            
+            <div class="dl-content-wrapper">
+                <div class="dl-img-wrapper-outer">
+                    <div class="dl-img-container">
+                        <img id="dlPreviewImage" class="dl-preview-image" src="" oncontextmenu="return false;" draggable="false">
+                        <div class="dl-powered-badge disable-long-press">POWERED BY : MADxPRINCE</div>
+                    </div>
+                </div>
+                
+                <h2 class="dl-title" id="dlBookTitle"></h2>
+                <div class="dl-author" id="dlBookAuthor"></div>
+                
+                <button id="dlPdfLinkBtn" class="dl-main-btn disable-long-press">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+
+                <div id="dlYoutubeLinkBtn" class="dl-box disable-long-press">
+                    <i class="fab fa-youtube icon" style="color: #ef4444;"></i>
+                    <div>
+                        <div class="dl-box-title">Watch Tutorials</div>
+                        <div class="dl-box-sub">How to download books?</div>
+                    </div>
+                </div>
+
+                <div class="dl-box disable-long-press" onclick="shareBook()">
+                    <i class="fas fa-share-nodes icon"></i>
+                    <div><div class="dl-box-title">Share this book</div><div class="dl-box-sub">Send this book to friends</div></div>
+                </div>
+                
+                <div class="exam-rel-box">
+                    <div class="exam-header"><i class="fas fa-ribbon"></i> EXAM RELEVANCE</div>
+                    <div class="exam-tags" id="dlModalTags"></div>
+                </div>
+
+                <div class="dl-social-container">
+                    <div class="dev-social-row">
+                        <a href="https://youtube.com/@madxprince" target="_blank" class="dev-soc-btn dev-yt"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/madxprince_3030" target="_blank" class="dev-soc-btn dev-ig"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/MultiverseBooks" target="_blank" class="dev-soc-btn dev-tg"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb6NBZx1yT2GByTTVf2A" target="_blank" class="dev-soc-btn dev-wa"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="premium-copyright">© 2026 MULTIVERSE BOOKS <span style="margin: 0 5px;">|</span> MADE WITH <i class="fas fa-heart" style="color: #ff4757; margin: 0 3px; filter: drop-shadow(0 0 5px rgba(255,71,87,0.8));"></i> BY MADxPRINCE</div>
+            </div>
+        </div>
+
+        <div class="notifications-panel" id="noti-panel">
+            <div class="noti-header"><div class="noti-title-area"><div class="noti-icon"><i class="fas fa-bell"></i></div><div class="noti-text"><h2>Notifications</h2><p>Updates & News</p></div></div><div class="icon-box" id="close-noti"><i class="fas fa-times"></i></div></div>
+            <div class="noti-body" id="dynamic-noti-container"></div>
+        </div>
+
+        <div class="overlay-panel" id="about-dev-panel">
+            <div class="modal-header-fixed">
+                <div class="header-content-wrapper">
+                    <button class="back-btn" id="close-dev-btn"><i class="fas fa-arrow-left"></i></button>
+                    <h1 class="modal-title">ABOUT DEVELOPER</h1>
+                </div>
+                <div class="header-active-badge"><span class="dot"></span> Active</div>
+            </div>
+            
+            <div class="dev-profile-section">
+                <div class="profile-avatar-container">
+                    <div class="dev-profile-img-wrapper">
+                        <img src="https://i.postimg.cc/D0BF1b77/file-000000000e847207a64f6711d825a859.png" class="dev-profile-img" oncontextmenu="return false;" draggable="false">
+                    </div>
+                    <div class="profile-shield"><i class="fas fa-shield-alt"></i></div>
+                </div>
+                <h2 class="dev-greeting">Hey there! I'm MADxPRINCE</h2>
+                <p class="dev-quote">"Dream Big, Hustle Hard, and Never Stop Exploring!"</p>
+            </div>
+            
+            <div class="dev-cards-container">
+                <div class="dev-info-card"><div class="dev-icon-box"><i class="fas fa-graduation-cap"></i></div><div class="dev-card-content"><div class="dev-card-title">Education</div><div class="dev-card-desc"><span class="dev-small-caps">Class</span> 11th (PCMB) | <span class="dev-small-caps">Batch:</span> 2026-28</div></div></div>
+                <div class="dev-info-card"><div class="dev-icon-box"><i class="fas fa-map-marker-alt"></i></div><div class="dev-card-content"><div class="dev-card-title">Location</div><div class="dev-card-desc"><span class="dev-small-caps">Bihar , India</span> 🚩</div></div></div>
+                <div class="dev-info-card"><div class="dev-icon-box"><i class="fas fa-birthday-cake"></i></div><div class="dev-card-content"><div class="dev-card-title">Birthday</div><div class="dev-card-desc"><span class="dev-small-caps">6 December</span> 💐💖</div></div></div>
+                <div class="dev-info-card"><div class="dev-icon-box"><i class="fas fa-tools"></i></div><div class="dev-card-content"><div class="dev-card-title">Skills</div><div class="dev-card-desc" style="font-family: serif; font-style: italic; font-size: 0.95rem; font-weight: 600;">Hehe... Nothing ☠️</div></div></div>
+            </div>
+
+            <div class="find-online-section">
+                <div class="dev-social-row">
+                    <a href="https://youtube.com/@madxprince" class="dev-soc-btn dev-yt"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/madxprince_3030" class="dev-soc-btn dev-ig"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/MADxPRINCE" class="dev-soc-btn dev-tg"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://whatsapp.com/channel/0029Vb6NBZx1yT2GByTTVf2A" class="dev-soc-btn dev-wa"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="premium-copyright">© 2026 MULTIVERSE BOOKS <span style="margin: 0 5px;">|</span> MADE WITH <i class="fas fa-heart" style="color: #ff4757; margin: 0 3px; filter: drop-shadow(0 0 5px rgba(255,71,87,0.8));"></i> BY MADxPRINCE</div>
+        </div>
+
+        <div class="overlay-panel" id="dmca-panel">
+            <div class="modal-header-fixed">
+                <button class="back-btn" id="close-dmca-btn"><i class="fas fa-arrow-left"></i></button>
+                <h1 class="modal-title">DMCA REQUEST</h1>
+            </div>
+            <div class="dmca-content">
+                <div class="dmca-hero">
+                    <h1 class="dmca-hero-title">COPYRIGHT DISCLAIMER</h1>
+                    <p class="dmca-hero-subtitle"><span class="dmca-badge"><i class="fas fa-graduation-cap"></i> Educational</span><span class="dmca-badge"><i class="fas fa-flask"></i> Research</span><span class="dmca-badge"><i class="fas fa-book-open"></i> Reference</span></p>
+                </div>
+                <div class="dmca-section">
+                    <h2 class="dmca-section-title"><span class="dmca-mini-icon icon-book"><i class="fas fa-book"></i></span>Content Ownership</h2>
+                    <p>This website is created solely for educational, informational and archival purposes. We do not claim ownership of any copyrighted material shared on this platform. All copyrights and intellectual property rights belong to their respective authors, publishers and owners.</p>
+                </div>
+                <div class="dmca-section">
+                    <h2 class="dmca-section-title"><span class="dmca-mini-icon icon-copyright"><i class="fas fa-copyright"></i></span>Copyright Concerns</h2>
+                    <p>If you are the copyright owner of any material available here and believe that your content has been shared without proper authorization, please contact us.</p>
+                </div>
+                <div class="dmca-section" style="border-color: rgba(96, 165, 250, 0.3);">
+                    <h2 class="dmca-section-title" style="color: #60a5fa;"><span class="dmca-mini-icon icon-contact"><i class="fas fa-envelope"></i></span>Contact Information</h2>
+                    <a href="https://t.me/Multiverse_Contact_Bot" target="_blank" class="dmca-contact-link"><i class="fab fa-telegram-plane"></i> @Multiverse_Contact_Bot</a>
+                    <p style="margin-top: 15px; font-weight: bold; color: #a1a1aa; font-size: 0.75rem;">⏱ Review Time: 24–48 Hours</p>
+                </div>
+                <div class="dmca-section">
+                    <h2 class="dmca-section-title" style="color: #f59e0b;"><span class="dmca-mini-icon icon-shield"><i class="fas fa-shield-alt"></i></span>Important Notice</h2>
+                    <p>The materials shared on this platform are intended for educational, research, review and reference purposes only. Users are encouraged to support authors and publishers by purchasing original books whenever possible.</p>
+                </div>
+                <div class="dmca-section">
+                    <h2 class="dmca-section-title" style="color: #ec4899;"><span class="dmca-mini-icon" style="background: linear-gradient(135deg, #a855f7, #ec4899);"><i class="fas fa-user-shield"></i></span>User Responsibility</h2>
+                    <p>Users are solely responsible for how they access, download, share or use any content available through this platform. This website and its administrators cannot be held responsible for any misuse or unauthorized use of the materials.</p>
+                </div>
+            </div>
+            <div class="premium-copyright">© 2026 MULTIVERSE BOOKS <span style="margin: 0 5px;">|</span> MADE WITH <i class="fas fa-heart" style="color: #ff4757; margin: 0 3px; filter: drop-shadow(0 0 5px rgba(255,71,87,0.8));"></i> BY MADxPRINCE</div>
+        </div>
     </div>
 
- <!-- Contact -->
-
-<div class="card">
-
-    <h2 class="card-title contact-title">
-        <span class="mini-icon book-icon">
-            <i class="fa-solid fa-envelope"></i>
-        </span>
-        Contact Information
-    </h2>
-
-    <div class="contact-links">
-
-        <a href="https://t.me/Multiverse_Contact_Bot"
-           target="_blank"
-           class="telegram-link">
-
-            <i class="fa-brands fa-telegram"></i>
-            @Multiverse_Contact_Bot
-
-        </a>
-
-        <br>
-
-        <span class="review-time">
-            ⏱ Review Time: 24–48 Hours
-        </span>
-
-    </div>
-
-</div>
-
-    <!-- Important Notice -->
-
-    <div class="card">
-
-        <h2 class="card-title notice-title">
-            <span class="mini-icon shield-icon">
-                <i class="fa-solid fa-shield-halved"></i>
-            </span>
-            Important Notice
-        </h2>
-
-        <p>
-            The materials shared on this platform are intended for
-            educational, research, review and reference purposes only.
-
-            Users are encouraged to support authors and publishers
-            by purchasing original books whenever possible.
-        </p>
-
-    </div>
-
-    <!-- User Responsibility -->
-
-    <div class="card">
-
-        <h2 class="card-title responsibility-title">
-            <span class="mini-icon copyright-icon">
-                <i class="fa-solid fa-user-shield"></i>
-            </span>
-            User Responsibility
-        </h2>
-
-        <p>
-            Users are solely responsible for how they access,
-            download, share or use any content available through
-            this platform.
-
-            This website and its administrators cannot be
-            held responsible for any misuse, redistribution or
-            unauthorized use of the materials by users.
-        </p>
-
-    </div>
-
-
-</div>  
-</div>
- 
-
-<!-- DOWNLOAD PAGE -->
-
-<div class="download-page"
-id="downloadPage">
-
-<div class="download-top">
-
-<button class="close-btn"
-onclick="closeDownloadPage()">
-
-<i class="fa-solid fa-arrow-left"></i>
-
-</button>
-
-<div class="download-logo">
-MULTIVERSE BOOKS
-</div>
-
-</div>
-
-<img id="previewImage"
-class="preview-image">
-
-<div style="text-align:left;">
-    <div class="image-quote quote-style">
-        POWERED BY : MADxPRINCE
-    </div>
-</div>
-
-<h2 class="preview-title"
-id="bookTitle"></h2>
-
-<a id="pdfLink"
-href=""
-target="_blank">
-
-<button class="main-download">
-
-<i class="fa-solid fa-download"></i>
-
-Download PDF
-
-</button>
-
-</a>
-
-<a id="youtubeLink"
-href=""
-target="_blank"
-class="box">
-
-<i class="fa-brands fa-youtube"></i>
-
-<div>
-
-<div class="box-title">
-Watch Tutorials.
-</div>
-
-<div class="box-sub">
-How to download books ?
-</div>
-
-</div>
-
-</a>
-
-<div class="box"
-onclick="shareBook()">
-
-<i class="fa-solid fa-share-nodes"></i>
-
-<div>
-
-<div class="box-title">
-Share this book
-</div>
-
-<div class="box-sub">
-Send this book to friends
-</div>
-
-</div>
-
-</div>
-
-<div class="box">
-
-<i class="fa-solid fa-file"></i>
-
-<div>
-
-<div class="box-title">
-File Size
-</div>
-
-<div class="box-sub">
-Compressed PDF File
-</div>
-
-</div>
-
-<div class="file-size"
-id="fileSize">
-</div>
-
-</div>
-
-<div class="copyright-text">
-
-© MULTIVERSE BOOKS | DESIGNED & DEVELOPED BY MADxPRINCE
-
-</div>
-
-</div>
-
-<script>
-
-let vmj=typeof globalThis!=='undefined'?globalThis:typeof window!=='undefined'?window:global,vme_fa36e1=vmj['vme_fa36e1']||(vmj['vme_fa36e1']={});const vml_9501e1=(function(){var K=Object['defineProperty'],A=Object['create'],Z=Object['getOwnPropertyDescriptor'],q=Object['getOwnPropertyNames'],l=Object['getOwnPropertySymbols'],S=Object['setPrototypeOf'],U=Object['getPrototypeOf'],j=Function['prototype']['call'],B=Function['prototype']['apply'],z=Reflect['apply'],g=WeakMap['prototype']['set'],I=WeakMap['prototype']['get'],b=WeakMap['prototype']['has'],O=WeakSet['prototype']['add'],o=WeakSet['prototype']['has'];let c=['AQAIAQAAACgIHHNlc3Npb25TdG9yYWdlCA5nZXRJdGVtCBRsb2FkZXJEb25lBAEIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgYbG9hZGVyU2NyZWVuCAxyZW1vdmUEAAgQbWFpblNpdGUICnN0eWxlCAhmbGV4CA5kaXNwbGF5CBZyZW5kZXJCb29rcwgOc2V0SXRlbQgIdHJ1ZQQCBAEFuAsIFHNldFRpbWVvdXR6BACWAQAIBAGMAQQCAAA2ADYEAwAEAW4AaAQElgEACAQFjAEEBgAANgA2BAMABAFuAAgEB4wBBAgABABuAAYEBJYBAAgEBYwBBAkAADYANgQDAAQBbgQKjAEECwAEDI4BAAYGAAABAK4EBAgABABsAAYAAgBwBACWAQAIBA6MAQQCAAA2ADYEDwAANgA2BBAABAJuAAYEEQAAyAEEEgAEE5YBBBAABAJsAAYAAgBwAhBQ','AQAAIQAAAgIUCBJfMHg1NzljOWIIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgaYm9va0NvbnRhaW5lcgQBCAAIEmlubmVySFRNTAgKYm9va3MIDmZvckVhY2gEAjqqA6QDtgSWAQiMAQA2NgButASuBACOAQauBAiMAQDIATY2AG4GrAMCcAQABAEEAAQBAAQCBAMAAAQEBAEEAAQABAUEBgAGAAACAAAECAQJAAAABAQEAQAEAAAA','AQAIIQAABgQmCBJfMHgxZmYxMTcIEF8weDgyM2JjCBZzZWFyY2hJbnB1dAgKdmFsdWUIFnRvTG93ZXJDYXNlBAAIEGRvY3VtZW50CCBxdWVyeVNlbGVjdG9yQWxsCBQuYm9vay1jYXJkBAECCA5mb3JFYWNoBAMIHGdldEVsZW1lbnRCeUlkCBBub3RGb3VuZAgKc3R5bGUICG5vbmUICGZsZXgIDmRpc3BsYXlmBACqAwQCpAMEALYEBAG2BAYAAAIArgQEA4wBAAgEBIwBBAUABABuBACyBAQGlgEACAQHjAEECAAANgA2BAkABAFuBAAOBAoABAGyBAQADAAIBAuMAQQMAADIAQA2ADYECQAEAW4ABgQGlgEACAQNjAEEDgAANgA2BAkABAFuBA+MAQQBrgQAaAQQAABkBBEABBKOAQAGBACsAwACAHAEVFpYXA==','AQAAAQAMAD4IEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgYZG93bmxvYWRQYWdlBAEICnN0eWxlCAhmbGV4CA5kaXNwbGF5CAhib2R5CAxoaWRkZW4IEG92ZXJmbG93CBJib29rVGl0bGUIEmlubmVyVGV4dAgYcHJldmlld0ltYWdlCAZzcmMIEGZpbGVTaXplCA5wZGZMaW5rCAhocmVmCBZ5b3V0dWJlTGluawggY3VycmVudEJvb2tUaXRsZQgcY3VycmVudFBkZkxpbmsIGmN1cnJlbnRCb29rSWQIDmhpc3RvcnkIEnB1c2hTdGF0ZQgQZG93bmxvYWQICHBhZ2UIAAgMd2luZG93CBBsb2NhdGlvbggQcGF0aG5hbWUIDD9ib29rPQQD3gGWAQQACACMAQQBAAQCNgA2AAAEA24EAYwBBAQABAWOAQQGBgCWAQQAjAEEB4wBBAQABAiOAQQJBgCWAQQACACMAQQBAAQKNgA2AAAEA24EARAEAI4BBAsGAJYBBAAIAIwBBAEABAw2ADYAAAQDbgQBEAQBjgEEDQYAlgEEAAgAjAEEAQAEDjYANgAABANuBAEQBAKOAQQLBgCWAQQACACMAQQBAAQPNgA2AAAEA24EARAEA44BBBAGAJYBBAAIAIwBBAEABBE2ADYAAAQDbgQBEAQEjgEEEAYAEAQACACwBAYBAAEABgAQBAMIALAEBgIAAQAGABAEBQgAsAQGAAABAAYAlgEEFQgAjAEEFpoBAAgAAAQXpgEEGDYANgAABBk2ADYAlgEEGowBBBuMAQQcAAQdFAAQBAUUADYANgAABB5uBAMGAAIAcAA=','AQAAAQAAABwIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgYZG93bmxvYWRQYWdlBAEICnN0eWxlCAhub25lCA5kaXNwbGF5CAhib2R5CAhhdXRvCBBvdmVyZmxvdwgMd2luZG93CA5oaXN0b3J5CAhiYWNrBAA2BACWAQAIBAGMAQQCAAA2ADYEAwAEAW4EBIwBBAUABAaOAQAGBACWAQQHjAEEBIwBBAgABAmOAQAGBAqWAQQLjAEACAQMjAEEDQAEAG4ABgACAHA=','AQAIAQAAAiQIDHdpbmRvdwgQbG9jYXRpb24IDG9yaWdpbggQcGF0aG5hbWUIDD9ib29rPQgaY3VycmVudEJvb2tJZAgSbmF2aWdhdG9yCApzaGFyZQggY3VycmVudEJvb2tUaXRsZQgKdGl0bGUIJERvd25sb2FkIHRoaXMgYm9vawgIdGV4dAgGdXJsBAEIEmNsaXBib2FyZAgSd3JpdGVUZXh0CBZMaW5rIENvcGllZAgKYWxlcnRmlgEEAIwBBAGMAQQClgEEAIwBBAGMAQQDFAAABAQUAK4EBgAAAQAUAA4EAJYBBAaMAQQHaACWAQQGCACMAQQHmgEACACuBAYBAAEApgEECQgAAAQKpgEECwgADAQApgEEDDYANgAABA1uBAEGAGQAlgEEBowBBA4IAIwBBA8MBAA2ADYAAAQNbgQBBgAABBCWAQQRAAQNbAQBBgACAHAABBxEQmI=','AQAAAQAAABwIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgQc2lkZU1lbnUEAQgSY2xhc3NMaXN0CAZhZGQIDGFjdGl2ZQgWbWVudU92ZXJsYXkICnN0eWxlCApibG9jawgOZGlzcGxheQgIYm9keQgMaGlkZGVuCBBvdmVyZmxvd0oEAAAEAQQCAAAEAwQBBAQABAUEBgAABAMEAQAEAAAEAQQHAAAEAwQBBAgECQQKAAQABAsECAQMBA0AAACWAQiMAQA2NgBujAEIjAEANjYAbgaWAQiMAQA2NgBujAEAjgEGlgGMAYwBAI4BBgJw','AQAAAQAAABwIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgQc2lkZU1lbnUEAQgSY2xhc3NMaXN0CAxyZW1vdmUIDGFjdGl2ZQgWbWVudU92ZXJsYXkICnN0eWxlCAhub25lCA5kaXNwbGF5CAhib2R5CAhhdXRvCBBvdmVyZmxvd0oEAAAEAQQCAAAEAwQBBAQABAUEBgAABAMEAQAEAAAEAQQHAAAEAwQBBAgECQQKAAQABAsECAQMBA0AAACWAQiMAQA2NgBujAEIjAEANjYAbgaWAQiMAQA2NgBujAEAjgEGlgGMAYwBAI4BBgJw','AQAAAQAAABAIEmNsb3NlTWVudQQACAx3aW5kb3cIEHNjcm9sbFRvCAZ0b3AIDHNtb290aAgQYmVoYXZpb3IEASoGAAABAK4EBAEABABsAAYEApYBAAgEA4wBAJoBAAgEAQAEBKYBAAgEBQAEBqYBADYANgQHAAQBbgAGAAIAcA==','AQAAAQAAACgIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgSYWJvdXRQYWdlBAEIEmNsYXNzTGlzdAgGYWRkCAxhY3RpdmUIDmhpc3RvcnkIEnB1c2hTdGF0ZQgKYWJvdXQICHBhZ2UIAAgMI2Fib3V0BAMICGJvZHkICnN0eWxlCAxoaWRkZW4IEG92ZXJmbG93CBJjbG9zZU1lbnUEAF4EAAAEAQQCAAAEAwQBBAQABAUEBgAABAMEAQAEBwAECAAABAkECgAABAsAAAQMAAAEDQQDAAQABA4EDwQQBBEABgAAAQAEEwQAAAAAlgEIjAEANjYAbowBCIwBADY2AG4GlgEIjAGaAQgApgE2NgA2NgA2NgBuBpYBjAGMAQCOAQauBABsBgJw','AQAAAQAAABYIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgSYWJvdXRQYWdlBAEIEmNsYXNzTGlzdAgMcmVtb3ZlCAxhY3RpdmUICGJvZHkICnN0eWxlCAhhdXRvCBBvdmVyZmxvdzKWAQQACACMAQQBAAQCNgA2AAAEA24EAYwBBAQIAIwBBAUABAY2ADYAAAQDbgQBBgCWAQQAjAEEB4wBBAgABAmOAQQKBgACAHAA','AQAAAQAAAA4IEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgYcG9wdXBPdmVybGF5BAEICnN0eWxlCAhub25lCA5kaXNwbGF5HAQAAAQBBAIAAAQDBAEEBAQFBAYAAACWAQiMAQA2NgBujAEAjgEGAnA=','AQAAAQAAAAoIDHdpbmRvdwgIb3BlbghqaHR0cHM6Ly93aGF0c2FwcC5jb20vY2hhbm5lbC8wMDI5VmI2TkJaeDF5VDJHQnlUVFZmMkEIDF9ibGFuawQCHAQAlgEACAQBjAEEAgAANgA2BAMAADYANgQEAAQCbgAGAAIAcA==','AQAIAQAAACIIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgYZG93bmxvYWRQYWdlBAEICnN0eWxlCA5kaXNwbGF5CAhmbGV4CAhub25lCAhib2R5CAhhdXRvCBBvdmVyZmxvdwgSYWJvdXRQYWdlCBJjbGFzc0xpc3QIEGNvbnRhaW5zCAxhY3RpdmUIDHJlbW92ZQgcZGlzY2xhaW1lclBhZ2XiAZYBCIwBADY2AG6MAYwBAFRolgEIjAEANjYAbowBAI4BBpYBjAGMAQCOAQaWAQiMAQA2NgBujAEIjAEANjYAbmiWAQiMAQA2NgBujAEIjAEANjYAbgaWAYwBjAEAjgEGlgEIjAEANjYAbowBCIwBADY2AG5olgEIjAEANjYAbowBCIwBADY2AG4GlgGMAYwBAI4BBgJwBAAABAEEAgAABAMEAQQEBAUEBgAABAAABAEEAgAABAMEAQQEBAcEBQAEAAQIBAQECQQKAAQAAAQBBAsAAAQDBAEEDAAEDQQOAAAEAwQBAAQAAAQBBAsAAAQDBAEEDAAEDwQOAAAEAwQBAAQABAgEBAQJBAoABAAABAEEEAAABAMEAQQMAAQNBA4AAAQDBAEABAAABAEEEAAABAMEAQQMAAQPBA4AAAQDBAEABAAECAQEBAkECgAAAAYYPl6OAa4B3gE=','AQAAAQAAAA4IEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgYcG9wdXBPdmVybGF5BAEICnN0eWxlCAhmbGV4CA5kaXNwbGF5HAQAAAQBBAIAAAQDBAEEBAQFBAYAAACWAQiMAQA2NgBujAEAjgEGAnA=','AQAIIQAABgImCBJfMHg1MjAxMTQIHlVSTFNlYXJjaFBhcmFtcwgMd2luZG93CBBsb2NhdGlvbggMc2VhcmNoBAEIBmdldAgIYm9vawgKYm9va3MICGZpbmQEBAgKdGl0bGUICmltYWdlCAhzaXplCAZwZGYIDnlvdXR1YmUIBGlkCCBvcGVuRG93bmxvYWRQYWdlBAZuBACqAwQBpAMEALYEBAGWAQQClgEEA4wBBASMAQQFAAQB0AEEAA4EAAwACAQGjAEEBwAANgA2BAUABAFuBAC0BAQArgQAQABoAAIAcAYAAAIArgQACAQJjAEECgAAyAEANgA2BAUABAFuBAEOBAEMAGgEAQwEC4wBBAEMBAyMAQQBDAQNjAEEAQwEDowBBAEMBA+MAQQBDAQQjAEGAQACAK4EBBIABAZsAAYEAKwDAAIAcAQqMEZo','AQAAAQAAACgIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgcZGlzY2xhaW1lclBhZ2UEAQgSY2xhc3NMaXN0CAZhZGQIDGFjdGl2ZQgOaGlzdG9yeQgScHVzaFN0YXRlCAhkbWNhCAhwYWdlCAAICiNkbWNhBAMICGJvZHkICnN0eWxlCAxoaWRkZW4IEG92ZXJmbG93CBJjbG9zZU1lbnUEAF4EAAAEAQQCAAAEAwQBBAQABAUEBgAABAMEAQAEBwAECAAABAkECgAABAsAAAQMAAAEDQQDAAQABA4EDwQQBBEABgAAAQAEEwQAAAAAlgEIjAEANjYAbowBCIwBADY2AG4GlgEIjAGaAQgApgE2NgA2NgA2NgBuBpYBjAGMAQCOAQauBABsBgJw','AQAAAQAAABYIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgcZGlzY2xhaW1lclBhZ2UEAQgSY2xhc3NMaXN0CAxyZW1vdmUIDGFjdGl2ZQgIYm9keQgKc3R5bGUICGF1dG8IEG92ZXJmbG93MpYBBAAIAIwBBAEABAI2ADYAAAQDbgQBjAEEBAgAjAEEBQAEBjYANgAABANuBAEGAJYBBACMAQQHjAEECAAECY4BBAoGAAIAcAA=','AQAAAQAAAAgIDmNvbnNvbGUIBmxvZwgmVGVsZWdyYW0gQm90IE9wZW5lZAQBFgQAAAQBBAIAAAQDBAEAAACWAQiMAQA2NgBuBgJw'],X=['AQEAAQAAAAYIEl8weDVmMTVjYQgMcmVtb3ZlBAAQBACqAwQApAMGAAACAK4EAAgEAYwBBAIABABuAAY=','AQEAIQAAAAImCBJfMHg1ZjE1Y2EIEGRvY3VtZW50CBxnZXRFbGVtZW50QnlJZAgYbG9hZGVyU2NyZWVuBAEICnN0eWxlCAIwCA5vcGFjaXR5CAxoaWRkZW4IFHZpc2liaWxpdHkIEG1haW5TaXRlCAhmbGV4CA5kaXNwbGF5CBZyZW5kZXJCb29rcwQABAAFvAIIFHNldFRpbWVvdXQEAlqqAwQApAMEAbYEBACWAQQBCACMAQQCAAQDNgA2AAAEBG4EAbQEBACuBAQAjAEEBQAEBo4BBAcGAK4EBACMAQQFAAQIjgEECQYAlgEEAQgAjAEEAgAECjYANgAABARuBAGMAQQFAAQLjgEEDAYArgQGAAADAAAEDmwEAAYAAAQPyAEAAAQQlgEEEQAEEmwEAgYA','AQEAAQACABoIEl8weDU3OWM5YggSaW5uZXJIVE1MCEgKPGRpdiBjbGFzcz0iYm9vay1jYXJkIj4KCjxpbWcgc3JjPSIICmltYWdlCJgBIgpjbGFzcz0iYm9vay1pbWFnZSI+Cgo8ZGl2IGNsYXNzPSJib29rLWRldGFpbHMiPgoKPGRpdiBjbGFzcz0iYm9vay10aXRsZSI+CggKdGl0bGUIhAEKPC9kaXY+Cgo8YnV0dG9uIGNsYXNzPSJkb3dubG9hZC1idG4iCm9uY2xpY2s9Im9wZW5Eb3dubG9hZFBhZ2UoCicICCcsCicICHNpemUIBnBkZggOeW91dHViZQgEaWQIogEnCikiPgoKPGkgY2xhc3M9ImZhLXNvbGlkIGZhLWRvd25sb2FkIj48L2k+CgpEb3dubG9hZAoKPC9idXR0b24+Cgo8L2Rpdj4KCjwvZGl2PgpyBACqAwQApAMGAAACAK4EAAgEAYwBBAIABAAQBAOMAQA6ABQEBAAAFAQAEAQFjAEAOgAUBAYAABQEABAEBYwBADoAFAQHAAAUBAAQBAOMAQA6ABQEBwAAFAQAEAQIjAEAOgAUBAcAABQEABAECYwBADoAFAQHAAAUBAAQBAqMAQA6ABQEBwAAFAQAEAQLjAEAOgAUBAwAABQAFAQBjgEABg==','AQEIAQACAhwIGnF1ZXJ5U2VsZWN0b3IIFi5ib29rLXRpdGxlBAEIEmlubmVyVGV4dAgWdG9Mb3dlckNhc2UEAAgQaW5jbHVkZXMIEl8weDFmZjExNwgKc3R5bGUICmJsb2NrCA5kaXNwbGF5AwgQXzB4ODIzYmMICG5vbmVQqgMEAKQDBAAQBAAIAIwBBAAABAE2ADYAAAQCbgQBjAEEAwgAjAEEBAAEBW4EAA4EAQwEAQgAjAEEBq4EBgAAAgA2ADYAAAQCbgQBaAAQBACMAQQIAAQJjgEECgYAAAQLCACwBAYBAAIABgBkABAEAIwBBAgABA2OAQQKBgAEMEZEUA==','AQEAAQACAAQIBGlkCBJfMHg1MjAxMTQOqgOkAxCMAa4EVHAEAAQABAAEAAYAAAIAAAA='],E={'0':0x76,'1':0xcc,'2':0x124,'3':0x113,'4':0x1b6,'5':0x1c4,'6':0x8a,'7':0x163,'8':0x106,'9':0x1ef,'10':0x1a1,'11':0xbe,'12':0x15c,'13':0x1e1,'14':0x12d,'15':0x172,'16':0x3f,'17':0x1d7,'18':0xd2,'19':0x51,'20':0x102,'21':0xfd,'22':0x143,'23':0x5e,'24':0x11e,'25':0x162,'26':0x1d4,'27':0xa5,'28':0x120,'29':0x107,'32':0x1b4,'40':0x7d,'41':0x1d,'42':0x10a,'43':0x78,'44':0xba,'45':0x139,'46':0x44,'47':0x184,'50':0x1df,'51':0x152,'52':0x125,'53':0x6b,'54':0x1c,'55':0x90,'56':0x137,'57':0x73,'58':0x13c,'59':0xdd,'60':0x1a3,'61':0x12c,'62':0xd4,'63':0x1b9,'64':0xab,'65':0x8c,'70':0x115,'71':0x1a2,'72':0xf2,'73':0x1dc,'74':0xaf,'75':0x7f,'76':0x38,'77':0x13b,'78':0x1fa,'79':0xa8,'80':0x1f6,'81':0x16f,'82':0x1a4,'83':0x153,'84':0x7e,'90':0x121,'91':0x2f,'92':0x1,'93':0x14c,'94':0xbf,'95':0xf5,'100':0x132,'101':0xd1,'102':0xea,'103':0x1ab,'104':0x12f,'105':0x135,'106':0x187,'107':0x8f,'110':0x122,'111':0x1a5,'112':0x159,'120':0x173,'121':0x1a,'122':0x94,'123':0x1ba,'124':0x1bb,'125':0x91,'126':0x167,'127':0x3e,'128':0xb4,'129':0x16,'130':0x57,'131':0x98,'132':0x14d,'140':0x46,'141':0x104,'142':0x15d,'143':0x1a9,'144':0xfb,'145':0x53,'146':0x99,'147':0x11b,'148':0x16d,'149':0x198,'160':0x4d,'161':0x11,'162':0x136,'163':0xfa,'164':0x111,'165':0xbc,'166':0xf9,'167':0xf,'168':0x1b5,'169':0x64,'180':0xb2,'181':0xe8,'182':0x1d8,'183':0xc9,'184':0xa9,'185':0xee,'200':0x195,'201':0x41,'202':0x16a,'210':0x1bc,'213':0x13e,'214':0x31,'220':0xa4,'250':0x13d,'251':0x1a0,'252':0x3c,'253':0x84,'254':0x1cd,'255':0x142,'256':0xa0,'257':0x1aa,'258':0x6,'259':0x109,'260':0x186,'261':0x18e,'262':0x8d,'263':0x1b,'264':0xb,'265':0x80,'266':0x19,'267':0x13f,'268':0xe7,'270':0xcb,'271':0x1f2,'272':0x170,'273':0x52,'274':0x12b,'275':0x9d,'276':0x18a,'277':0x60,'278':0x12e,'279':0xc6,'280':0xf0,'281':0x1de,'282':0x40,'283':0x1f,'284':0x9,'285':0x118,'286':0x175};const u=0x1,C=0x2,y=0x3,v=0x4,R=0x78,a=0x79,n=0x7a,P=typeof 0x0n,F=[],G=function(){throw new TypeError('\x27caller\x27,\x20\x27callee\x27,\x20and\x20\x27arguments\x27\x20properties\x20may\x20not\x20be\x20accessed\x20on\x20strict\x20mode\x20functions\x20or\x20the\x20arguments\x20objects\x20for\x20calls\x20to\x20them');};Object['preventExtensions'](G);let N=new WeakSet(),V=new WeakSet();const p=Symbol();let t={'__proto__':null},L={'__proto__':null},D=0x1;function s(A9,AK){let AA=A9[p];AA===undefined&&(AA=D++,A9[p]=AA),t[AA]=AK,L[AA]=A9;}function f(A9){let AK=A9[p];if(AK===undefined)return undefined;return L[AK]===A9?t[AK]:undefined;}function m(A9){let AK=A9[p];return AK!==undefined&&L[AK]===A9;}let k=new WeakMap(),J=[],H=Array['prototype'][Symbol['iterator']],M=Symbol['iterator'],r=null,d=null,h=null,x=null,T=null;try{let A9=function*(){};r=U(A9),d=r&&r['prototype'];}catch(AK){}try{let AA=async function*(){};h=U(AA),x=h&&h['prototype'];}catch(AZ){}try{let Aq=async function(){};T=U(Aq);}catch(Al){}function Q(Ae,AS,AU){try{K(Ae,AS,AU);}catch(Aj){}}function w(Ae,AS){let AU=new Array(AS),Aj=![];for(let Az=AS-0x1;Az>=0x0;Az--){let Ag=Ae();Ag&&typeof Ag==='object'&&o['call'](N,Ag)?(Aj=!![],AU[Az]=Ag):AU[Az]=Ag;}if(!Aj)return AU;let AB=[];for(let AI=0x0;AI<AS;AI++){let Ab=AU[AI];if(Ab&&typeof Ab==='object'&&o['call'](N,Ab)){let AO=Ab['value'];if(Array['isArray'](AO)){for(let Ao=0x0;Ao<AO['length'];Ao++)AB['push'](AO[Ao]);}}else AB['push'](Ab);}return AB;}function Y(Ae){return typeof Ae==='object'||typeof Ae==='function';}function W(Ae){return{'value':Ae,'writable':!![],'configurable':!![]};}function K0(Ae,AS){return Ae&&Y(Ae)?Ae:AS;}function K1(Ae,AS){try{S(Ae,AS);}catch(AU){}}function K2(Ae,AS){let AU=Ae===null||Ae===undefined?undefined:Ae[AS];if(AU===null||AU===undefined)return undefined;if(typeof AU!=='function')throw new TypeError('Method\x20is\x20not\x20callable');return AU;}function K3(Ae){if(Ae===null||typeof Ae!=='object'&&typeof Ae!=='function')throw new TypeError('Iterator\x20result\x20'+Ae+'\x20is\x20not\x20an\x20object');}function K4(Ae){let AS=Ae['done'];return{'done':AS,'value':AS?Ae['value']:undefined};}function K5(Ae){let AS=K2(Ae,Symbol['asyncIterator']),AU,Aj;if(AS!==undefined)AU=z(AS,Ae,[]),Aj=![];else{let Az=K2(Ae,Symbol['iterator']);if(Az===undefined)throw new TypeError(typeof Ae+'\x20is\x20not\x20iterable');AU=z(Az,Ae,[]),Aj=!![];}if(AU===null||typeof AU!=='object')throw new TypeError('Iterator\x20method\x20returned\x20a\x20non-object\x20value');let AB=AU['next'];if(typeof AB!=='function')throw new TypeError('Iterator\x20next\x20is\x20not\x20a\x20function');return{'iter':AU,'nextMethod':AB,'isSync':Aj};}function K6(Ae){let AS=[];for(let AU in Ae){AS['push'](AU);}return AS;}function K7(Ae){return Array['prototype']['slice']['call'](Ae);}function K8(Ae){return typeof Ae==='function'&&Ae['prototype']?Ae['prototype']:Ae;}function K9(Ae){if(typeof Ae==='function')return U(Ae);let AS=U(Ae),AU=AS&&Z(AS,'constructor'),Aj=AU&&AU['value'],AB=Aj&&typeof Aj==='function'&&(Aj['prototype']===AS||U(Aj['prototype'])===U(AS));if(AB)return U(AS);return AS;}function KK(Ae,AS){let AU=Ae;while(AU!==null){let Aj=Z(AU,AS);if(Aj)return{'desc':Aj,'proto':AU};AU=U(AU);}return{'desc':null,'proto':Ae};}function KA(Ae,AS){let AU=Ae;while(AU){let Aj=AU['_$rMjli4'];if(Aj>=0x0){let AB=AU['_$bQrsS0'];if(AB){let Az=AS(AB,Aj);if(Az!==undefined)return Az;}}AU=AU['_$nSPtWf'];}}function KZ(Ae,AS){KA(Ae,function(AU,Aj){AU[Aj]===AU&&(AU[Aj]=AS);});}function Kq(Ae){return KA(Ae,function(AS,AU){let Aj=AS[AU];if(Aj!==AS&&Aj!==undefined)return Aj;});}function Kl(Ae,AS){var AU=Ae[AS],Aj=function(){vme_fa36e1['_$jVviIS']=!![];var AB=vme_fa36e1['_$HL1Tk0'];vme_fa36e1['_$HL1Tk0']=Ae;try{return Reflect['apply'](AU,this,arguments);}finally{vme_fa36e1['_$HL1Tk0']=AB;}};Object['defineProperties'](Aj,{'length':{'value':AU['length'],'configurable':!![]},'name':{'value':AU['name'],'configurable':!![]}}),Ae[AS]=Aj,(vme_fa36e1['_$rIYp6L']||(vme_fa36e1['_$rIYp6L']=new WeakMap()))['set'](Aj,Ae);}vme_fa36e1['_$4DTnWr']=Kl;function Ke(Ae,AS){if(Ae[0x2]===undefined||!AS)return;let AU=Ae[0x8][Ae[0x2]];Q(AS,'name',{'value':AU,'writable':![],'enumerable':![],'configurable':!![]});}function KS(Ae,AS,AU){if(!Ae||AS[0xf]||AS[0x6]||AS[0x3])return;!m(Ae)&&s(Ae,{'b':AS,'e':AU,'c':AS});}function KU(Ae,AS,AU,Aj,AB,Az){let Ag;if(Az){Aj?Ag={'GTuaVy'(){'use strict';let AI=new.target!==undefined?new.target:vme_fa36e1['_$lgbdxE'];return Ae(AS,arguments,AU,Ag,AI,this);}}['GTuaVy']:Ag={'GTuaVy'(){let AI=new.target!==undefined?new.target:vme_fa36e1['_$lgbdxE'];return Ae(AS,arguments,AU,Ag,AI,this);}}['GTuaVy'];try{delete Ag['prototype'];}catch(AI){}}else Aj?Ag=function Ab(){'use strict';let AO=new.target!==undefined?new.target:vme_fa36e1['_$lgbdxE'];return Ae(AS,arguments,AU,Ag,AO,this);}:Ag=function AO(){let Ao=new.target!==undefined?new.target:vme_fa36e1['_$lgbdxE'];return Ae(AS,arguments,AU,Ag,Ao,this);};return s(Ag,{'b':AS,'e':AU}),Ag;}function Kj(Ae,AS,AU,Aj,AB){let Az;Aj?Az={'GTuaVy'(){'use strict';let Ag=new.target!==undefined?new.target:vme_fa36e1['_$lgbdxE'];return Ae(AS,arguments,AU,Az,Ag,undefined,this);}}['GTuaVy']:Az={'GTuaVy'(){let Ag=new.target!==undefined?new.target:vme_fa36e1['_$lgbdxE'];return Ae(AS,arguments,AU,Az,Ag,undefined,this);}}['GTuaVy'];if(T)K1(Az,T);return Az;}function KB(Ae,AS,AU,Aj,AB,Az,Ag){let AI;AB?AI={'GTuaVy'(){'use strict';return Ae(AS,arguments,AU,AI,vme_fa36e1['_$HL1Tk0'],this);}}['GTuaVy']:AI={'GTuaVy'(){return Ae(AS,arguments,AU,AI,vme_fa36e1['_$HL1Tk0'],this);}}['GTuaVy'];O['call'](Aj,AI);let Ab=Ag?h:r,AO=Ag?x:d;if(Ab)K1(AI,Ab);try{K(AI,'prototype',{'value':AO?A(AO):A({}),'writable':!![],'enumerable':![],'configurable':![]});}catch(Ao){}return AI;}function Kz(Ae,AS,AU,Aj){let AB=vme_fa36e1['_$HL1Tk0'],Az;return Az={'GTuaVy':(...Ag)=>{return AB!==undefined&&(vme_fa36e1['_$jVviIS']=!![],vme_fa36e1['_$HL1Tk0']=AB),Ae(AS,Ag,AU,Az,undefined,Aj);}}['GTuaVy'],Az;}function Kg(Ae,AS,AU,Aj){let AB;AB={'GTuaVy':(...Az)=>{return Ae(AS,Az,AU,AB,undefined,undefined,Aj);}}['GTuaVy'];if(T)K1(AB,T);return AB;}function KI(Ae,AS,AU,Aj,AB,Az){let Ag=[void 0x0,void 0x0,void 0x0,void 0x0,void 0x0,void 0x0,void 0x0,void 0x0],AI=0x0,Ab=new Array((Ae[0x0]||0x0)+(Ae[0x10]||0x0)),AO=0x0,Ao=Ae[0x8],Ac=Ae[0xa],AX=Ae[0xb]||F,AE=Ae[0x17]||F,Au=Ac['length']>>0x1,AC=(Ae[0x0]*0x1f^Ae[0x10]*0x11^Au*0xd^Ao['length']*0x7)>>>0x0&0x3,Ay,Av,AR;switch(AC){case 0x1:Ay=0x1,Av=0x0,AR=0x1;break;case 0x2:Ay=0x0,Av=Au,AR=0x0;break;case 0x3:Ay=Au,Av=0x0,AR=0x0;break;default:Ay=0x0,Av=0x1,AR=0x1;break;}let Aa=null,An=null,AP=![],AF=undefined,AG=![],AN=0x0,AV=![],Ap=0x0,At=!!Ae[0x1],AL=!!Ae[0x4],AD=!!Ae[0xe],As=!!Ae[0x14],Af=Az,Am=!!Ae[0x3];!At&&!Am&&(Az===undefined||Az===null)&&(Az=vmj);let Ak=Z0=>{Ag[AI++]=Z0;},AJ=()=>Ag[--AI],AH={['_$bQrsS0']:new Array(Ae[0x7]||0x0),['_$dPxYjd']:null,['_$rMjli4']:-0x1,['_$nSPtWf']:AU};if(AS){let Z0=Ae[0x0]||0x0;for(let Z1=0x0,Z2=AS['length']<Z0?AS['length']:Z0;Z1<Z2;Z1++){Ab[Z1]=AS[Z1];}}let AM=(At||!AL)&&AS?K7(AS):null,Ar=null,Ad=![],Ah=Ab['length'],Ax=null,AT=0x0;Ke(Ae,Aj),KS(Aj,Ae,AU);while(AO<Au){try{while(AO<Au){let Z3=AO<<AR,Z4=Ac[Ay+Z3],Z5=Ac[Av+Z3];var AQ,Aw,Ai,AY;!Aw&&(Aw=function(Z6,Z7){switch(Z6){case 0x3:{Ag[--AI],AO++;break;}case 0x4e:{let Z8=Ag[--AI],Z9=Ao[Z7];Z8===null||Z8===undefined?Ag[AI++]=undefined:Ag[AI++]=Z8[Z9];AO++;break;}case 0x1d:{if(typeof Ag[AI-0x1]==='symbol')throw new TypeError('Cannot\x20convert\x20a\x20Symbol\x20value\x20to\x20a\x20string');Ag[AI-0x1]=String(Ag[AI-0x1]),AO++;break;}case 0xd:{let ZK=Ag[--AI],ZA=Ag[--AI];Ag[AI++]=ZA/ZK,AO++;break;}case 0x2e:{let ZZ=Ag[--AI],Zq=Ag[--AI];Ag[AI++]=Zq>ZZ,AO++;break;}case 0x53:{let Zl=Ag[--AI],Ze=Ag[--AI],ZS=Ao[Z7];K(Ze,ZS,{'value':Zl,'writable':!![],'enumerable':!![],'configurable':!![]});typeof Zl==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],Zl,Ze));AO++;break;}case 0x29:{let ZU=Ag[--AI],Zj=Ag[--AI];Ag[AI++]=Zj!=ZU,AO++;break;}case 0x2b:{let ZB=Ag[--AI],Zz=Ag[--AI];Ag[AI++]=Zz!==ZB,AO++;break;}case 0x7:{Ab[Z7]=Ag[--AI],AO++;break;}case 0x4b:{let Zg=Ao[Z7],ZI;if(vme_fa36e1['_$6q9N3P']&&Zg in vme_fa36e1['_$6q9N3P'])throw new ReferenceError('Cannot\x20access\x20\x27'+Zg+'\x27\x20before\x20initialization');if(Zg in vme_fa36e1)ZI=vme_fa36e1[Zg];else{if(Zg in vmj)ZI=vmj[Zg];else throw new ReferenceError(Zg+'\x20is\x20not\x20defined');}Ag[AI++]=ZI,AO++;break;}case 0x47:{let Zb=Ag[--AI],ZO=Ag[--AI],Zo=Ao[Z7];if(ZO===null||ZO===undefined)throw new TypeError('Cannot\x20set\x20properties\x20of\x20'+ZO+'\x20(setting\x20'+'\x27'+String(Zo)+'\x27'+')');if(At){let Zc=typeof ZO==='object'||typeof ZO==='function'?ZO:Object(ZO);if(!Reflect['set'](Zc,Zo,Zb,ZO))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(Zo)+'\x27\x20of\x20object');}else ZO[Zo]=Zb;Ag[AI++]=Zb,AO++;break;}case 0x37:{let ZX=Ag[--AI],ZE=Ag[--AI],Zu=Ag[--AI];if(typeof ZE!=='function')throw new TypeError(ZE+'\x20is\x20not\x20a\x20function');let ZC=vme_fa36e1['_$rIYp6L'],Zy=ZC&&I['call'](ZC,ZE);!Zy&&ZC&&(ZE===j||ZE===B)&&(Zy=I['call'](ZC,Zu));let Zv=vme_fa36e1['_$HL1Tk0'];Zy&&(vme_fa36e1['_$jVviIS']=!![],vme_fa36e1['_$HL1Tk0']=Zy);let ZR;try{if(ZX===0x0)ZR=z(ZE,Zu,F);else{if(ZX===0x1){let Za=Ag[--AI];ZR=Za&&typeof Za==='object'&&o['call'](N,Za)?z(ZE,Zu,Za['value']):z(ZE,Zu,[Za]);}else ZR=z(ZE,Zu,w(AJ,ZX));}Ag[AI++]=ZR;}finally{Zy&&(vme_fa36e1['_$jVviIS']=![],vme_fa36e1['_$HL1Tk0']=Zv);}AO++;break;}case 0x5:{let Zn=Ag[AI-0x1];Ag[AI-0x1]=Ag[AI-0x2],Ag[AI-0x2]=Zn,AO++;break;}case 0x36:{l8:{let ZP=Ag[--AI],ZF=Ag[--AI];if(typeof ZF!=='function')throw new TypeError(ZF+'\x20is\x20not\x20a\x20function');let ZG=vme_fa36e1['_$rIYp6L'],ZN=!vme_fa36e1['_$HL1Tk0']&&!vme_fa36e1['_$lgbdxE']&&!(ZG&&I['call'](ZG,ZF))&&f(ZF);if(ZN){let ZD=ZN['c']||(ZN['c']=typeof ZN['b']==='object'?ZN['b']:A4(ZN['b']));if(ZD){let Zs;if(ZP===0x0)Zs=[];else{if(ZP===0x1){let Zm=Ag[--AI];Zs=Zm&&typeof Zm==='object'&&o['call'](N,Zm)?Zm['value']:[Zm];}else Zs=w(AJ,ZP);}let Zf=ZD[0x15];if(Zf&&ZD===Ae&&!ZD[0x17]&&ZN['e']===AU){!Ax&&(Ax=[]);Ax[AT++]=AO,Ax[AT++]=AI,Ax[AT++]=AS,Ax[AT++]=Ar,Ax[AT++]=AM,Ax[AT++]=AH;for(let Zk=0x0;Zk<Ah;Zk++){Ax[AT++]=Ab[Zk];}AS=Zs,Ar=null;if(ZD[0x4]){AM=null;let ZJ=ZD[0x0]||0x0;for(let ZH=0x0;ZH<ZJ&&ZH<Zs['length'];ZH++){Ab[ZH]=Zs[ZH];}for(let ZM=Zs['length']<ZJ?Zs['length']:ZJ;ZM<Ah;ZM++){Ab[ZM]=undefined;}AO=Zf;}else{AM=K7(Zs);for(let Zr=0x0;Zr<Ah;Zr++){Ab[Zr]=undefined;}AO=0x0;}break l8;}vme_fa36e1['_$jVviIS']?vme_fa36e1['_$jVviIS']=![]:vme_fa36e1['_$HL1Tk0']=undefined;Ag[AI++]=KI(ZD,Zs,ZN['e'],ZF,undefined,undefined),AO++;break l8;}}let ZV=vme_fa36e1['_$HL1Tk0'],Zp=vme_fa36e1['_$rIYp6L'],Zt=Zp&&I['call'](Zp,ZF);Zt?(vme_fa36e1['_$jVviIS']=!![],vme_fa36e1['_$HL1Tk0']=Zt):vme_fa36e1['_$HL1Tk0']=undefined;let ZL;try{if(ZP===0x0)ZL=ZF();else{if(ZP===0x1){let Zd=Ag[--AI];ZL=Zd&&typeof Zd==='object'&&o['call'](N,Zd)?z(ZF,undefined,Zd['value']):ZF(Zd);}else ZL=z(ZF,undefined,w(AJ,ZP));}Ag[AI++]=ZL;}finally{Zt&&(vme_fa36e1['_$jVviIS']=![]),vme_fa36e1['_$HL1Tk0']=ZV;}AO++;}break;}case 0x2c:{let Zh=Ag[--AI],Zx=Ag[--AI];Ag[AI++]=Zx<Zh,AO++;break;}case 0x39:{throw Ag[--AI];break;}case 0x51:{let ZT=Ag[--AI],ZQ=Ag[AI-0x1];ZT!==null&&ZT!==undefined&&Object['assign'](ZQ,ZT);AO++;break;}case 0x3b:{Aa['pop'](),AO++;break;}case 0x2:{Ag[AI++]=null,AO++;break;}case 0x18:{let Zw=Ag[--AI],Zi=Ag[--AI];Ag[AI++]=Zi<<Zw,AO++;break;}case 0x3d:{if(Aa&&Aa['length']>0x0){let ZY=Aa[Aa['length']-0x1];ZY['_$EMl7dv']===AO&&(ZY['_$CIy63E']!==undefined&&(An=ZY['_$CIy63E']),ZY['_es']!==undefined&&(AH=ZY['_es']),Aa['pop']());}AO++;break;}case 0x4f:{let ZW=Ag[--AI],q0=Ag[--AI];Ag[AI++]=q0 in ZW,AO++;break;}case 0x0:{Ag[AI++]=Ao[Z7],AO++;break;}case 0x4c:{let q1=Ag[--AI],q2=Ao[Z7];if(vme_fa36e1['_$6q9N3P']&&q2 in vme_fa36e1['_$6q9N3P'])throw new ReferenceError('Cannot\x20access\x20\x27'+q2+'\x27\x20before\x20initialization');let q3=!(q2 in vme_fa36e1)&&!(q2 in vmj);vme_fa36e1[q2]=q1;q2 in vmj&&(vmj[q2]=q1);q3&&(vmj[q2]=q1);Ag[AI++]=q1,AO++;break;}case 0x11:{let q4=Ag[--AI];Ag[AI++]=typeof q4===P?q4-0x1n:+q4-0x1,AO++;break;}case 0x33:{Ag[--AI]?AO=AX[AO]:AO++;break;}case 0x3a:{let q5=AE[AO];if(!Aa)Aa=[];Aa['push']({['_$2tZ6o0']:q5[0x0]>=0x0?q5[0x0]:undefined,['_$EMl7dv']:q5[0x1]>=0x0?q5[0x1]:undefined,['_$n9TFzh']:q5[0x2]>=0x0?q5[0x2]:undefined,['_$fPsSuL']:AI,'_ts':AO,'_es':AH}),AO++;break;}case 0x12:{let q6=Ag[--AI],q7=Ag[--AI];Ag[AI++]=q7**q6,AO++;break;}case 0x46:{let q8=Ag[--AI],q9=Ao[Z7];if(q8===null||q8===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+q8+'\x20(reading\x20'+'\x27'+String(q9)+'\x27'+')');Ag[AI++]=q8[q9],AO++;break;}case 0x1c:{let qK=Ag[--AI];Ag[AI++]=typeof qK===P?qK:+qK,AO++;break;}case 0xf:{Ag[AI-0x1]=-Ag[AI-0x1],AO++;break;}case 0x3e:{l9:{if(An!==null){AP=![],AG=![],AV=![];let qA=An;An=null;throw qA;}if(AP){if(Aa&&Aa['length']>0x0){let qq=Aa[Aa['length']-0x1];if(qq['_$EMl7dv']!==undefined){AO=qq['_$EMl7dv'];break l9;}}let qZ=AF;return AP=![],AF=undefined,AQ=qZ,0x1;}if(AG){if(Aa&&Aa['length']>0x0){let qe=Aa[Aa['length']-0x1];if(qe['_$EMl7dv']!==undefined){AO=qe['_$EMl7dv'];break l9;}}let ql=AN;AG=![],AN=0x0,AO=ql;break l9;}if(AV){if(Aa&&Aa['length']>0x0){let qU=Aa[Aa['length']-0x1];if(qU['_$EMl7dv']!==undefined){AO=qU['_$EMl7dv'];break l9;}}let qS=Ap;AV=![],Ap=0x0,AO=qS;break l9;}AO++;}break;}case 0x3c:{if(Z7===-0x2){}else Z7===-0x1?Ag[--AI]:AH['_$bQrsS0'][Z7]=Ag[--AI];AO++;break;}case 0x14:{let qj=Ag[--AI],qB=Ag[--AI];Ag[AI++]=qB&qj,AO++;break;}case 0x4a:{let qz,qg;Z7>=0x0?(qg=Ag[--AI],qz=Ao[Z7]):(qz=Ag[--AI],qg=Ag[--AI]);let qI=delete qg[qz];if(At&&!qI)throw new TypeError('Cannot\x20delete\x20property\x20\x27'+String(qz)+'\x27\x20of\x20object');Ag[AI++]=qI,AO++;break;}case 0x54:{let qb=Ag[--AI],qO=Ag[--AI],qo=Ag[--AI];K(qo,qO,{'value':qb,'writable':!![],'enumerable':!![],'configurable':!![]});typeof qb==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qb,qo));AO++;break;}case 0x16:{let qc=Ag[--AI],qX=Ag[--AI];Ag[AI++]=qX^qc,AO++;break;}case 0x6:{Ag[AI++]=Ab[Z7],AO++;break;}case 0x48:{let qE=Ag[--AI],qu=Ag[--AI];if(qu===null||qu===undefined){if(qE===Symbol['iterator'])throw new TypeError((qu===null?'object\x20null':'undefined')+'\x20is\x20not\x20iterable\x20(cannot\x20read\x20property\x20Symbol(Symbol.iterator))');throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+qu+'\x20(reading\x20'+(typeof qE==='symbol'?'\x27'+qE['toString']()+'\x27':typeof qE==='string'?'\x27'+qE+'\x27':typeof qE==='object'||typeof qE==='function'?'\x27<computed\x20key>\x27':'\x27'+String(qE)+'\x27')+')');}Ag[AI++]=qu[qE],AO++;break;}case 0x20:{Ag[AI-0x1]=!Ag[AI-0x1],AO++;break;}case 0x9:{AS[Z7]=Ag[--AI],AO++;break;}case 0xe:{let qC=Ag[--AI],qy=Ag[--AI];Ag[AI++]=qy%qC,AO++;break;}case 0x1b:{let qv=Ag[AI-0x3],qR=Ag[AI-0x2],qa=Ag[AI-0x1];Ag[AI-0x3]=qR,Ag[AI-0x2]=qa,Ag[AI-0x1]=qv,AO++;break;}case 0xc:{let qn=Ag[--AI],qP=Ag[--AI];Ag[AI++]=qP*qn,AO++;break;}case 0x15:{let qF=Ag[--AI],qG=Ag[--AI];Ag[AI++]=qG|qF,AO++;break;}case 0x3f:{lK:{let qN=AX[AO];if(Aa&&Aa['length']>0x0){let qV=Aa[Aa['length']-0x1];if(qV['_$EMl7dv']!==undefined&&(qN>=qV['_$n9TFzh']||qN<=qV['_ts'])){AG=!![],AN=qN,AO=qV['_$EMl7dv'];break lK;}}AO=qN;}break;}case 0x2a:{let qp=Ag[--AI],qt=Ag[--AI];Ag[AI++]=qt===qp,AO++;break;}case 0x38:{lA:{if(Aa&&Aa['length']>0x0){let qD=Aa[Aa['length']-0x1];if(qD['_$EMl7dv']!==undefined){AP=!![],AF=Ag[--AI],AO=qD['_$EMl7dv'];break lA;}}AP&&(AP=![],AF=undefined);let qL=Ag[--AI];if(AD&&qL===undefined&&!Ad)throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');return AQ=qL,0x1;}break;}case 0x40:{lZ:{let qs=AX[AO];if(Aa&&Aa['length']>0x0){let qf=Aa[Aa['length']-0x1];if(qf['_$EMl7dv']!==undefined&&(qs>=qf['_$n9TFzh']||qs<=qf['_ts'])){AV=!![],Ap=qs,AO=qf['_$EMl7dv'];break lZ;}}AO=qs;}break;}case 0x1:{Ag[AI++]=undefined,AO++;break;}case 0x2f:{let qm=Ag[--AI],qk=Ag[--AI];Ag[AI++]=qk>=qm,AO++;break;}case 0x32:{AO=AX[AO];break;}case 0xa:{let qJ=Ag[--AI],qH=Ag[--AI];Ag[AI++]=qH+qJ,AO++;break;}case 0xb:{let qM=Ag[--AI],qr=Ag[--AI];Ag[AI++]=qr-qM,AO++;break;}case 0x35:{let qd=Ag[--AI];qd!==null&&qd!==undefined?AO=AX[AO]:AO++;break;}case 0x4d:{Ag[AI++]={},AO++;break;}case 0x52:{let qh=Ag[--AI],qx=Ag[--AI];qx===null||qx===undefined?Ag[AI++]=undefined:Ag[AI++]=qx[qh];AO++;break;}case 0x4:{let qT=Ag[AI-0x1];Ag[AI++]=qT,AO++;break;}case 0x49:{let qQ=Ag[--AI],qw=Ag[--AI],qi=Ag[--AI];if(qi===null||qi===undefined)throw new TypeError('Cannot\x20set\x20properties\x20of\x20'+qi+'\x20(setting\x20'+(typeof qw==='symbol'?'\x27'+qw['toString']()+'\x27':typeof qw==='string'?'\x27'+qw+'\x27':typeof qw==='object'||typeof qw==='function'?'\x27<computed\x20key>\x27':'\x27'+String(qw)+'\x27')+')');if(At){let qY=typeof qi==='object'||typeof qi==='function'?qi:Object(qi);if(!Reflect['set'](qY,qw,qQ,qi))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(qw)+'\x27\x20of\x20object');}else qi[qw]=qQ;Ag[AI++]=qQ,AO++;break;}case 0x10:{let qW=Ag[--AI];Ag[AI++]=typeof qW===P?qW+0x1n:+qW+0x1,AO++;break;}case 0x28:{let l0=Ag[--AI],l1=Ag[--AI];Ag[AI++]=l1==l0,AO++;break;}case 0x34:{!Ag[--AI]?AO=AX[AO]:AO++;break;}case 0x2d:{let l2=Ag[--AI],l3=Ag[--AI];Ag[AI++]=l3<=l2,AO++;break;}case 0x17:{Ag[AI-0x1]=~Ag[AI-0x1],AO++;break;}case 0x8:{Ag[AI++]=AS[Z7],AO++;break;}case 0x1a:{let l4=Ag[--AI],l5=Ag[--AI];Ag[AI++]=l5>>>l4,AO++;break;}case 0x13:{Ag[AI-0x1]=+Ag[AI-0x1],AO++;break;}case 0x19:{let l6=Ag[--AI],l7=Ag[--AI];Ag[AI++]=l7>>l6,AO++;break;}}},Ai=function(Z6,Z7){switch(Z6){case 0x95:{let Z9=Ag[--AI],ZK=Ag[AI-0x1],ZA=Ao[Z7];K(ZK,ZA,{'set':Z9,'enumerable':![],'configurable':!![]}),AO++;break;}case 0xa7:{if(Z7===-0x1)Ag[AI++]=Symbol();else{let ZZ=Ag[--AI];Ag[AI++]=Symbol(ZZ);}AO++;break;}case 0x8d:{e1:{let Zq=Ag[--AI],Zl=Ag[AI-0x1];if(Zq===null){S(Zl['prototype'],null),S(Zl,Function['prototype']),Zl['_$gvIAXK']=null,AO++;break e1;}if(typeof Zq!=='function')throw new TypeError('Class\x20extends\x20value\x20'+String(Zq)+'\x20is\x20not\x20a\x20constructor\x20or\x20null');let Ze=![],ZS=m(Zq);if(!ZS)try{let ZU=A(Zq['prototype']),Zj=Zq['apply'](ZU,[]);Zj!==undefined&&Zj!==ZU&&(Ze=!![]);}catch(ZB){let Zz=ZB&&typeof ZB['message']==='string'?ZB['message']:'';(Zz['includes']('\x27new\x27')||Zz['includes']('constructor')||Zz['includes']('Illegal\x20constructor'))&&(Ze=!![]);}if(Ze){let Zg=Zl,ZI=vme_fa36e1,Zb='_$lgbdxE',ZO='_$fMMDMh',Zo='_$pa57wB';function Z8(...Zc){let ZX=A(Zq['prototype']);ZI[Zo]={'parent':Zq,'newTarget':new.target||Z8,'outer':Z8},ZI[ZO]=new.target||Z8;let ZE=Zb in ZI;!ZE&&(ZI[Zb]=new.target);try{let Zu=Zg['apply'](ZX,Zc);Zu!==undefined&&Zu!==null&&Y(Zu)&&(ZX=Zu);}finally{delete ZI[Zo],delete ZI[ZO],!ZE&&delete ZI[Zb];}return ZX;}Z8['prototype']=A(Zq['prototype']),Z8['prototype']['constructor']=Z8,S(Z8,Zq),q(Zg)['forEach'](function(Zc){Zc!=='prototype'&&Zc!=='length'&&Zc!=='name'&&Q(Z8,Zc,Z(Zg,Zc));});Zg['prototype']&&(q(Zg['prototype'])['forEach'](function(Zc){Zc!=='constructor'&&Q(Z8['prototype'],Zc,Z(Zg['prototype'],Zc));}),l(Zg['prototype'])['forEach'](function(Zc){Q(Z8['prototype'],Zc,Z(Zg['prototype'],Zc));}));Ag[--AI],Ag[AI++]=Z8,Z8['_$gvIAXK']=Zq,AO++;break e1;}S(Zl['prototype'],Zq['prototype']),S(Zl,Zq),Zl['_$gvIAXK']=Zq,AO++;}break;}case 0x8f:{let Zc=Ag[--AI],ZX=Ag[--AI],ZE=Ag[--AI],Zu=vme_fa36e1['_$HL1Tk0'],ZC=Zu?U(Zu):K9(ZE);if(ZC===null||ZC===undefined)throw new TypeError('Cannot\x20convert\x20'+ZC+'\x20to\x20object');let Zy=KK(ZC,ZX),Zv=![];if(Zy['desc']){let ZR=Zy['desc'];if(ZR['set'])ZR['set']['call'](ZE,Zc);else{if(ZR['get']||!('value'in ZR)){if(At)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(ZX)+'\x27\x20of\x20object\x20which\x20has\x20only\x20a\x20getter');}else{if(ZR['writable']===![]){if(At)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(ZX)+'\x27\x20of\x20object');}else Zv=!![];}}}else Zv=!![];if(Zv){let Za=Object['getOwnPropertyDescriptor'](ZE,ZX);if(Za){if('value'in Za){if(Za['writable'])ZE[ZX]=Zc;else{if(At)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(ZX)+'\x27\x20of\x20object');}}else{if(At)throw new TypeError('Cannot\x20redefine\x20property:\x20'+String(ZX));}}else{let Zn=Reflect['defineProperty'](ZE,ZX,{'value':Zc,'writable':!![],'enumerable':!![],'configurable':!![]});if(!Zn&&At)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(ZX)+'\x27\x20of\x20object');}}Ag[AI++]=Zc,AO++;break;}case 0x69:{e2:{let ZP=Ag[--AI],ZF=w(AJ,ZP),ZG=Ag[--AI];if(Z7===0x1){Ag[AI++]=ZF,AO++;break e2;}if(vme_fa36e1['_$WEK7nD']){AO++;break e2;}let ZN=vme_fa36e1['_$pa57wB'];if(ZN){let Zt=ZN['outer'],ZL=Zt?U(Zt):ZN['parent'];if(typeof ZL!=='function')throw new TypeError('Super\x20constructor\x20'+String(ZL)+'\x20of\x20'+(Zt&&Zt['name']||'anonymous')+'\x20is\x20not\x20a\x20constructor');let ZD=ZN['newTarget'],Zs=Reflect['construct'](ZL,ZF,ZD);Az&&Az!==Zs&&q(Az)['forEach'](function(Zf){!(Zf in Zs)&&(Zs[Zf]=Az[Zf]);});Az=Zs,Ad=!![],KZ(AH,Az),AO++;break e2;}if(typeof ZG!=='function')throw new TypeError('Super\x20expression\x20must\x20be\x20a\x20constructor');let ZV;k['has'](Aj)?ZV=Kq(AH):ZV=Ad?Az:undefined;vme_fa36e1['_$lgbdxE']=AB;let Zp;try{let Zf=ZG['apply'](Az,ZF);Zf!==undefined&&Zf!==Az&&Y(Zf)&&(Az&&Object['assign'](Zf,Az),Az=Zf,AB&&AB['prototype']&&U(Az)!==AB['prototype']&&S(Az,AB['prototype'])),Ad=!![],KZ(AH,Az);}catch(Zm){let Zk=Zm&&typeof Zm['message']==='string'?Zm['message']:'';if(Zk['includes']('\x27new\x27')||Zk['includes']('Illegal\x20constructor')){let ZJ=Reflect['construct'](ZG,ZF,AB);ZJ!==Az&&Az&&Object['assign'](ZJ,Az),Az=ZJ,Ad=!![],KZ(AH,Az);}else Zp=Zm;}finally{delete vme_fa36e1['_$lgbdxE'];}if(Zp!==undefined)throw Zp;if(ZV!==undefined)throw new ReferenceError('Super\x20constructor\x20may\x20only\x20be\x20called\x20once');AO++;}break;}case 0x82:{let ZH=Ag[--AI];Ag[AI++]=ZH['next'](),AO++;break;}case 0x5f:{let ZM=Ag[AI-0x1];ZM['length']++,AO++;break;}case 0x80:{let Zr=Ag[--AI];Ag[AI++]=!!Zr['done'],AO++;break;}case 0x83:{let Zd=Ag[--AI],Zh=Zd&&Zd['i']?Zd['i']:Zd;if(An!==null)try{Zh&&typeof Zh['return']==='function'?Ag[AI++]=Promise['resolve'](Zh['return']())['catch'](function(){return undefined;}):Ag[AI++]=Promise['resolve']();}catch(Zx){Ag[AI++]=Promise['resolve']();}else{let ZT=Zh!=null?Zh['return']:undefined;if(ZT==null)Ag[AI++]=Promise['resolve']();else typeof ZT!=='function'?Ag[AI++]=Promise['reject'](new TypeError('iterator\x20\x27return\x27\x20is\x20not\x20callable')):Ag[AI++]=Promise['resolve'](ZT['call'](Zh));}AO++;break;}case 0xa5:{Ag[AI++]=vmB[Z7],AO++;break;}case 0x7b:{let ZQ=Ag[--AI],Zw=ZQ&&ZQ['_$TaL8J1'];if(Zw!==undefined){let Zi=ZQ['_$U13OaJ'],ZY;Zi>=Zw['length']?ZY={'value':undefined,'done':!![]}:(ZQ['_$U13OaJ']=Zi+0x1,ZY={'value':Zw[Zi],'done':![]}),Ag[AI++]=ZY,AO++;}else{let ZW=ZQ&&ZQ['i']?ZQ['i']:ZQ,q0=ZQ&&ZQ['n']?ZQ['n']:ZW&&ZW['next'];if(typeof q0!=='function')throw new TypeError('iterator.next\x20is\x20not\x20a\x20function');let q1=z(q0,ZW,[]);K3(q1),Ag[AI++]=q1,AO++;}break;}case 0xa4:{Ag[AI++]=AB,AO++;break;}case 0x84:{let q2=Ag[--AI];Ag[AI++]=K6(q2),AO++;break;}case 0xa8:{let q3=Ao[Z7];Ag[AI++]=Symbol['for'](q3),AO++;break;}case 0x6e:{Ag[AI-0x1]=typeof Ag[AI-0x1],AO++;break;}case 0xa6:{Ag[AI++]=vmz[Z7],AO++;break;}case 0xa0:{if(AD&&!Ad){let q4=Kq(AH);if(q4!==undefined)Az=q4,Ad=!![];else throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');}Ag[AI++]=Az,AO++;break;}case 0x5d:{let q5=Ag[--AI],q6;if(Array['isArray'](q5))q6=q5;else{if(q5===null||q5===undefined)throw new TypeError(q5+'\x20is\x20not\x20iterable');let q8=q5[Symbol['iterator']];if(q8===null||q8===undefined||typeof q8!=='function')throw new TypeError(q5+'\x20is\x20not\x20iterable');let q9=z(q8,q5,[]);if(q9===null||typeof q9!=='object')throw new TypeError('Iterator\x20method\x20returned\x20a\x20non-object\x20value');q6=[];while(!![]){let qK=q9['next']();K3(qK);if(qK['done'])break;q6['push'](qK['value']);}}let q7={'value':q6};O['call'](N,q7),Ag[AI++]=q7,AO++;break;}case 0xa3:{Ag[--AI],Ag[AI++]=undefined,AO++;break;}case 0x5a:{Ag[AI++]=[],AO++;break;}case 0x94:{let qA=Ag[--AI],qZ=Ag[AI-0x1],qq=Ao[Z7];K(qZ,qq,{'get':qA,'enumerable':![],'configurable':!![]}),AO++;break;}case 0xb5:{let ql=Ag[--AI],qe=Ag[--AI],qS=Ag[AI-0x1];K(qS,qe,{'value':ql,'writable':!![],'enumerable':![],'configurable':!![]});typeof ql==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],ql,qS));AO++;break;}case 0x90:{let qU=Ag[--AI],qj=Ag[AI-0x1],qB=Ao[Z7];K(qj['prototype'],qB,{'value':qU,'writable':!![],'enumerable':![],'configurable':!![]});typeof qU==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qU,qj['prototype']));AO++;break;}case 0x8e:{e3:{let qz=Ag[--AI],qg=Ag[--AI],qI=vme_fa36e1['_$HL1Tk0'],qb=qI?U(qI):K9(qg),qO=KK(qb,qz);if(qO['desc']&&qO['desc']['get']){let qc=qO['desc']['get']['call'](qg);Ag[AI++]=qc,AO++;break e3;}if(qO['desc']&&qO['desc']['set']&&!('value'in qO['desc'])){Ag[AI++]=undefined,AO++;break e3;}let qo=qO['proto']?qO['proto'][qz]:qb[qz];if(typeof qo==='function'){let qX=qO['proto']||qb,qE=qo['constructor']&&qo['constructor']['name'],qu=qE==='GeneratorFunction'||qE==='AsyncFunction'||qE==='AsyncGeneratorFunction';!qu&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qo,qX));}Ag[AI++]=qo,AO++;}break;}case 0x64:{let qC=Ag[--AI],qy=typeof qC==='object'?qC:A5(qC);qC=qy;let qv=qy&&qy[0x3],qR=qy&&qy[0xf],qa=qy&&qy[0x6],qn=qy&&qy[0x9],qP=qy&&qy[0x0]||0x0,qF=qy&&qy[0x1],qG=qv?Af:undefined,qN=AH,qV;if(qa)qV=KB(A7,qC,qN,V,qF,vmj,qR);else{if(qR)qv?qV=Kg(A6,qC,qN,qG):qV=Kj(A6,qC,qN,qF,vmj);else{if(qv){qV=Kz(Ko,qC,qN,qG);let qp=vme_fa36e1['_$fMMDMh'];qp===undefined&&Aj&&k['has'](Aj)&&(qp=k['get'](Aj)),qp!==undefined&&k['set'](qV,qp);}else qV=KU(Ko,qC,qN,qF,vmj,qn);}}Q(qV,'length',{'value':qP,'writable':![],'enumerable':![],'configurable':!![]}),Ag[AI++]=qV,AO++;break;}case 0xb9:{let qt=Ag[--AI],qL=Ag[--AI],qD=Ag[AI-0x1];K(qD,qL,{'set':qt,'enumerable':![],'configurable':!![]}),AO++;break;}case 0x93:{let qs=Ag[--AI],qf=Ag[AI-0x1],qm=Ao[Z7];K(qf,qm,{'value':qs,'writable':!![],'enumerable':![],'configurable':!![]});typeof qs==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qs,qf));AO++;break;}case 0x7f:{let qk=Ag[--AI];if(qk==null)throw new TypeError(qk+'\x20is\x20not\x20iterable');let qJ=qk[M];if(Array['isArray'](qk)&&qJ===H)Ag[AI++]={['_$TaL8J1']:qk,['_$U13OaJ']:0x0},AO++;else{if(typeof qJ!=='function')throw new TypeError(qk+'\x20is\x20not\x20iterable');let qH=z(qJ,qk,[]);K3(qH);let qM=qH['next'];Ag[AI++]={'i':qH,'n':qM},AO++;}break;}case 0x5b:{let qr=Ag[--AI],qd=Ag[AI-0x1];qd['push'](qr),AO++;break;}case 0xb8:{let qh=Ag[--AI],qx=Ag[--AI],qT=Ag[AI-0x1];K(qT,qx,{'get':qh,'enumerable':![],'configurable':!![]}),AO++;break;}case 0xb4:{let qQ=Ag[--AI],qw=Ag[--AI],qi=Ag[AI-0x1];K(qi['prototype'],qw,{'value':qQ,'writable':!![],'enumerable':![],'configurable':!![]});typeof qQ==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qQ,qi['prototype']));AO++;break;}case 0xa9:{let qY=Ag[--AI];Ag[AI++]=Symbol['keyFor'](qY),AO++;break;}case 0x92:{let qW=Ag[--AI],l0=Ag[AI-0x1],l1=Ao[Z7],l2=K8(l0);K(l2,l1,{'set':qW,'enumerable':l2===l0,'configurable':!![]}),AO++;break;}case 0x81:{let l3=Ag[--AI];if(l3==null)throw new TypeError(l3+'\x20is\x20not\x20iterable');let l4=l3[Symbol['asyncIterator']];if(typeof l4==='function')Ag[AI++]=l4['call'](l3);else{let l5=l3[Symbol['iterator']];if(typeof l5!=='function')throw new TypeError(l3+'\x20is\x20not\x20iterable');let l6=l5['call'](l3);if(l6===null||typeof l6!=='object')throw new TypeError('Iterator\x20method\x20returned\x20a\x20non-object\x20value');let l7=async function(l9){if(l9===null||typeof l9!=='object')throw new TypeError('Iterator\x20result\x20is\x20not\x20an\x20object');let lK=await l9['value'];return{'value':lK,'done':!!l9['done']};},l8={'next':function(l9){let lK;try{lK=l6['next'](l9);}catch(lA){return Promise['reject'](lA);}return l7(lK);},'return':function(l9){if(typeof l6['return']!=='function')return Promise['resolve']({'value':l9,'done':!![]});let lK;try{lK=l6['return'](l9);}catch(lA){return Promise['reject'](lA);}return l7(lK);},'throw':function(l9){if(typeof l6['throw']!=='function')return Promise['reject'](l9);let lK;try{lK=l6['throw'](l9);}catch(lA){return Promise['reject'](lA);}return l7(lK);},[Symbol['asyncIterator']]:function(){return this;}};Ag[AI++]=l8;}AO++;break;}case 0x6f:{let l9=Ag[--AI],lK=Ag[--AI];Ag[AI++]=lK instanceof l9,AO++;break;}case 0x7c:{let lA=Ag[--AI],lZ=lA&&lA['i']?lA['i']:lA;if(lZ!=null){if(An!==null)try{let lq=lZ['return'];typeof lq==='function'&&lq['call'](lZ);}catch(ll){}else{let le=lZ['return'];if(le!=null){if(typeof le!=='function')throw new TypeError('iterator\x20\x27return\x27\x20is\x20not\x20callable');let lS=le['call'](lZ);K3(lS);}}}AO++;break;}case 0xa1:{if(Ar===null){if(At||!AL){let lU=AM||AS,lj=lU?lU['length']:0x0;Ar=A(Object['prototype']);for(let lB=0x0;lB<lj;lB++){Ar[lB]=lU[lB];}K(Ar,'length',{'value':lj,'writable':!![],'enumerable':![],'configurable':!![]}),K(Ar,Symbol['iterator'],{'value':Array['prototype'][Symbol['iterator']],'writable':!![],'enumerable':![],'configurable':!![]}),Ar=new Proxy(Ar,{'has':function(lz,lg){if(lg===Symbol['toStringTag'])return![];return lg in lz;},'get':function(lz,lg,lI){if(lg===Symbol['toStringTag'])return'Arguments';return Reflect['get'](lz,lg,lI);}}),At?K(Ar,'callee',{'get':G,'set':G,'enumerable':![],'configurable':![]}):K(Ar,'callee',{'value':Aj,'writable':!![],'enumerable':![],'configurable':!![]});}else{let lz=AS?AS['length']:0x0,lg={},lI={},lb=Aj,lO=![],lo=!![],lc={},lX=function(lv){if(typeof lv!=='string')return NaN;let lR=+lv;return lR>=0x0&&lR%0x1===0x0&&String(lR)===lv?lR:NaN;},lE=function(lv){return!isNaN(lv)&&lv>=0x0;},lu=function(lv){if(lv in lI)return undefined;if(lv in lg)return lg[lv];return lv<AS['length']?AS[lv]:undefined;},lC=function(lv){if(lv in lI)return![];if(lv in lg)return!![];return lv<AS['length']?lv in AS:![];},ly={};K(ly,'length',{'value':lz,'writable':!![],'enumerable':![],'configurable':!![]}),K(ly,'callee',{'value':Aj,'writable':!![],'enumerable':![],'configurable':!![]}),K(ly,Symbol['iterator'],{'value':Array['prototype'][Symbol['iterator']],'writable':!![],'enumerable':![],'configurable':!![]}),Ar=new Proxy(ly,{'get':function(lv,lR,la){if(lR==='length')return lz;if(lR==='callee')return lO?undefined:lb;if(lR===Symbol['toStringTag'])return'Arguments';let ln=lX(lR);if(lE(ln)){if(ln in lc)return Reflect['get'](lv,lR,la);return lu(ln);}return Reflect['get'](lv,lR,la);},'set':function(lv,lR,la){if(lR==='length'){if(!lo)return![];return lz=la,lv['length']=la,!![];}if(lR==='callee')return lb=la,lO=![],lv['callee']=la,!![];let ln=lX(lR);if(lE(ln)){if(ln in lc)return Reflect['set'](lv,lR,la);let lP=Z(lv,String(ln));if(lP&&!lP['writable'])return![];if(ln in lI)delete lI[ln],lg[ln]=la;else ln<AS['length']?AS[ln]=la:lg[ln]=la;return!![];}return lv[lR]=la,!![];},'has':function(lv,lR){if(lR==='length')return!![];if(lR==='callee')return!lO;if(lR===Symbol['toStringTag'])return![];let la=lX(lR);if(lE(la)){if(String(la)in lv)return!![];return lC(la);}return lR in lv;},'defineProperty':function(lv,lR,la){if(lR==='length')return'value'in la&&(lz=la['value']),'writable'in la&&(lo=la['writable']),K(lv,lR,la),!![];if(lR==='callee')return'value'in la&&(lb=la['value']),lO=![],K(lv,lR,la),!![];let ln=lX(lR);if(lE(ln)){let lP='get'in la||'set'in la,lF=Z(lv,String(ln)),lG=ln in lc?lF?lF['value']:undefined:lu(ln),lN=lF?lF['writable']!==![]:!![],lV=lF?lF['enumerable']!==![]:!![],lp=lF?lF['configurable']!==![]:!![],lt;if(lP)lt=la,lc[ln]=0x1,ln in lg&&delete lg[ln],ln in lI&&delete lI[ln];else{let lL='value'in la?la['value']:lG,lD='writable'in la?la['writable']:lN,ls='enumerable'in la?la['enumerable']:lV,lf='configurable'in la?la['configurable']:lp;lt={'value':lL,'writable':lD,'enumerable':ls,'configurable':lf},'value'in la&&(!(ln in lc)&&(ln<AS['length']&&!(ln in lI)?AS[ln]=la['value']:(lg[ln]=la['value'],ln in lI&&delete lI[ln]))),'writable'in la&&la['writable']===![]&&(lc[ln]=0x1,ln in lg&&delete lg[ln],ln in lI&&delete lI[ln]);}return K(lv,String(ln),lt),!![];}return K(lv,lR,la),!![];},'deleteProperty':function(lv,lR){if(lR==='callee')return lO=!![],delete lv['callee'],!![];let la=lX(lR);if(lE(la)){let lP=Z(lv,String(la));if(lP&&lP['configurable']===![])return![];return la in lc&&delete lc[la],la<AS['length']?lI[la]=0x1:delete lg[la],delete lv[lR],!![];}let ln=Z(lv,lR);if(ln&&ln['configurable']===![])return![];return delete lv[lR],!![];},'preventExtensions':function(lv){let lR=AS?AS['length']:0x0;for(let la=0x0;la<lR;la++){!(la in lI)&&!Z(lv,String(la))&&K(lv,String(la),{'value':lu(la),'writable':!![],'enumerable':!![],'configurable':!![]});}for(let ln in lg){!Z(lv,ln)&&K(lv,ln,{'value':lg[ln],'writable':!![],'enumerable':!![],'configurable':!![]});}return Object['preventExtensions'](lv),!![];},'getOwnPropertyDescriptor':function(lv,lR){if(lR==='callee'){if(lO)return undefined;return Z(lv,'callee');}if(lR==='length')return Z(lv,'length');let la=lX(lR);if(lE(la)){if(la in lc)return Z(lv,lR);if(lC(la)){let lP=Z(lv,String(la));return{'value':lu(la),'writable':lP?lP['writable']:!![],'enumerable':lP?lP['enumerable']:!![],'configurable':lP?lP['configurable']:!![]};}return Z(lv,lR);}let ln=Z(lv,lR);if(ln)return ln;return undefined;},'ownKeys':function(lv){let lR=[],la=AS?AS['length']:0x0;for(let lP=0x0;lP<la;lP++){!(lP in lI)&&lR['push'](String(lP));}for(let lF in lg){lR['indexOf'](lF)===-0x1&&lR['push'](lF);}lR['push']('length');!lO&&lR['push']('callee');let ln=Reflect['ownKeys'](lv);for(let lG=0x0;lG<ln['length'];lG++){lR['indexOf'](ln[lG])===-0x1&&lR['push'](ln[lG]);}return lR;}});}}Ag[AI++]=Ar,AO++;break;}case 0x5e:{let lv=Ag[--AI],lR=Ag[AI-0x1];if(Array['isArray'](lv))Array['prototype']['push']['apply'](lR,lv);else for(let la of lv){lR['push'](la);}AO++;break;}case 0xb6:{let ln=Ag[--AI],lP=Ag[--AI],lF=Ag[AI-0x1],lG=K8(lF);K(lG,lP,{'get':ln,'enumerable':lG===lF,'configurable':!![]}),AO++;break;}case 0x70:{let lN=Ao[Z7];lN in vme_fa36e1?Ag[AI++]=typeof vme_fa36e1[lN]:Ag[AI++]=typeof vmj[lN];AO++;break;}case 0x91:{let lV=Ag[--AI],lp=Ag[AI-0x1],lt=Ao[Z7],lL=K8(lp);K(lL,lt,{'get':lV,'enumerable':lL===lp,'configurable':!![]}),AO++;break;}case 0xb7:{let lD=Ag[--AI],ls=Ag[--AI],lf=Ag[AI-0x1],lm=K8(lf);K(lm,ls,{'set':lD,'enumerable':lm===lf,'configurable':!![]}),AO++;break;}case 0x68:{let lk=Ag[--AI],lJ=w(AJ,lk),lH=Ag[--AI];if(typeof lH!=='function')throw new TypeError(lH+'\x20is\x20not\x20a\x20constructor');if(o['call'](V,lH))throw new TypeError(lH['name']+'\x20is\x20not\x20a\x20constructor');let lM=vme_fa36e1['_$HL1Tk0'];vme_fa36e1['_$HL1Tk0']=undefined;let lr;try{lr=Reflect['construct'](lH,lJ);}finally{vme_fa36e1['_$HL1Tk0']=lM;}Ag[AI++]=lr,AO++;break;}case 0x6a:{let ld=Ag[--AI];Ag[AI++]=import(ld),AO++;break;}case 0x8c:{let lh=Ag[--AI],lx=Ag[--AI],lT=Z7,lQ=function(lw,li){let lY=function(){if(lw){li&&(vme_fa36e1['_$fMMDMh']=lY);let lW='_$lgbdxE'in vme_fa36e1;!lW&&(vme_fa36e1['_$lgbdxE']=new.target);try{let e0=lw['apply'](this,K7(arguments));if(li&&e0!==undefined&&(e0===null||typeof e0!=='object'&&typeof e0!=='function'))throw new TypeError('Derived\x20constructors\x20may\x20only\x20return\x20object\x20or\x20undefined');return e0;}finally{li&&delete vme_fa36e1['_$fMMDMh'],!lW&&delete vme_fa36e1['_$lgbdxE'];}}};return lY;}(lx,lT);lh&&K(lQ,'name',{'value':lh,'configurable':!![]});if(lx&&!m(lQ)){let lw=f(lx);lw&&s(lQ,lw);}Ag[AI++]=lQ,AO++;break;}case 0xa2:{let li=Z7&0xffff,lY=Z7>>0x10,lW=Ao[li],e0=Ao[lY];Ag[AI++]=new RegExp(lW,e0),AO++;break;}}},AY=function(Z6,Z7){switch(Z6){case 0x107:{let Z9=Ao[Z7],ZK=Ag[--AI],ZA=Ag[--AI];if(typeof ZK!=='function')throw new TypeError(ZK+'\x20is\x20not\x20a\x20function');let ZZ=vme_fa36e1['_$rIYp6L'],Zq=ZZ&&I['call'](ZZ,ZK);!Zq&&ZZ&&(ZK===j||ZK===B)&&(Zq=I['call'](ZZ,ZA));let Zl=vme_fa36e1['_$HL1Tk0'];Zq&&(vme_fa36e1['_$jVviIS']=!![],vme_fa36e1['_$HL1Tk0']=Zq);let Ze;try{if(Z9===0x0)Ze=z(ZK,ZA,F);else{if(Z9===0x1){let ZS=Ag[--AI];Ze=ZS&&typeof ZS==='object'&&o['call'](N,ZS)?z(ZK,ZA,ZS['value']):z(ZK,ZA,[ZS]);}else Ze=z(ZK,ZA,w(AJ,Z9));}Ag[AI++]=Ze;}finally{Zq&&(vme_fa36e1['_$jVviIS']=![],vme_fa36e1['_$HL1Tk0']=Zl);}AO++;break;}case 0xca:{AQ=AI>0x0?Ag[--AI]:undefined;return 0x1;break;}case 0x101:{let ZU=Z7&0xffff,Zj=Z7>>>0x10;Ab[ZU]<Ao[Zj]?AO=AX[AO]:AO++;break;}case 0x11a:{let ZB=Z7,Zz=Ag[--AI];AH['_$bQrsS0'][ZB]=Zz;let Zg=AH['_$dPxYjd'];!Zg&&(Zg=A(null),AH['_$dPxYjd']=Zg);Zg[ZB]=0x1,AO++;break;}case 0x111:{let ZI=vme_fa36e1['_$fMMDMh'];ZI===undefined&&Aj&&k['has'](Aj)&&(ZI=k['get'](Aj));if(ZI===undefined)throw new ReferenceError('\x27super\x27\x20keyword\x20is\x20only\x20valid\x20inside\x20a\x20derived\x20constructor');Ag[AI++]=ZI,AO++;break;}case 0x104:{let Zb=Ab[Z7]+0x1;Ab[Z7]=Zb,Ag[AI++]=Zb,AO++;break;}case 0x11c:{let ZO=Z7;AH['_$bQrsS0'][ZO]=Aj;let Zo=AH['_$dPxYjd'];!Zo&&(Zo=A(null),AH['_$dPxYjd']=Zo);Zo[ZO]=0x2,AO++;break;}case 0xc8:{debugger;AO++;break;}case 0x119:{let Zc=Z7,ZX=Ag[--AI];AH['_$bQrsS0'][Zc]=ZX,AO++;break;}case 0x10b:{!Ag[AI-0x1]?AO=AX[AO]:(Ag[--AI],AO++);break;}case 0x102:{let ZE=Z7&0xffff,Zu=Z7>>>0x10,ZC=Ag[--AI],Zy=w(AJ,ZC),Zv=Ab[ZE],ZR=Ao[Zu],Za=Zv[ZR];Ag[AI++]=Za['apply'](Zv,Zy),AO++;break;}case 0xd2:{let Zn=Ag[--AI],ZP={['_$bQrsS0']:new Array(Z7),['_$dPxYjd']:null,['_$rMjli4']:-0x1,['_$nSPtWf']:Zn};AH=ZP,AO++;break;}case 0x10a:{!Ag[--AI]?AO=AX[AO]:(Ag[--AI],AO++);break;}case 0x109:{if(AD&&!Ad){let ZN=Kq(AH);if(ZN!==undefined)Az=ZN,Ad=!![];else throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');}let ZF=Az,ZG=Ao[Z7];if(ZF===null||ZF===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+ZF+'\x20(reading\x20'+'\x27'+String(ZG)+'\x27'+')');Ag[AI++]=ZF[ZG],AO++;break;}case 0xfc:{let ZV=Z7&0xffff,Zp=Z7>>>0x10;Ag[AI++]=Ab[ZV]+Ao[Zp],AO++;break;}case 0x10e:{debugger;AO++;break;}case 0x116:{let Zt=Ab[Z7],ZL=Zt&&Zt['_$TaL8J1'];if(ZL!==undefined){let ZD=Zt['_$U13OaJ'];ZD>=ZL['length']?AO=AX[AO]:(Zt['_$U13OaJ']=ZD+0x1,Ag[AI++]=ZL[ZD],AO++);}else{let Zs=Zt['i'],Zf=z(Zt['n'],Zs,[]);K3(Zf),Zf['done']?AO=AX[AO]:(Ag[AI++]=Zf['value'],AO++);}break;}case 0xdc:{let Zm=Ag[--AI],Zk=Ao[Z7];if(At&&!(Zk in vmj)&&!(Zk in vme_fa36e1))throw new ReferenceError(Zk+'\x20is\x20not\x20defined');vme_fa36e1[Zk]=Zm,vmj[Zk]=Zm,Ag[AI++]=Zm,AO++;break;}case 0x11d:{Ag[AI++]=Af,AO++;break;}case 0xd5:{Ag[AI++]=AH,AO++;break;}case 0xfb:{Ab[Z7]=Ab[Z7]-0x1,AO++;break;}case 0x11e:{let ZJ=AH['_$bQrsS0'];ZJ[Z7]=ZJ,AH['_$rMjli4']=Z7,AO++;break;}case 0xfe:{let ZH=Z7&0xffff,ZM=Z7>>>0x10;Ag[AI++]=Ab[ZH]*Ao[ZM],AO++;break;}case 0xd6:{AH=AH['_$nSPtWf'],AO++;break;}case 0x106:{let Zr=Ag[AI-0x3],Zd=Ag[AI-0x2],Zh=Ag[AI-0x1];Ag[AI-0x3]=Zh,Ag[AI-0x2]=Zr,Ag[AI-0x1]=Zd,AO++;break;}case 0xfd:{let Zx=Z7&0xffff,ZT=Z7>>>0x10;Ag[AI++]=Ab[Zx]-Ao[ZT],AO++;break;}case 0x117:{qN:{let ZQ=Z7&0xffff,Zw=Z7>>>0x10,Zi=AH;for(let q0=0x0;q0<Zw;q0++){Zi=Zi['_$nSPtWf'];}let ZY=Zi['_$bQrsS0'],ZW=ZY[ZQ];if(ZW===ZY)throw new ReferenceError('Cannot\x20access\x20\x27'+'<slot\x20'+ZQ+'>'+'\x27\x20before\x20initialization');Ag[AI++]=ZW,AO++;break qN;}break;}case 0x113:{let q1=Ag[--AI],q2=Ag[AI-0x1];(q1===null||Y(q1))&&S(q2,q1);AO++;break;}case 0x114:{let q3=Ao[Z7],q4=!![];q3 in vmj&&(q4=delete vmj[q3]);q4&&q3 in vme_fa36e1&&(q4=delete vme_fa36e1[q3]);Ag[AI++]=q4,AO++;break;}case 0xfa:{Ab[Z7]=Ab[Z7]+0x1,AO++;break;}case 0x108:{let q5=Ag[AI-0x1],q6=Ao[Z7];if(q5===null||q5===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+q5+'\x20(reading\x20'+'\x27'+String(q6)+'\x27'+')');Ag[AI++]=q5[q6],AO++;break;}case 0x100:{let q7=Z7&0xffff,q8=Z7>>>0x10;Ag[AI++]=Ab[q7]<Ao[q8],AO++;break;}case 0xc9:{AO++;break;}case 0x103:{Ab[Z7]=Ag[--AI],AO++;break;}case 0x10c:{Ag[AI-0x1]?AO=AX[AO]:(Ag[--AI],AO++);break;}case 0x11b:{let q9=Z7,qK=AH['_$bQrsS0'];qK[q9]=qK,AO++;break;}case 0x118:{qV:{let qA=Z7&0xffff,qZ=Z7>>>0x10,qq=Ag[--AI],ql=AH;for(let qj=0x0;qj<qZ;qj++){ql=ql['_$nSPtWf'];}let qe=ql['_$bQrsS0'];if(qe[qA]===qe)throw new ReferenceError('Cannot\x20access\x20\x27'+'<slot\x20'+qA+'>'+'\x27\x20before\x20initialization');let qS=ql['_$dPxYjd'],qU=qS&&qS[qA];if(qU){if(qU===0x2&&!At){AO++;break qV;}throw new TypeError('Assignment\x20to\x20constant\x20variable.');}qe[qA]=qq,AO++;break qV;}break;}case 0xff:{let qB=Z7&0xffff,qz=Z7>>>0x10,qg=Ab[qB],qI=Ao[qz];Ag[AI++]=qg[qI],AO++;break;}case 0x110:{let qb=J[Z7],qO=Ag[--AI];if(qb){for(let qo=0x0;qo<qO;qo++)Ag[--AI];for(let qc=0x0;qc<qO;qc++)Ag[--AI];Ag[AI++]=qb;}else{let qX=new Array(qO);for(let qu=qO-0x1;qu>=0x0;qu--)qX[qu]=Ag[--AI];let qE=new Array(qO);for(let qC=qO-0x1;qC>=0x0;qC--)qE[qC]=Ag[--AI];K(qE,'raw',{'value':Object['freeze'](qX)}),Object['freeze'](qE),J[Z7]=qE,Ag[AI++]=qE;}AO++;break;}case 0x10f:{if(typeof process!=='undefined'&&process['hrtime']&&process['hrtime']['bigint']){var Z8=process['hrtime']['bigint']();debugger;if(Number(process['hrtime']['bigint']()-Z8)/0xf4240>0.1)try{_setDeceptionDetected();}catch(qy){}}AO++;break;}case 0x115:{let qv=Ag[--AI],qR=Ag[--AI];Ag[AI++]=qv==null||typeof qv!=='object'&&typeof qv!=='function'?!![]:qR in qv,AO++;break;}case 0x112:{let qa=Ag[--AI],qn=qa&&qa['i']?qa['i']:qa;try{if(qn!=null){let qP=qn['return'];typeof qP==='function'&&qP['call'](qn);}}catch(qF){}AO++;break;}case 0x105:{let qG=Ab[Z7]-0x1;Ab[Z7]=qG,Ag[AI++]=qG,AO++;break;}}});switch(Z4){case 0x2c:{let Z6=Ag[--AI],Z7=Ag[--AI];Ag[AI++]=Z7<Z6,AO++;continue;}case 0x8:{Ag[AI++]=AS[Z5],AO++;continue;}case 0x46:{let Z8=Ag[--AI],Z9=Ao[Z5];if(Z8===null||Z8===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+Z8+'\x20(reading\x20'+'\x27'+String(Z9)+'\x27'+')');Ag[AI++]=Z8[Z9],AO++;continue;}case 0x34:{!Ag[--AI]?AO=AX[AO]:AO++;continue;}case 0x2e:{let ZK=Ag[--AI],ZA=Ag[--AI];Ag[AI++]=ZA>ZK,AO++;continue;}case 0x49:{let ZZ=Ag[--AI],Zq=Ag[--AI],Zl=Ag[--AI];if(Zl===null||Zl===undefined)throw new TypeError('Cannot\x20set\x20properties\x20of\x20'+Zl+'\x20(setting\x20'+(typeof Zq==='symbol'?'\x27'+Zq['toString']()+'\x27':typeof Zq==='string'?'\x27'+Zq+'\x27':typeof Zq==='object'||typeof Zq==='function'?'\x27<computed\x20key>\x27':'\x27'+String(Zq)+'\x27')+')');if(At){let Ze=typeof Zl==='object'||typeof Zl==='function'?Zl:Object(Zl);if(!Reflect['set'](Ze,Zq,ZZ,Zl))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(Zq)+'\x27\x20of\x20object');}else Zl[Zq]=ZZ;Ag[AI++]=ZZ,AO++;continue;}case 0x48:{let ZS=Ag[--AI],ZU=Ag[--AI];if(ZU===null||ZU===undefined){if(ZS===Symbol['iterator'])throw new TypeError((ZU===null?'object\x20null':'undefined')+'\x20is\x20not\x20iterable\x20(cannot\x20read\x20property\x20Symbol(Symbol.iterator))');throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+ZU+'\x20(reading\x20'+(typeof ZS==='symbol'?'\x27'+ZS['toString']()+'\x27':typeof ZS==='string'?'\x27'+ZS+'\x27':typeof ZS==='object'||typeof ZS==='function'?'\x27<computed\x20key>\x27':'\x27'+String(ZS)+'\x27')+')');}Ag[AI++]=ZU[ZS],AO++;continue;}case 0x6:{Ag[AI++]=Ab[Z5],AO++;continue;}case 0xb:{let Zj=Ag[--AI],ZB=Ag[--AI];Ag[AI++]=ZB-Zj,AO++;continue;}case 0x1c:{let Zz=Ag[--AI];Ag[AI++]=typeof Zz===P?Zz:+Zz,AO++;continue;}case 0x32:{AO=AX[AO];continue;}case 0x3:{Ag[--AI],AO++;continue;}case 0x4:{let Zg=Ag[AI-0x1];Ag[AI++]=Zg,AO++;continue;}case 0x0:{Ag[AI++]=Ao[Z5],AO++;continue;}case 0x1:{Ag[AI++]=undefined,AO++;continue;}case 0x7:{Ab[Z5]=Ag[--AI],AO++;continue;}case 0x10:{let ZI=Ag[--AI];Ag[AI++]=typeof ZI===P?ZI+0x1n:+ZI+0x1,AO++;continue;}case 0xa:{let Zb=Ag[--AI],ZO=Ag[--AI];Ag[AI++]=ZO+Zb,AO++;continue;}}if(Z4<0x5a){if(Aw(Z4,Z5)){if(AT>0x0){for(let Zo=Ah-0x1;Zo>=0x0;Zo--){Ab[Zo]=Ax[--AT];}AH=Ax[--AT],AM=Ax[--AT],Ar=Ax[--AT],AS=Ax[--AT],AI=Ax[--AT],AO=Ax[--AT],Ag[AI++]=AQ,AO++;continue;}return AQ;}}else{if(Z4<0xc8){if(Ai(Z4,Z5)){if(AT>0x0){for(let Zc=Ah-0x1;Zc>=0x0;Zc--){Ab[Zc]=Ax[--AT];}AH=Ax[--AT],AM=Ax[--AT],Ar=Ax[--AT],AS=Ax[--AT],AI=Ax[--AT],AO=Ax[--AT],Ag[AI++]=AQ,AO++;continue;}return AQ;}}else{if(AY(Z4,Z5)){if(AT>0x0){for(let ZX=Ah-0x1;ZX>=0x0;ZX--){Ab[ZX]=Ax[--AT];}AH=Ax[--AT],AM=Ax[--AT],Ar=Ax[--AT],AS=Ax[--AT],AI=Ax[--AT],AO=Ax[--AT],Ag[AI++]=AQ,AO++;continue;}return AQ;}}}}break;}catch(ZE){if(Aa&&Aa['length']>0x0){let Zu=Aa[Aa['length']-0x1];AI=Zu['_$fPsSuL'];Zu['_es']!==undefined&&(AH=Zu['_es']);if(Zu['_$2tZ6o0']!==undefined)An=null,Ak(ZE),AO=Zu['_$2tZ6o0'],Zu['_$2tZ6o0']=undefined,Zu['_$EMl7dv']===undefined&&Aa['pop']();else Zu['_$EMl7dv']!==undefined?(AO=Zu['_$EMl7dv'],Zu['_$CIy63E']=ZE):(AO=Zu['_$n9TFzh'],Aa['pop']());continue;}throw ZE;}}if(AD&&!Ad){let ZC=Kq(AH);ZC!==undefined&&(Az=ZC,Ad=!![]);}let AW=AI>0x0?Ag[--AI]:Ad?Az:undefined;if(AD&&!Ad&&(AW===undefined||AW===null||typeof AW!=='object'&&typeof AW!=='function'))throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');return AW;}function Kb(Ae,AS,AU,Aj,AB,Az){let Ag=[void 0x0,void 0x0,void 0x0,void 0x0,void 0x0,void 0x0,void 0x0,void 0x0],AI=0x0,Ab=new Array((Ae[0x0]||0x0)+(Ae[0x10]||0x0)),AO=0x0,Ao=Ae[0x8],Ac=Ae[0xa],AX=Ae[0xb]||F,AE=Ae[0x17]||F,Au=Ac['length']>>0x1,AC=(Ae[0x0]*0x1f^Ae[0x10]*0x11^Au*0xd^Ao['length']*0x7)>>>0x0&0x3,Ay,Av,AR;switch(AC){case 0x1:Ay=0x1,Av=0x0,AR=0x1;break;case 0x2:Ay=0x0,Av=Au,AR=0x0;break;case 0x3:Ay=Au,Av=0x0,AR=0x0;break;default:Ay=0x0,Av=0x1,AR=0x1;break;}let Aa=null,An=null,AP=![],AF=undefined,AG=![],AN=0x0,AV=![],Ap=0x0,At=!!Ae[0x1],AL=!!Ae[0x4],AD=!!Ae[0xe],As=!!Ae[0x14],Af=Az,Am=!!Ae[0x3];!At&&!Am&&(Az===undefined||Az===null)&&(Az=vmj);let Ak=Ae[0x16],AJ,AH,AM,Ar,Ad,Ah;if(Ak!==undefined){let Z1=Z2=>typeof Z2==='number'&&(Z2|0x0)===Z2&&!Object['is'](Z2,-0x0)?Z2^Ak|0x0:Z2;AJ=Z2=>{Ag[AI++]=Z1(Z2);},AH=()=>Z1(Ag[--AI]),AM=()=>Z1(Ag[AI-0x1]),Ar=Z2=>{Ag[AI-0x1]=Z1(Z2);},Ad=Z2=>Z1(Ag[AI-Z2]),Ah=(Z2,Z3)=>{Ag[AI-Z2]=Z1(Z3);};}else AJ=Z2=>{Ag[AI++]=Z2;},AH=()=>Ag[--AI],AM=()=>Ag[AI-0x1],Ar=Z2=>{Ag[AI-0x1]=Z2;},Ad=Z2=>Ag[AI-Z2],Ah=(Z2,Z3)=>{Ag[AI-Z2]=Z3;};let Ax={['_$bQrsS0']:new Array(Ae[0x7]||0x0),['_$dPxYjd']:null,['_$rMjli4']:-0x1,['_$nSPtWf']:AU};if(AS){let Z2=Ae[0x0]||0x0;for(let Z3=0x0,Z4=AS['length']<Z2?AS['length']:Z2;Z3<Z4;Z3++){Ab[Z3]=AS[Z3];}}let AT=(At||!AL)&&AS?K7(AS):null,AQ=null,Aw=![],Ai=Ab['length'],AY=null,AW=0x0;Ke(Ae,Aj),KS(Aj,Ae,AU);function Z0(Z5,Z6){if(Z5===0x1)AJ(Z6);else{if(Z5===0x2){if(Aa&&Aa['length']>0x0){let ZZ=Aa[Aa['length']-0x1];AI=ZZ['_$fPsSuL'];ZZ['_es']!==undefined&&(Ax=ZZ['_es']);if(ZZ['_$2tZ6o0']!==undefined)AJ(Z6),AO=ZZ['_$2tZ6o0'],ZZ['_$2tZ6o0']=undefined,ZZ['_$EMl7dv']===undefined&&Aa['pop']();else ZZ['_$EMl7dv']!==undefined?(AO=ZZ['_$EMl7dv'],ZZ['_$CIy63E']=Z6):(AO=ZZ['_$n9TFzh'],Aa['pop']());}else throw Z6;}else{if(Z5===0x3){let Zq=Z6;if(Aa&&Aa['length']>0x0){let Zl=Aa[Aa['length']-0x1];if(Zl['_$EMl7dv']!==undefined)AP=!![],AF=Zq,AO=Zl['_$EMl7dv'];else return Zq;}else return Zq;}}}while(AO<Au){try{while(AO<Au){let Ze=AO<<AR,ZS=Ac[Ay+Ze],ZU=Ac[Av+Ze];if(ZS===n){let Zj=AH();return AO++,{['_$lX6gOD']:u,['_$nEKuKe']:Zj,'_d':Z0};}if(ZS===R){let ZB=AH();return AO++,{['_$lX6gOD']:C,['_$nEKuKe']:ZB,'_d':Z0};}if(ZS===a){let Zz=AH();return AO++,{['_$lX6gOD']:y,['_$nEKuKe']:Zz,'_d':Z0};}var Z7,Z8,Z9,ZK;!Z8&&(Z8=function(Zg,ZI){switch(Zg){case 0x3:{Ag[--AI],AO++;break;}case 0x4e:{let Zb=Ag[--AI],ZO=Ao[ZI];Zb===null||Zb===undefined?Ag[AI++]=undefined:Ag[AI++]=Zb[ZO];AO++;break;}case 0x1d:{if(typeof Ag[AI-0x1]==='symbol')throw new TypeError('Cannot\x20convert\x20a\x20Symbol\x20value\x20to\x20a\x20string');Ag[AI-0x1]=String(Ag[AI-0x1]),AO++;break;}case 0xd:{let Zo=Ag[--AI],Zc=Ag[--AI];Ag[AI++]=Zc/Zo,AO++;break;}case 0x2e:{let ZX=Ag[--AI],ZE=Ag[--AI];Ag[AI++]=ZE>ZX,AO++;break;}case 0x53:{let Zu=Ag[--AI],ZC=Ag[--AI],Zy=Ao[ZI];K(ZC,Zy,{'value':Zu,'writable':!![],'enumerable':!![],'configurable':!![]});typeof Zu==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],Zu,ZC));AO++;break;}case 0x29:{let Zv=Ag[--AI],ZR=Ag[--AI];Ag[AI++]=ZR!=Zv,AO++;break;}case 0x2b:{let Za=Ag[--AI],Zn=Ag[--AI];Ag[AI++]=Zn!==Za,AO++;break;}case 0x7:{Ab[ZI]=Ag[--AI],AO++;break;}case 0x4b:{let ZP=Ao[ZI],ZF;if(vme_fa36e1['_$6q9N3P']&&ZP in vme_fa36e1['_$6q9N3P'])throw new ReferenceError('Cannot\x20access\x20\x27'+ZP+'\x27\x20before\x20initialization');if(ZP in vme_fa36e1)ZF=vme_fa36e1[ZP];else{if(ZP in vmj)ZF=vmj[ZP];else throw new ReferenceError(ZP+'\x20is\x20not\x20defined');}Ag[AI++]=ZF,AO++;break;}case 0x47:{let ZG=Ag[--AI],ZN=Ag[--AI],ZV=Ao[ZI];if(ZN===null||ZN===undefined)throw new TypeError('Cannot\x20set\x20properties\x20of\x20'+ZN+'\x20(setting\x20'+'\x27'+String(ZV)+'\x27'+')');if(At){let Zp=typeof ZN==='object'||typeof ZN==='function'?ZN:Object(ZN);if(!Reflect['set'](Zp,ZV,ZG,ZN))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(ZV)+'\x27\x20of\x20object');}else ZN[ZV]=ZG;Ag[AI++]=ZG,AO++;break;}case 0x37:{let Zt=Ag[--AI],ZL=Ag[--AI],ZD=Ag[--AI];if(typeof ZL!=='function')throw new TypeError(ZL+'\x20is\x20not\x20a\x20function');let Zs=vme_fa36e1['_$rIYp6L'],Zf=Zs&&I['call'](Zs,ZL);!Zf&&Zs&&(ZL===j||ZL===B)&&(Zf=I['call'](Zs,ZD));let Zm=vme_fa36e1['_$HL1Tk0'];Zf&&(vme_fa36e1['_$jVviIS']=!![],vme_fa36e1['_$HL1Tk0']=Zf);let Zk;try{if(Zt===0x0)Zk=z(ZL,ZD,F);else{if(Zt===0x1){let ZJ=Ag[--AI];Zk=ZJ&&typeof ZJ==='object'&&o['call'](N,ZJ)?z(ZL,ZD,ZJ['value']):z(ZL,ZD,[ZJ]);}else Zk=z(ZL,ZD,w(AH,Zt));}Ag[AI++]=Zk;}finally{Zf&&(vme_fa36e1['_$jVviIS']=![],vme_fa36e1['_$HL1Tk0']=Zm);}AO++;break;}case 0x5:{let ZH=Ag[AI-0x1];Ag[AI-0x1]=Ag[AI-0x2],Ag[AI-0x2]=ZH,AO++;break;}case 0x36:{lb:{let ZM=Ag[--AI],Zr=Ag[--AI];if(typeof Zr!=='function')throw new TypeError(Zr+'\x20is\x20not\x20a\x20function');let Zd=vme_fa36e1['_$rIYp6L'],Zh=!vme_fa36e1['_$HL1Tk0']&&!vme_fa36e1['_$lgbdxE']&&!(Zd&&I['call'](Zd,Zr))&&f(Zr);if(Zh){let Zi=Zh['c']||(Zh['c']=typeof Zh['b']==='object'?Zh['b']:A4(Zh['b']));if(Zi){let ZY;if(ZM===0x0)ZY=[];else{if(ZM===0x1){let q0=Ag[--AI];ZY=q0&&typeof q0==='object'&&o['call'](N,q0)?q0['value']:[q0];}else ZY=w(AH,ZM);}let ZW=Zi[0x15];if(ZW&&Zi===Ae&&!Zi[0x17]&&Zh['e']===AU){!AY&&(AY=[]);AY[AW++]=AO,AY[AW++]=AI,AY[AW++]=AS,AY[AW++]=AQ,AY[AW++]=AT,AY[AW++]=Ax;for(let q1=0x0;q1<Ai;q1++){AY[AW++]=Ab[q1];}AS=ZY,AQ=null;if(Zi[0x4]){AT=null;let q2=Zi[0x0]||0x0;for(let q3=0x0;q3<q2&&q3<ZY['length'];q3++){Ab[q3]=ZY[q3];}for(let q4=ZY['length']<q2?ZY['length']:q2;q4<Ai;q4++){Ab[q4]=undefined;}AO=ZW;}else{AT=K7(ZY);for(let q5=0x0;q5<Ai;q5++){Ab[q5]=undefined;}AO=0x0;}break lb;}vme_fa36e1['_$jVviIS']?vme_fa36e1['_$jVviIS']=![]:vme_fa36e1['_$HL1Tk0']=undefined;Ag[AI++]=KI(Zi,ZY,Zh['e'],Zr,undefined,undefined),AO++;break lb;}}let Zx=vme_fa36e1['_$HL1Tk0'],ZT=vme_fa36e1['_$rIYp6L'],ZQ=ZT&&I['call'](ZT,Zr);ZQ?(vme_fa36e1['_$jVviIS']=!![],vme_fa36e1['_$HL1Tk0']=ZQ):vme_fa36e1['_$HL1Tk0']=undefined;let Zw;try{if(ZM===0x0)Zw=Zr();else{if(ZM===0x1){let q6=Ag[--AI];Zw=q6&&typeof q6==='object'&&o['call'](N,q6)?z(Zr,undefined,q6['value']):Zr(q6);}else Zw=z(Zr,undefined,w(AH,ZM));}Ag[AI++]=Zw;}finally{ZQ&&(vme_fa36e1['_$jVviIS']=![]),vme_fa36e1['_$HL1Tk0']=Zx;}AO++;}break;}case 0x2c:{let q7=Ag[--AI],q8=Ag[--AI];Ag[AI++]=q8<q7,AO++;break;}case 0x39:{throw Ag[--AI];break;}case 0x51:{let q9=Ag[--AI],qK=Ag[AI-0x1];q9!==null&&q9!==undefined&&Object['assign'](qK,q9);AO++;break;}case 0x3b:{Aa['pop'](),AO++;break;}case 0x2:{Ag[AI++]=null,AO++;break;}case 0x18:{let qA=Ag[--AI],qZ=Ag[--AI];Ag[AI++]=qZ<<qA,AO++;break;}case 0x3d:{if(Aa&&Aa['length']>0x0){let qq=Aa[Aa['length']-0x1];qq['_$EMl7dv']===AO&&(qq['_$CIy63E']!==undefined&&(An=qq['_$CIy63E']),qq['_es']!==undefined&&(Ax=qq['_es']),Aa['pop']());}AO++;break;}case 0x4f:{let ql=Ag[--AI],qe=Ag[--AI];Ag[AI++]=qe in ql,AO++;break;}case 0x0:{Ag[AI++]=Ao[ZI],AO++;break;}case 0x4c:{let qS=Ag[--AI],qU=Ao[ZI];if(vme_fa36e1['_$6q9N3P']&&qU in vme_fa36e1['_$6q9N3P'])throw new ReferenceError('Cannot\x20access\x20\x27'+qU+'\x27\x20before\x20initialization');let qj=!(qU in vme_fa36e1)&&!(qU in vmj);vme_fa36e1[qU]=qS;qU in vmj&&(vmj[qU]=qS);qj&&(vmj[qU]=qS);Ag[AI++]=qS,AO++;break;}case 0x11:{let qB=Ag[--AI];Ag[AI++]=typeof qB===P?qB-0x1n:+qB-0x1,AO++;break;}case 0x33:{Ag[--AI]?AO=AX[AO]:AO++;break;}case 0x3a:{let qz=AE[AO];if(!Aa)Aa=[];Aa['push']({['_$2tZ6o0']:qz[0x0]>=0x0?qz[0x0]:undefined,['_$EMl7dv']:qz[0x1]>=0x0?qz[0x1]:undefined,['_$n9TFzh']:qz[0x2]>=0x0?qz[0x2]:undefined,['_$fPsSuL']:AI,'_ts':AO,'_es':Ax}),AO++;break;}case 0x12:{let qg=Ag[--AI],qI=Ag[--AI];Ag[AI++]=qI**qg,AO++;break;}case 0x46:{let qb=Ag[--AI],qO=Ao[ZI];if(qb===null||qb===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+qb+'\x20(reading\x20'+'\x27'+String(qO)+'\x27'+')');Ag[AI++]=qb[qO],AO++;break;}case 0x1c:{let qo=Ag[--AI];Ag[AI++]=typeof qo===P?qo:+qo,AO++;break;}case 0xf:{Ag[AI-0x1]=-Ag[AI-0x1],AO++;break;}case 0x3e:{lO:{if(An!==null){AP=![],AG=![],AV=![];let qc=An;An=null;throw qc;}if(AP){if(Aa&&Aa['length']>0x0){let qE=Aa[Aa['length']-0x1];if(qE['_$EMl7dv']!==undefined){AO=qE['_$EMl7dv'];break lO;}}let qX=AF;return AP=![],AF=undefined,Z7=qX,0x1;}if(AG){if(Aa&&Aa['length']>0x0){let qC=Aa[Aa['length']-0x1];if(qC['_$EMl7dv']!==undefined){AO=qC['_$EMl7dv'];break lO;}}let qu=AN;AG=![],AN=0x0,AO=qu;break lO;}if(AV){if(Aa&&Aa['length']>0x0){let qv=Aa[Aa['length']-0x1];if(qv['_$EMl7dv']!==undefined){AO=qv['_$EMl7dv'];break lO;}}let qy=Ap;AV=![],Ap=0x0,AO=qy;break lO;}AO++;}break;}case 0x3c:{if(ZI===-0x2){}else ZI===-0x1?Ag[--AI]:Ax['_$bQrsS0'][ZI]=Ag[--AI];AO++;break;}case 0x14:{let qR=Ag[--AI],qa=Ag[--AI];Ag[AI++]=qa&qR,AO++;break;}case 0x4a:{let qn,qP;ZI>=0x0?(qP=Ag[--AI],qn=Ao[ZI]):(qn=Ag[--AI],qP=Ag[--AI]);let qF=delete qP[qn];if(At&&!qF)throw new TypeError('Cannot\x20delete\x20property\x20\x27'+String(qn)+'\x27\x20of\x20object');Ag[AI++]=qF,AO++;break;}case 0x54:{let qG=Ag[--AI],qN=Ag[--AI],qV=Ag[--AI];K(qV,qN,{'value':qG,'writable':!![],'enumerable':!![],'configurable':!![]});typeof qG==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qG,qV));AO++;break;}case 0x16:{let qp=Ag[--AI],qt=Ag[--AI];Ag[AI++]=qt^qp,AO++;break;}case 0x6:{Ag[AI++]=Ab[ZI],AO++;break;}case 0x48:{let qL=Ag[--AI],qD=Ag[--AI];if(qD===null||qD===undefined){if(qL===Symbol['iterator'])throw new TypeError((qD===null?'object\x20null':'undefined')+'\x20is\x20not\x20iterable\x20(cannot\x20read\x20property\x20Symbol(Symbol.iterator))');throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+qD+'\x20(reading\x20'+(typeof qL==='symbol'?'\x27'+qL['toString']()+'\x27':typeof qL==='string'?'\x27'+qL+'\x27':typeof qL==='object'||typeof qL==='function'?'\x27<computed\x20key>\x27':'\x27'+String(qL)+'\x27')+')');}Ag[AI++]=qD[qL],AO++;break;}case 0x20:{Ag[AI-0x1]=!Ag[AI-0x1],AO++;break;}case 0x9:{AS[ZI]=Ag[--AI],AO++;break;}case 0xe:{let qs=Ag[--AI],qf=Ag[--AI];Ag[AI++]=qf%qs,AO++;break;}case 0x1b:{let qm=Ag[AI-0x3],qk=Ag[AI-0x2],qJ=Ag[AI-0x1];Ag[AI-0x3]=qk,Ag[AI-0x2]=qJ,Ag[AI-0x1]=qm,AO++;break;}case 0xc:{let qH=Ag[--AI],qM=Ag[--AI];Ag[AI++]=qM*qH,AO++;break;}case 0x15:{let qr=Ag[--AI],qd=Ag[--AI];Ag[AI++]=qd|qr,AO++;break;}case 0x3f:{lo:{let qh=AX[AO];if(Aa&&Aa['length']>0x0){let qx=Aa[Aa['length']-0x1];if(qx['_$EMl7dv']!==undefined&&(qh>=qx['_$n9TFzh']||qh<=qx['_ts'])){AG=!![],AN=qh,AO=qx['_$EMl7dv'];break lo;}}AO=qh;}break;}case 0x2a:{let qT=Ag[--AI],qQ=Ag[--AI];Ag[AI++]=qQ===qT,AO++;break;}case 0x38:{lc:{if(Aa&&Aa['length']>0x0){let qi=Aa[Aa['length']-0x1];if(qi['_$EMl7dv']!==undefined){AP=!![],AF=Ag[--AI],AO=qi['_$EMl7dv'];break lc;}}AP&&(AP=![],AF=undefined);let qw=Ag[--AI];if(AD&&qw===undefined&&!Aw)throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');return Z7=qw,0x1;}break;}case 0x40:{lX:{let qY=AX[AO];if(Aa&&Aa['length']>0x0){let qW=Aa[Aa['length']-0x1];if(qW['_$EMl7dv']!==undefined&&(qY>=qW['_$n9TFzh']||qY<=qW['_ts'])){AV=!![],Ap=qY,AO=qW['_$EMl7dv'];break lX;}}AO=qY;}break;}case 0x1:{Ag[AI++]=undefined,AO++;break;}case 0x2f:{let l0=Ag[--AI],l1=Ag[--AI];Ag[AI++]=l1>=l0,AO++;break;}case 0x32:{AO=AX[AO];break;}case 0xa:{let l2=Ag[--AI],l3=Ag[--AI];Ag[AI++]=l3+l2,AO++;break;}case 0xb:{let l4=Ag[--AI],l5=Ag[--AI];Ag[AI++]=l5-l4,AO++;break;}case 0x35:{let l6=Ag[--AI];l6!==null&&l6!==undefined?AO=AX[AO]:AO++;break;}case 0x4d:{Ag[AI++]={},AO++;break;}case 0x52:{let l7=Ag[--AI],l8=Ag[--AI];l8===null||l8===undefined?Ag[AI++]=undefined:Ag[AI++]=l8[l7];AO++;break;}case 0x4:{let l9=Ag[AI-0x1];Ag[AI++]=l9,AO++;break;}case 0x49:{let lK=Ag[--AI],lA=Ag[--AI],lZ=Ag[--AI];if(lZ===null||lZ===undefined)throw new TypeError('Cannot\x20set\x20properties\x20of\x20'+lZ+'\x20(setting\x20'+(typeof lA==='symbol'?'\x27'+lA['toString']()+'\x27':typeof lA==='string'?'\x27'+lA+'\x27':typeof lA==='object'||typeof lA==='function'?'\x27<computed\x20key>\x27':'\x27'+String(lA)+'\x27')+')');if(At){let lq=typeof lZ==='object'||typeof lZ==='function'?lZ:Object(lZ);if(!Reflect['set'](lq,lA,lK,lZ))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(lA)+'\x27\x20of\x20object');}else lZ[lA]=lK;Ag[AI++]=lK,AO++;break;}case 0x10:{let ll=Ag[--AI];Ag[AI++]=typeof ll===P?ll+0x1n:+ll+0x1,AO++;break;}case 0x28:{let le=Ag[--AI],lS=Ag[--AI];Ag[AI++]=lS==le,AO++;break;}case 0x34:{!Ag[--AI]?AO=AX[AO]:AO++;break;}case 0x2d:{let lU=Ag[--AI],lj=Ag[--AI];Ag[AI++]=lj<=lU,AO++;break;}case 0x17:{Ag[AI-0x1]=~Ag[AI-0x1],AO++;break;}case 0x8:{Ag[AI++]=AS[ZI],AO++;break;}case 0x1a:{let lB=Ag[--AI],lz=Ag[--AI];Ag[AI++]=lz>>>lB,AO++;break;}case 0x13:{Ag[AI-0x1]=+Ag[AI-0x1],AO++;break;}case 0x19:{let lg=Ag[--AI],lI=Ag[--AI];Ag[AI++]=lI>>lg,AO++;break;}}},Z9=function(Zg,ZI){switch(Zg){case 0x95:{let ZO=Ag[--AI],Zo=Ag[AI-0x1],Zc=Ao[ZI];K(Zo,Zc,{'set':ZO,'enumerable':![],'configurable':!![]}),AO++;break;}case 0xa7:{if(ZI===-0x1)Ag[AI++]=Symbol();else{let ZX=Ag[--AI];Ag[AI++]=Symbol(ZX);}AO++;break;}case 0x8d:{eS:{let ZE=Ag[--AI],Zu=Ag[AI-0x1];if(ZE===null){S(Zu['prototype'],null),S(Zu,Function['prototype']),Zu['_$gvIAXK']=null,AO++;break eS;}if(typeof ZE!=='function')throw new TypeError('Class\x20extends\x20value\x20'+String(ZE)+'\x20is\x20not\x20a\x20constructor\x20or\x20null');let ZC=![],Zy=m(ZE);if(!Zy)try{let Zv=A(ZE['prototype']),ZR=ZE['apply'](Zv,[]);ZR!==undefined&&ZR!==Zv&&(ZC=!![]);}catch(Za){let Zn=Za&&typeof Za['message']==='string'?Za['message']:'';(Zn['includes']('\x27new\x27')||Zn['includes']('constructor')||Zn['includes']('Illegal\x20constructor'))&&(ZC=!![]);}if(ZC){let ZP=Zu,ZF=vme_fa36e1,ZG='_$lgbdxE',ZN='_$fMMDMh',ZV='_$pa57wB';function Zb(...Zp){let Zt=A(ZE['prototype']);ZF[ZV]={'parent':ZE,'newTarget':new.target||Zb,'outer':Zb},ZF[ZN]=new.target||Zb;let ZL=ZG in ZF;!ZL&&(ZF[ZG]=new.target);try{let ZD=ZP['apply'](Zt,Zp);ZD!==undefined&&ZD!==null&&Y(ZD)&&(Zt=ZD);}finally{delete ZF[ZV],delete ZF[ZN],!ZL&&delete ZF[ZG];}return Zt;}Zb['prototype']=A(ZE['prototype']),Zb['prototype']['constructor']=Zb,S(Zb,ZE),q(ZP)['forEach'](function(Zp){Zp!=='prototype'&&Zp!=='length'&&Zp!=='name'&&Q(Zb,Zp,Z(ZP,Zp));});ZP['prototype']&&(q(ZP['prototype'])['forEach'](function(Zp){Zp!=='constructor'&&Q(Zb['prototype'],Zp,Z(ZP['prototype'],Zp));}),l(ZP['prototype'])['forEach'](function(Zp){Q(Zb['prototype'],Zp,Z(ZP['prototype'],Zp));}));Ag[--AI],Ag[AI++]=Zb,Zb['_$gvIAXK']=ZE,AO++;break eS;}S(Zu['prototype'],ZE['prototype']),S(Zu,ZE),Zu['_$gvIAXK']=ZE,AO++;}break;}case 0x8f:{let Zp=Ag[--AI],Zt=Ag[--AI],ZL=Ag[--AI],ZD=vme_fa36e1['_$HL1Tk0'],Zs=ZD?U(ZD):K9(ZL);if(Zs===null||Zs===undefined)throw new TypeError('Cannot\x20convert\x20'+Zs+'\x20to\x20object');let Zf=KK(Zs,Zt),Zm=![];if(Zf['desc']){let Zk=Zf['desc'];if(Zk['set'])Zk['set']['call'](ZL,Zp);else{if(Zk['get']||!('value'in Zk)){if(At)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(Zt)+'\x27\x20of\x20object\x20which\x20has\x20only\x20a\x20getter');}else{if(Zk['writable']===![]){if(At)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(Zt)+'\x27\x20of\x20object');}else Zm=!![];}}}else Zm=!![];if(Zm){let ZJ=Object['getOwnPropertyDescriptor'](ZL,Zt);if(ZJ){if('value'in ZJ){if(ZJ['writable'])ZL[Zt]=Zp;else{if(At)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(Zt)+'\x27\x20of\x20object');}}else{if(At)throw new TypeError('Cannot\x20redefine\x20property:\x20'+String(Zt));}}else{let ZH=Reflect['defineProperty'](ZL,Zt,{'value':Zp,'writable':!![],'enumerable':!![],'configurable':!![]});if(!ZH&&At)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(Zt)+'\x27\x20of\x20object');}}Ag[AI++]=Zp,AO++;break;}case 0x69:{eU:{let ZM=Ag[--AI],Zr=w(AH,ZM),Zd=Ag[--AI];if(ZI===0x1){Ag[AI++]=Zr,AO++;break eU;}if(vme_fa36e1['_$WEK7nD']){AO++;break eU;}let Zh=vme_fa36e1['_$pa57wB'];if(Zh){let ZQ=Zh['outer'],Zw=ZQ?U(ZQ):Zh['parent'];if(typeof Zw!=='function')throw new TypeError('Super\x20constructor\x20'+String(Zw)+'\x20of\x20'+(ZQ&&ZQ['name']||'anonymous')+'\x20is\x20not\x20a\x20constructor');let Zi=Zh['newTarget'],ZY=Reflect['construct'](Zw,Zr,Zi);Az&&Az!==ZY&&q(Az)['forEach'](function(ZW){!(ZW in ZY)&&(ZY[ZW]=Az[ZW]);});Az=ZY,Aw=!![],KZ(Ax,Az),AO++;break eU;}if(typeof Zd!=='function')throw new TypeError('Super\x20expression\x20must\x20be\x20a\x20constructor');let Zx;k['has'](Aj)?Zx=Kq(Ax):Zx=Aw?Az:undefined;vme_fa36e1['_$lgbdxE']=AB;let ZT;try{let ZW=Zd['apply'](Az,Zr);ZW!==undefined&&ZW!==Az&&Y(ZW)&&(Az&&Object['assign'](ZW,Az),Az=ZW,AB&&AB['prototype']&&U(Az)!==AB['prototype']&&S(Az,AB['prototype'])),Aw=!![],KZ(Ax,Az);}catch(q0){let q1=q0&&typeof q0['message']==='string'?q0['message']:'';if(q1['includes']('\x27new\x27')||q1['includes']('Illegal\x20constructor')){let q2=Reflect['construct'](Zd,Zr,AB);q2!==Az&&Az&&Object['assign'](q2,Az),Az=q2,Aw=!![],KZ(Ax,Az);}else ZT=q0;}finally{delete vme_fa36e1['_$lgbdxE'];}if(ZT!==undefined)throw ZT;if(Zx!==undefined)throw new ReferenceError('Super\x20constructor\x20may\x20only\x20be\x20called\x20once');AO++;}break;}case 0x82:{let q3=Ag[--AI];Ag[AI++]=q3['next'](),AO++;break;}case 0x5f:{let q4=Ag[AI-0x1];q4['length']++,AO++;break;}case 0x80:{let q5=Ag[--AI];Ag[AI++]=!!q5['done'],AO++;break;}case 0x83:{let q6=Ag[--AI],q7=q6&&q6['i']?q6['i']:q6;if(An!==null)try{q7&&typeof q7['return']==='function'?Ag[AI++]=Promise['resolve'](q7['return']())['catch'](function(){return undefined;}):Ag[AI++]=Promise['resolve']();}catch(q8){Ag[AI++]=Promise['resolve']();}else{let q9=q7!=null?q7['return']:undefined;if(q9==null)Ag[AI++]=Promise['resolve']();else typeof q9!=='function'?Ag[AI++]=Promise['reject'](new TypeError('iterator\x20\x27return\x27\x20is\x20not\x20callable')):Ag[AI++]=Promise['resolve'](q9['call'](q7));}AO++;break;}case 0xa5:{Ag[AI++]=vmB[ZI],AO++;break;}case 0x7b:{let qK=Ag[--AI],qA=qK&&qK['_$TaL8J1'];if(qA!==undefined){let qZ=qK['_$U13OaJ'],qq;qZ>=qA['length']?qq={'value':undefined,'done':!![]}:(qK['_$U13OaJ']=qZ+0x1,qq={'value':qA[qZ],'done':![]}),Ag[AI++]=qq,AO++;}else{let ql=qK&&qK['i']?qK['i']:qK,qe=qK&&qK['n']?qK['n']:ql&&ql['next'];if(typeof qe!=='function')throw new TypeError('iterator.next\x20is\x20not\x20a\x20function');let qS=z(qe,ql,[]);K3(qS),Ag[AI++]=qS,AO++;}break;}case 0xa4:{Ag[AI++]=AB,AO++;break;}case 0x84:{let qU=Ag[--AI];Ag[AI++]=K6(qU),AO++;break;}case 0xa8:{let qj=Ao[ZI];Ag[AI++]=Symbol['for'](qj),AO++;break;}case 0x6e:{Ag[AI-0x1]=typeof Ag[AI-0x1],AO++;break;}case 0xa6:{Ag[AI++]=vmz[ZI],AO++;break;}case 0xa0:{if(AD&&!Aw){let qB=Kq(Ax);if(qB!==undefined)Az=qB,Aw=!![];else throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');}Ag[AI++]=Az,AO++;break;}case 0x5d:{let qz=Ag[--AI],qg;if(Array['isArray'](qz))qg=qz;else{if(qz===null||qz===undefined)throw new TypeError(qz+'\x20is\x20not\x20iterable');let qb=qz[Symbol['iterator']];if(qb===null||qb===undefined||typeof qb!=='function')throw new TypeError(qz+'\x20is\x20not\x20iterable');let qO=z(qb,qz,[]);if(qO===null||typeof qO!=='object')throw new TypeError('Iterator\x20method\x20returned\x20a\x20non-object\x20value');qg=[];while(!![]){let qo=qO['next']();K3(qo);if(qo['done'])break;qg['push'](qo['value']);}}let qI={'value':qg};O['call'](N,qI),Ag[AI++]=qI,AO++;break;}case 0xa3:{Ag[--AI],Ag[AI++]=undefined,AO++;break;}case 0x5a:{Ag[AI++]=[],AO++;break;}case 0x94:{let qc=Ag[--AI],qX=Ag[AI-0x1],qE=Ao[ZI];K(qX,qE,{'get':qc,'enumerable':![],'configurable':!![]}),AO++;break;}case 0xb5:{let qu=Ag[--AI],qC=Ag[--AI],qy=Ag[AI-0x1];K(qy,qC,{'value':qu,'writable':!![],'enumerable':![],'configurable':!![]});typeof qu==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qu,qy));AO++;break;}case 0x90:{let qv=Ag[--AI],qR=Ag[AI-0x1],qa=Ao[ZI];K(qR['prototype'],qa,{'value':qv,'writable':!![],'enumerable':![],'configurable':!![]});typeof qv==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qv,qR['prototype']));AO++;break;}case 0x8e:{ej:{let qn=Ag[--AI],qP=Ag[--AI],qF=vme_fa36e1['_$HL1Tk0'],qG=qF?U(qF):K9(qP),qN=KK(qG,qn);if(qN['desc']&&qN['desc']['get']){let qp=qN['desc']['get']['call'](qP);Ag[AI++]=qp,AO++;break ej;}if(qN['desc']&&qN['desc']['set']&&!('value'in qN['desc'])){Ag[AI++]=undefined,AO++;break ej;}let qV=qN['proto']?qN['proto'][qn]:qG[qn];if(typeof qV==='function'){let qt=qN['proto']||qG,qL=qV['constructor']&&qV['constructor']['name'],qD=qL==='GeneratorFunction'||qL==='AsyncFunction'||qL==='AsyncGeneratorFunction';!qD&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qV,qt));}Ag[AI++]=qV,AO++;}break;}case 0x64:{let qs=Ag[--AI],qf=typeof qs==='object'?qs:A5(qs);qs=qf;let qm=qf&&qf[0x3],qk=qf&&qf[0xf],qJ=qf&&qf[0x6],qH=qf&&qf[0x9],qM=qf&&qf[0x0]||0x0,qr=qf&&qf[0x1],qd=qm?Af:undefined,qh=Ax,qx;if(qJ)qx=KB(A7,qs,qh,V,qr,vmj,qk);else{if(qk)qm?qx=Kg(A6,qs,qh,qd):qx=Kj(A6,qs,qh,qr,vmj);else{if(qm){qx=Kz(Ko,qs,qh,qd);let qT=vme_fa36e1['_$fMMDMh'];qT===undefined&&Aj&&k['has'](Aj)&&(qT=k['get'](Aj)),qT!==undefined&&k['set'](qx,qT);}else qx=KU(Ko,qs,qh,qr,vmj,qH);}}Q(qx,'length',{'value':qM,'writable':![],'enumerable':![],'configurable':!![]}),Ag[AI++]=qx,AO++;break;}case 0xb9:{let qQ=Ag[--AI],qw=Ag[--AI],qi=Ag[AI-0x1];K(qi,qw,{'set':qQ,'enumerable':![],'configurable':!![]}),AO++;break;}case 0x93:{let qY=Ag[--AI],qW=Ag[AI-0x1],l0=Ao[ZI];K(qW,l0,{'value':qY,'writable':!![],'enumerable':![],'configurable':!![]});typeof qY==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],qY,qW));AO++;break;}case 0x7f:{let l1=Ag[--AI];if(l1==null)throw new TypeError(l1+'\x20is\x20not\x20iterable');let l2=l1[M];if(Array['isArray'](l1)&&l2===H)Ag[AI++]={['_$TaL8J1']:l1,['_$U13OaJ']:0x0},AO++;else{if(typeof l2!=='function')throw new TypeError(l1+'\x20is\x20not\x20iterable');let l3=z(l2,l1,[]);K3(l3);let l4=l3['next'];Ag[AI++]={'i':l3,'n':l4},AO++;}break;}case 0x5b:{let l5=Ag[--AI],l6=Ag[AI-0x1];l6['push'](l5),AO++;break;}case 0xb8:{let l7=Ag[--AI],l8=Ag[--AI],l9=Ag[AI-0x1];K(l9,l8,{'get':l7,'enumerable':![],'configurable':!![]}),AO++;break;}case 0xb4:{let lK=Ag[--AI],lA=Ag[--AI],lZ=Ag[AI-0x1];K(lZ['prototype'],lA,{'value':lK,'writable':!![],'enumerable':![],'configurable':!![]});typeof lK==='function'&&(!vme_fa36e1['_$rIYp6L']&&(vme_fa36e1['_$rIYp6L']=new WeakMap()),g['call'](vme_fa36e1['_$rIYp6L'],lK,lZ['prototype']));AO++;break;}case 0xa9:{let lq=Ag[--AI];Ag[AI++]=Symbol['keyFor'](lq),AO++;break;}case 0x92:{let ll=Ag[--AI],le=Ag[AI-0x1],lS=Ao[ZI],lU=K8(le);K(lU,lS,{'set':ll,'enumerable':lU===le,'configurable':!![]}),AO++;break;}case 0x81:{let lj=Ag[--AI];if(lj==null)throw new TypeError(lj+'\x20is\x20not\x20iterable');let lB=lj[Symbol['asyncIterator']];if(typeof lB==='function')Ag[AI++]=lB['call'](lj);else{let lz=lj[Symbol['iterator']];if(typeof lz!=='function')throw new TypeError(lj+'\x20is\x20not\x20iterable');let lg=lz['call'](lj);if(lg===null||typeof lg!=='object')throw new TypeError('Iterator\x20method\x20returned\x20a\x20non-object\x20value');let lI=async function(lO){if(lO===null||typeof lO!=='object')throw new TypeError('Iterator\x20result\x20is\x20not\x20an\x20object');let lo=await lO['value'];return{'value':lo,'done':!!lO['done']};},lb={'next':function(lO){let lo;try{lo=lg['next'](lO);}catch(lc){return Promise['reject'](lc);}return lI(lo);},'return':function(lO){if(typeof lg['return']!=='function')return Promise['resolve']({'value':lO,'done':!![]});let lo;try{lo=lg['return'](lO);}catch(lc){return Promise['reject'](lc);}return lI(lo);},'throw':function(lO){if(typeof lg['throw']!=='function')return Promise['reject'](lO);let lo;try{lo=lg['throw'](lO);}catch(lc){return Promise['reject'](lc);}return lI(lo);},[Symbol['asyncIterator']]:function(){return this;}};Ag[AI++]=lb;}AO++;break;}case 0x6f:{let lO=Ag[--AI],lo=Ag[--AI];Ag[AI++]=lo instanceof lO,AO++;break;}case 0x7c:{let lc=Ag[--AI],lX=lc&&lc['i']?lc['i']:lc;if(lX!=null){if(An!==null)try{let lE=lX['return'];typeof lE==='function'&&lE['call'](lX);}catch(lu){}else{let lC=lX['return'];if(lC!=null){if(typeof lC!=='function')throw new TypeError('iterator\x20\x27return\x27\x20is\x20not\x20callable');let ly=lC['call'](lX);K3(ly);}}}AO++;break;}case 0xa1:{if(AQ===null){if(At||!AL){let lv=AT||AS,lR=lv?lv['length']:0x0;AQ=A(Object['prototype']);for(let la=0x0;la<lR;la++){AQ[la]=lv[la];}K(AQ,'length',{'value':lR,'writable':!![],'enumerable':![],'configurable':!![]}),K(AQ,Symbol['iterator'],{'value':Array['prototype'][Symbol['iterator']],'writable':!![],'enumerable':![],'configurable':!![]}),AQ=new Proxy(AQ,{'has':function(ln,lP){if(lP===Symbol['toStringTag'])return![];return lP in ln;},'get':function(ln,lP,lF){if(lP===Symbol['toStringTag'])return'Arguments';return Reflect['get'](ln,lP,lF);}}),At?K(AQ,'callee',{'get':G,'set':G,'enumerable':![],'configurable':![]}):K(AQ,'callee',{'value':Aj,'writable':!![],'enumerable':![],'configurable':!![]});}else{let ln=AS?AS['length']:0x0,lP={},lF={},lG=Aj,lN=![],lV=!![],lp={},lt=function(lm){if(typeof lm!=='string')return NaN;let lk=+lm;return lk>=0x0&&lk%0x1===0x0&&String(lk)===lm?lk:NaN;},lL=function(lm){return!isNaN(lm)&&lm>=0x0;},lD=function(lm){if(lm in lF)return undefined;if(lm in lP)return lP[lm];return lm<AS['length']?AS[lm]:undefined;},ls=function(lm){if(lm in lF)return![];if(lm in lP)return!![];return lm<AS['length']?lm in AS:![];},lf={};K(lf,'length',{'value':ln,'writable':!![],'enumerable':![],'configurable':!![]}),K(lf,'callee',{'value':Aj,'writable':!![],'enumerable':![],'configurable':!![]}),K(lf,Symbol['iterator'],{'value':Array['prototype'][Symbol['iterator']],'writable':!![],'enumerable':![],'configurable':!![]}),AQ=new Proxy(lf,{'get':function(lm,lk,lJ){if(lk==='length')return ln;if(lk==='callee')return lN?undefined:lG;if(lk===Symbol['toStringTag'])return'Arguments';let lH=lt(lk);if(lL(lH)){if(lH in lp)return Reflect['get'](lm,lk,lJ);return lD(lH);}return Reflect['get'](lm,lk,lJ);},'set':function(lm,lk,lJ){if(lk==='length'){if(!lV)return![];return ln=lJ,lm['length']=lJ,!![];}if(lk==='callee')return lG=lJ,lN=![],lm['callee']=lJ,!![];let lH=lt(lk);if(lL(lH)){if(lH in lp)return Reflect['set'](lm,lk,lJ);let lM=Z(lm,String(lH));if(lM&&!lM['writable'])return![];if(lH in lF)delete lF[lH],lP[lH]=lJ;else lH<AS['length']?AS[lH]=lJ:lP[lH]=lJ;return!![];}return lm[lk]=lJ,!![];},'has':function(lm,lk){if(lk==='length')return!![];if(lk==='callee')return!lN;if(lk===Symbol['toStringTag'])return![];let lJ=lt(lk);if(lL(lJ)){if(String(lJ)in lm)return!![];return ls(lJ);}return lk in lm;},'defineProperty':function(lm,lk,lJ){if(lk==='length')return'value'in lJ&&(ln=lJ['value']),'writable'in lJ&&(lV=lJ['writable']),K(lm,lk,lJ),!![];if(lk==='callee')return'value'in lJ&&(lG=lJ['value']),lN=![],K(lm,lk,lJ),!![];let lH=lt(lk);if(lL(lH)){let lM='get'in lJ||'set'in lJ,lr=Z(lm,String(lH)),ld=lH in lp?lr?lr['value']:undefined:lD(lH),lh=lr?lr['writable']!==![]:!![],lx=lr?lr['enumerable']!==![]:!![],lT=lr?lr['configurable']!==![]:!![],lQ;if(lM)lQ=lJ,lp[lH]=0x1,lH in lP&&delete lP[lH],lH in lF&&delete lF[lH];else{let lw='value'in lJ?lJ['value']:ld,li='writable'in lJ?lJ['writable']:lh,lY='enumerable'in lJ?lJ['enumerable']:lx,lW='configurable'in lJ?lJ['configurable']:lT;lQ={'value':lw,'writable':li,'enumerable':lY,'configurable':lW},'value'in lJ&&(!(lH in lp)&&(lH<AS['length']&&!(lH in lF)?AS[lH]=lJ['value']:(lP[lH]=lJ['value'],lH in lF&&delete lF[lH]))),'writable'in lJ&&lJ['writable']===![]&&(lp[lH]=0x1,lH in lP&&delete lP[lH],lH in lF&&delete lF[lH]);}return K(lm,String(lH),lQ),!![];}return K(lm,lk,lJ),!![];},'deleteProperty':function(lm,lk){if(lk==='callee')return lN=!![],delete lm['callee'],!![];let lJ=lt(lk);if(lL(lJ)){let lM=Z(lm,String(lJ));if(lM&&lM['configurable']===![])return![];return lJ in lp&&delete lp[lJ],lJ<AS['length']?lF[lJ]=0x1:delete lP[lJ],delete lm[lk],!![];}let lH=Z(lm,lk);if(lH&&lH['configurable']===![])return![];return delete lm[lk],!![];},'preventExtensions':function(lm){let lk=AS?AS['length']:0x0;for(let lJ=0x0;lJ<lk;lJ++){!(lJ in lF)&&!Z(lm,String(lJ))&&K(lm,String(lJ),{'value':lD(lJ),'writable':!![],'enumerable':!![],'configurable':!![]});}for(let lH in lP){!Z(lm,lH)&&K(lm,lH,{'value':lP[lH],'writable':!![],'enumerable':!![],'configurable':!![]});}return Object['preventExtensions'](lm),!![];},'getOwnPropertyDescriptor':function(lm,lk){if(lk==='callee'){if(lN)return undefined;return Z(lm,'callee');}if(lk==='length')return Z(lm,'length');let lJ=lt(lk);if(lL(lJ)){if(lJ in lp)return Z(lm,lk);if(ls(lJ)){let lM=Z(lm,String(lJ));return{'value':lD(lJ),'writable':lM?lM['writable']:!![],'enumerable':lM?lM['enumerable']:!![],'configurable':lM?lM['configurable']:!![]};}return Z(lm,lk);}let lH=Z(lm,lk);if(lH)return lH;return undefined;},'ownKeys':function(lm){let lk=[],lJ=AS?AS['length']:0x0;for(let lM=0x0;lM<lJ;lM++){!(lM in lF)&&lk['push'](String(lM));}for(let lr in lP){lk['indexOf'](lr)===-0x1&&lk['push'](lr);}lk['push']('length');!lN&&lk['push']('callee');let lH=Reflect['ownKeys'](lm);for(let ld=0x0;ld<lH['length'];ld++){lk['indexOf'](lH[ld])===-0x1&&lk['push'](lH[ld]);}return lk;}});}}Ag[AI++]=AQ,AO++;break;}case 0x5e:{let lm=Ag[--AI],lk=Ag[AI-0x1];if(Array['isArray'](lm))Array['prototype']['push']['apply'](lk,lm);else for(let lJ of lm){lk['push'](lJ);}AO++;break;}case 0xb6:{let lH=Ag[--AI],lM=Ag[--AI],lr=Ag[AI-0x1],ld=K8(lr);K(ld,lM,{'get':lH,'enumerable':ld===lr,'configurable':!![]}),AO++;break;}case 0x70:{let lh=Ao[ZI];lh in vme_fa36e1?Ag[AI++]=typeof vme_fa36e1[lh]:Ag[AI++]=typeof vmj[lh];AO++;break;}case 0x91:{let lx=Ag[--AI],lT=Ag[AI-0x1],lQ=Ao[ZI],lw=K8(lT);K(lw,lQ,{'get':lx,'enumerable':lw===lT,'configurable':!![]}),AO++;break;}case 0xb7:{let li=Ag[--AI],lY=Ag[--AI],lW=Ag[AI-0x1],e0=K8(lW);K(e0,lY,{'set':li,'enumerable':e0===lW,'configurable':!![]}),AO++;break;}case 0x68:{let e1=Ag[--AI],e2=w(AH,e1),e3=Ag[--AI];if(typeof e3!=='function')throw new TypeError(e3+'\x20is\x20not\x20a\x20constructor');if(o['call'](V,e3))throw new TypeError(e3['name']+'\x20is\x20not\x20a\x20constructor');let e4=vme_fa36e1['_$HL1Tk0'];vme_fa36e1['_$HL1Tk0']=undefined;let e5;try{e5=Reflect['construct'](e3,e2);}finally{vme_fa36e1['_$HL1Tk0']=e4;}Ag[AI++]=e5,AO++;break;}case 0x6a:{let e6=Ag[--AI];Ag[AI++]=import(e6),AO++;break;}case 0x8c:{let e7=Ag[--AI],e8=Ag[--AI],e9=ZI,eK=function(eA,eZ){let eq=function(){if(eA){eZ&&(vme_fa36e1['_$fMMDMh']=eq);let el='_$lgbdxE'in vme_fa36e1;!el&&(vme_fa36e1['_$lgbdxE']=new.target);try{let ee=eA['apply'](this,K7(arguments));if(eZ&&ee!==undefined&&(ee===null||typeof ee!=='object'&&typeof ee!=='function'))throw new TypeError('Derived\x20constructors\x20may\x20only\x20return\x20object\x20or\x20undefined');return ee;}finally{eZ&&delete vme_fa36e1['_$fMMDMh'],!el&&delete vme_fa36e1['_$lgbdxE'];}}};return eq;}(e8,e9);e7&&K(eK,'name',{'value':e7,'configurable':!![]});if(e8&&!m(eK)){let eA=f(e8);eA&&s(eK,eA);}Ag[AI++]=eK,AO++;break;}case 0xa2:{let eZ=ZI&0xffff,eq=ZI>>0x10,el=Ao[eZ],ee=Ao[eq];Ag[AI++]=new RegExp(el,ee),AO++;break;}}},ZK=function(Zg,ZI){switch(Zg){case 0x107:{let ZO=Ao[ZI],Zo=Ag[--AI],Zc=Ag[--AI];if(typeof Zo!=='function')throw new TypeError(Zo+'\x20is\x20not\x20a\x20function');let ZX=vme_fa36e1['_$rIYp6L'],ZE=ZX&&I['call'](ZX,Zo);!ZE&&ZX&&(Zo===j||Zo===B)&&(ZE=I['call'](ZX,Zc));let Zu=vme_fa36e1['_$HL1Tk0'];ZE&&(vme_fa36e1['_$jVviIS']=!![],vme_fa36e1['_$HL1Tk0']=ZE);let ZC;try{if(ZO===0x0)ZC=z(Zo,Zc,F);else{if(ZO===0x1){let Zy=Ag[--AI];ZC=Zy&&typeof Zy==='object'&&o['call'](N,Zy)?z(Zo,Zc,Zy['value']):z(Zo,Zc,[Zy]);}else ZC=z(Zo,Zc,w(AH,ZO));}Ag[AI++]=ZC;}finally{ZE&&(vme_fa36e1['_$jVviIS']=![],vme_fa36e1['_$HL1Tk0']=Zu);}AO++;break;}case 0xca:{Z7=AI>0x0?Ag[--AI]:undefined;return 0x1;break;}case 0x101:{let Zv=ZI&0xffff,ZR=ZI>>>0x10;Ab[Zv]<Ao[ZR]?AO=AX[AO]:AO++;break;}case 0x11a:{let Za=ZI,Zn=Ag[--AI];Ax['_$bQrsS0'][Za]=Zn;let ZP=Ax['_$dPxYjd'];!ZP&&(ZP=A(null),Ax['_$dPxYjd']=ZP);ZP[Za]=0x1,AO++;break;}case 0x111:{let ZF=vme_fa36e1['_$fMMDMh'];ZF===undefined&&Aj&&k['has'](Aj)&&(ZF=k['get'](Aj));if(ZF===undefined)throw new ReferenceError('\x27super\x27\x20keyword\x20is\x20only\x20valid\x20inside\x20a\x20derived\x20constructor');Ag[AI++]=ZF,AO++;break;}case 0x104:{let ZG=Ab[ZI]+0x1;Ab[ZI]=ZG,Ag[AI++]=ZG,AO++;break;}case 0x11c:{let ZN=ZI;Ax['_$bQrsS0'][ZN]=Aj;let ZV=Ax['_$dPxYjd'];!ZV&&(ZV=A(null),Ax['_$dPxYjd']=ZV);ZV[ZN]=0x2,AO++;break;}case 0xc8:{debugger;AO++;break;}case 0x119:{let Zp=ZI,Zt=Ag[--AI];Ax['_$bQrsS0'][Zp]=Zt,AO++;break;}case 0x10b:{!Ag[AI-0x1]?AO=AX[AO]:(Ag[--AI],AO++);break;}case 0x102:{let ZL=ZI&0xffff,ZD=ZI>>>0x10,Zs=Ag[--AI],Zf=w(AH,Zs),Zm=Ab[ZL],Zk=Ao[ZD],ZJ=Zm[Zk];Ag[AI++]=ZJ['apply'](Zm,Zf),AO++;break;}case 0xd2:{let ZH=Ag[--AI],ZM={['_$bQrsS0']:new Array(ZI),['_$dPxYjd']:null,['_$rMjli4']:-0x1,['_$nSPtWf']:ZH};Ax=ZM,AO++;break;}case 0x10a:{!Ag[--AI]?AO=AX[AO]:(Ag[--AI],AO++);break;}case 0x109:{if(AD&&!Aw){let Zh=Kq(Ax);if(Zh!==undefined)Az=Zh,Aw=!![];else throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');}let Zr=Az,Zd=Ao[ZI];if(Zr===null||Zr===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+Zr+'\x20(reading\x20'+'\x27'+String(Zd)+'\x27'+')');Ag[AI++]=Zr[Zd],AO++;break;}case 0xfc:{let Zx=ZI&0xffff,ZT=ZI>>>0x10;Ag[AI++]=Ab[Zx]+Ao[ZT],AO++;break;}case 0x10e:{debugger;AO++;break;}case 0x116:{let ZQ=Ab[ZI],Zw=ZQ&&ZQ['_$TaL8J1'];if(Zw!==undefined){let Zi=ZQ['_$U13OaJ'];Zi>=Zw['length']?AO=AX[AO]:(ZQ['_$U13OaJ']=Zi+0x1,Ag[AI++]=Zw[Zi],AO++);}else{let ZY=ZQ['i'],ZW=z(ZQ['n'],ZY,[]);K3(ZW),ZW['done']?AO=AX[AO]:(Ag[AI++]=ZW['value'],AO++);}break;}case 0xdc:{let q0=Ag[--AI],q1=Ao[ZI];if(At&&!(q1 in vmj)&&!(q1 in vme_fa36e1))throw new ReferenceError(q1+'\x20is\x20not\x20defined');vme_fa36e1[q1]=q0,vmj[q1]=q0,Ag[AI++]=q0,AO++;break;}case 0x11d:{Ag[AI++]=Af,AO++;break;}case 0xd5:{Ag[AI++]=Ax,AO++;break;}case 0xfb:{Ab[ZI]=Ab[ZI]-0x1,AO++;break;}case 0x11e:{let q2=Ax['_$bQrsS0'];q2[ZI]=q2,Ax['_$rMjli4']=ZI,AO++;break;}case 0xfe:{let q3=ZI&0xffff,q4=ZI>>>0x10;Ag[AI++]=Ab[q3]*Ao[q4],AO++;break;}case 0xd6:{Ax=Ax['_$nSPtWf'],AO++;break;}case 0x106:{let q5=Ag[AI-0x3],q6=Ag[AI-0x2],q7=Ag[AI-0x1];Ag[AI-0x3]=q7,Ag[AI-0x2]=q5,Ag[AI-0x1]=q6,AO++;break;}case 0xfd:{let q8=ZI&0xffff,q9=ZI>>>0x10;Ag[AI++]=Ab[q8]-Ao[q9],AO++;break;}case 0x117:{qh:{let qK=ZI&0xffff,qA=ZI>>>0x10,qZ=Ax;for(let qe=0x0;qe<qA;qe++){qZ=qZ['_$nSPtWf'];}let qq=qZ['_$bQrsS0'],ql=qq[qK];if(ql===qq)throw new ReferenceError('Cannot\x20access\x20\x27'+'<slot\x20'+qK+'>'+'\x27\x20before\x20initialization');Ag[AI++]=ql,AO++;break qh;}break;}case 0x113:{let qS=Ag[--AI],qU=Ag[AI-0x1];(qS===null||Y(qS))&&S(qU,qS);AO++;break;}case 0x114:{let qj=Ao[ZI],qB=!![];qj in vmj&&(qB=delete vmj[qj]);qB&&qj in vme_fa36e1&&(qB=delete vme_fa36e1[qj]);Ag[AI++]=qB,AO++;break;}case 0xfa:{Ab[ZI]=Ab[ZI]+0x1,AO++;break;}case 0x108:{let qz=Ag[AI-0x1],qg=Ao[ZI];if(qz===null||qz===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+qz+'\x20(reading\x20'+'\x27'+String(qg)+'\x27'+')');Ag[AI++]=qz[qg],AO++;break;}case 0x100:{let qI=ZI&0xffff,qb=ZI>>>0x10;Ag[AI++]=Ab[qI]<Ao[qb],AO++;break;}case 0xc9:{AO++;break;}case 0x103:{Ab[ZI]=Ag[--AI],AO++;break;}case 0x10c:{Ag[AI-0x1]?AO=AX[AO]:(Ag[--AI],AO++);break;}case 0x11b:{let qO=ZI,qo=Ax['_$bQrsS0'];qo[qO]=qo,AO++;break;}case 0x118:{qx:{let qc=ZI&0xffff,qX=ZI>>>0x10,qE=Ag[--AI],qu=Ax;for(let qR=0x0;qR<qX;qR++){qu=qu['_$nSPtWf'];}let qC=qu['_$bQrsS0'];if(qC[qc]===qC)throw new ReferenceError('Cannot\x20access\x20\x27'+'<slot\x20'+qc+'>'+'\x27\x20before\x20initialization');let qy=qu['_$dPxYjd'],qv=qy&&qy[qc];if(qv){if(qv===0x2&&!At){AO++;break qx;}throw new TypeError('Assignment\x20to\x20constant\x20variable.');}qC[qc]=qE,AO++;break qx;}break;}case 0xff:{let qa=ZI&0xffff,qn=ZI>>>0x10,qP=Ab[qa],qF=Ao[qn];Ag[AI++]=qP[qF],AO++;break;}case 0x110:{let qG=J[ZI],qN=Ag[--AI];if(qG){for(let qV=0x0;qV<qN;qV++)Ag[--AI];for(let qp=0x0;qp<qN;qp++)Ag[--AI];Ag[AI++]=qG;}else{let qt=new Array(qN);for(let qD=qN-0x1;qD>=0x0;qD--)qt[qD]=Ag[--AI];let qL=new Array(qN);for(let qs=qN-0x1;qs>=0x0;qs--)qL[qs]=Ag[--AI];K(qL,'raw',{'value':Object['freeze'](qt)}),Object['freeze'](qL),J[ZI]=qL,Ag[AI++]=qL;}AO++;break;}case 0x10f:{if(typeof process!=='undefined'&&process['hrtime']&&process['hrtime']['bigint']){var Zb=process['hrtime']['bigint']();debugger;if(Number(process['hrtime']['bigint']()-Zb)/0xf4240>0.1)try{_setDeceptionDetected();}catch(qf){}}AO++;break;}case 0x115:{let qm=Ag[--AI],qk=Ag[--AI];Ag[AI++]=qm==null||typeof qm!=='object'&&typeof qm!=='function'?!![]:qk in qm,AO++;break;}case 0x112:{let qJ=Ag[--AI],qH=qJ&&qJ['i']?qJ['i']:qJ;try{if(qH!=null){let qM=qH['return'];typeof qM==='function'&&qM['call'](qH);}}catch(qr){}AO++;break;}case 0x105:{let qd=Ab[ZI]-0x1;Ab[ZI]=qd,Ag[AI++]=qd,AO++;break;}}});switch(ZS){case 0x2c:{let Zg=Ag[--AI],ZI=Ag[--AI];Ag[AI++]=ZI<Zg,AO++;continue;}case 0x8:{Ag[AI++]=AS[ZU],AO++;continue;}case 0x46:{let Zb=Ag[--AI],ZO=Ao[ZU];if(Zb===null||Zb===undefined)throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+Zb+'\x20(reading\x20'+'\x27'+String(ZO)+'\x27'+')');Ag[AI++]=Zb[ZO],AO++;continue;}case 0x34:{!Ag[--AI]?AO=AX[AO]:AO++;continue;}case 0x2e:{let Zo=Ag[--AI],Zc=Ag[--AI];Ag[AI++]=Zc>Zo,AO++;continue;}case 0x49:{let ZX=Ag[--AI],ZE=Ag[--AI],Zu=Ag[--AI];if(Zu===null||Zu===undefined)throw new TypeError('Cannot\x20set\x20properties\x20of\x20'+Zu+'\x20(setting\x20'+(typeof ZE==='symbol'?'\x27'+ZE['toString']()+'\x27':typeof ZE==='string'?'\x27'+ZE+'\x27':typeof ZE==='object'||typeof ZE==='function'?'\x27<computed\x20key>\x27':'\x27'+String(ZE)+'\x27')+')');if(At){let ZC=typeof Zu==='object'||typeof Zu==='function'?Zu:Object(Zu);if(!Reflect['set'](ZC,ZE,ZX,Zu))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(ZE)+'\x27\x20of\x20object');}else Zu[ZE]=ZX;Ag[AI++]=ZX,AO++;continue;}case 0x48:{let Zy=Ag[--AI],Zv=Ag[--AI];if(Zv===null||Zv===undefined){if(Zy===Symbol['iterator'])throw new TypeError((Zv===null?'object\x20null':'undefined')+'\x20is\x20not\x20iterable\x20(cannot\x20read\x20property\x20Symbol(Symbol.iterator))');throw new TypeError('Cannot\x20read\x20properties\x20of\x20'+Zv+'\x20(reading\x20'+(typeof Zy==='symbol'?'\x27'+Zy['toString']()+'\x27':typeof Zy==='string'?'\x27'+Zy+'\x27':typeof Zy==='object'||typeof Zy==='function'?'\x27<computed\x20key>\x27':'\x27'+String(Zy)+'\x27')+')');}Ag[AI++]=Zv[Zy],AO++;continue;}case 0x6:{Ag[AI++]=Ab[ZU],AO++;continue;}case 0xb:{let ZR=Ag[--AI],Za=Ag[--AI];Ag[AI++]=Za-ZR,AO++;continue;}case 0x1c:{let Zn=Ag[--AI];Ag[AI++]=typeof Zn===P?Zn:+Zn,AO++;continue;}case 0x32:{AO=AX[AO];continue;}case 0x3:{Ag[--AI],AO++;continue;}case 0x4:{let ZP=Ag[AI-0x1];Ag[AI++]=ZP,AO++;continue;}case 0x0:{Ag[AI++]=Ao[ZU],AO++;continue;}case 0x1:{Ag[AI++]=undefined,AO++;continue;}case 0x7:{Ab[ZU]=Ag[--AI],AO++;continue;}case 0x10:{let ZF=Ag[--AI];Ag[AI++]=typeof ZF===P?ZF+0x1n:+ZF+0x1,AO++;continue;}case 0xa:{let ZG=Ag[--AI],ZN=Ag[--AI];Ag[AI++]=ZN+ZG,AO++;continue;}}if(ZS<0x5a){if(Z8(ZS,ZU)){if(AW>0x0){for(let ZV=Ai-0x1;ZV>=0x0;ZV--){Ab[ZV]=AY[--AW];}Ax=AY[--AW],AT=AY[--AW],AQ=AY[--AW],AS=AY[--AW],AI=AY[--AW],AO=AY[--AW],Ag[AI++]=Z7,AO++;continue;}return Z7;}}else{if(ZS<0xc8){if(Z9(ZS,ZU)){if(AW>0x0){for(let Zp=Ai-0x1;Zp>=0x0;Zp--){Ab[Zp]=AY[--AW];}Ax=AY[--AW],AT=AY[--AW],AQ=AY[--AW],AS=AY[--AW],AI=AY[--AW],AO=AY[--AW],Ag[AI++]=Z7,AO++;continue;}return Z7;}}else{if(ZK(ZS,ZU)){if(AW>0x0){for(let Zt=Ai-0x1;Zt>=0x0;Zt--){Ab[Zt]=AY[--AW];}Ax=AY[--AW],AT=AY[--AW],AQ=AY[--AW],AS=AY[--AW],AI=AY[--AW],AO=AY[--AW],Ag[AI++]=Z7,AO++;continue;}return Z7;}}}}break;}catch(ZL){if(Aa&&Aa['length']>0x0){let ZD=Aa[Aa['length']-0x1];AI=ZD['_$fPsSuL'];ZD['_es']!==undefined&&(Ax=ZD['_es']);if(ZD['_$2tZ6o0']!==undefined)An=null,AJ(ZL),AO=ZD['_$2tZ6o0'],ZD['_$2tZ6o0']=undefined,ZD['_$EMl7dv']===undefined&&Aa['pop']();else ZD['_$EMl7dv']!==undefined?(AO=ZD['_$EMl7dv'],ZD['_$CIy63E']=ZL):(AO=ZD['_$n9TFzh'],Aa['pop']());continue;}throw ZL;}}if(AD&&!Aw){let Zs=Kq(Ax);Zs!==undefined&&(Az=Zs,Aw=!![]);}let ZA=AI>0x0?Ag[--AI]:Aw?Az:undefined;if(AD&&!Aw&&(ZA===undefined||ZA===null||typeof ZA!=='object'&&typeof ZA!=='function'))throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');return ZA;}return Z0(0x0);}function*KO(Ae,AS,AU,Aj,AB,Az){let Ag=Kb(Ae,AS,AU,Aj,AB,Az);while(!![]){if(Ag&&typeof Ag==='object'&&Ag['_$lX6gOD']!==undefined){let AI=Ag['_d'],Ab;try{Ab=yield Ag;}catch(AO){Ag=AI(0x2,AO);continue;}Ab&&typeof Ab==='object'&&Ab['_$lX6gOD']===v?Ag=AI(0x3,Ab['_$nEKuKe']):Ag=AI(0x1,Ab);}else return Ag;}}let Ko=function(Ae,AS,AU,Aj,AB,Az){vme_fa36e1['_$jVviIS']?vme_fa36e1['_$jVviIS']=![]:vme_fa36e1['_$HL1Tk0']=undefined;let Ag=typeof Ae==='object'?Ae:A4(Ae);return KI(Ag,AS,AU,Aj,AB,Az);},Kc=0x0,KX=0x1,KE=0x2,Ku=0x3,KC=0x4,Ky=0x5,Kv=0x6,KR=0x7,Ka=0x8,Kn=0x9,KP=0xa,KF=0xb,KG=0x1,KN=0x2,KV=0x4,Kp=0x8,Kt=0x20,KL=0x40,KD=0x80,Ks=0x100,Kf=0x200,Km=0x400,Kk=0x800,KJ=0x1000,KH=0x2000,KM=0x4000,Kr=0x8000,Kd=0x10000,Kh=0x20000,Kx=0x40000,KT=0x80000,KQ=0x200000;function Kw(Ae){this['_$khQ7Vf']=Ae,this['_$KhLtTP']=new DataView(Ae['buffer'],Ae['byteOffset'],Ae['byteLength']),this['_$2Ayjnh']=0x0;}Kw['prototype']['_$eCD1zF']=function(){return this['_$khQ7Vf'][this['_$2Ayjnh']++];},Kw['prototype']['_$b1NfTW']=function(){let Ae=this['_$KhLtTP']['getUint16'](this['_$2Ayjnh'],!![]);return this['_$2Ayjnh']+=0x2,Ae;},Kw['prototype']['_$yhNuD3']=function(){let Ae=this['_$KhLtTP']['getUint32'](this['_$2Ayjnh'],!![]);return this['_$2Ayjnh']+=0x4,Ae;},Kw['prototype']['_$UiqARy']=function(){let Ae=this['_$KhLtTP']['getInt32'](this['_$2Ayjnh'],!![]);return this['_$2Ayjnh']+=0x4,Ae;},Kw['prototype']['_$Ke83V2']=function(){let Ae=this['_$KhLtTP']['getFloat64'](this['_$2Ayjnh'],!![]);return this['_$2Ayjnh']+=0x8,Ae;},Kw['prototype']['_$cjn71F']=function(){let Ae=0x0,AS=0x0,AU;do{AU=this['_$eCD1zF'](),Ae|=(AU&0x7f)<<AS,AS+=0x7;}while(AU>=0x80);return Ae>>>0x1^-(Ae&0x1);},Kw['prototype']['_$u3IYfE']=function(){let Ae=this['_$cjn71F'](),AS=this['_$khQ7Vf'],AU=this['_$2Ayjnh'],Aj=AU+Ae;this['_$2Ayjnh']=Aj;var AB='';while(AU<Aj){var Az=AS[AU++];if(Az<0x80)AB+=String['fromCharCode'](Az);else{if(Az<0xe0)AB+=String['fromCharCode']((Az&0x1f)<<0x6|AS[AU++]&0x3f);else{if(Az<0xf0)AB+=String['fromCharCode']((Az&0xf)<<0xc|(AS[AU++]&0x3f)<<0x6|AS[AU++]&0x3f);else{var Ag=(Az&0x7)<<0x12|(AS[AU++]&0x3f)<<0xc|(AS[AU++]&0x3f)<<0x6|AS[AU++]&0x3f;Ag-=0x10000,AB+=String['fromCharCode']((Ag>>0xa)+0xd800,(Ag&0x3ff)+0xdc00);}}}}return AB;};var Ki='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',KY=new Uint8Array(0x80);for(var KW=0x0;KW<Ki['length'];KW++){KY[Ki['charCodeAt'](KW)]=KW;}function A0(Ae){var AS=Ae['charCodeAt'](Ae['length']-0x1)===0x3d?Ae['charCodeAt'](Ae['length']-0x2)===0x3d?0x2:0x1:0x0,AU=(Ae['length']*0x3>>0x2)-AS,Aj=new Uint8Array(AU),AB=0x0;for(var Az=0x0;Az<Ae['length'];Az+=0x4){var Ag=KY[Ae['charCodeAt'](Az)],AI=KY[Ae['charCodeAt'](Az+0x1)],Ab=KY[Ae['charCodeAt'](Az+0x2)],AO=KY[Ae['charCodeAt'](Az+0x3)];Aj[AB++]=Ag<<0x2|AI>>0x4,AB<AU&&(Aj[AB++]=(AI&0xf)<<0x4|Ab>>0x2),AB<AU&&(Aj[AB++]=(Ab&0x3)<<0x6|AO);}return Aj;}function A1(Ae){let AS=Ae['_$eCD1zF']();switch(AS){case Kc:return null;case KX:return undefined;case KE:return![];case Ku:return!![];case KC:{let AU=Ae['_$eCD1zF']();return AU>0x7f?AU-0x100:AU;}case Ky:{let Aj=Ae['_$b1NfTW']();return Aj>0x7fff?Aj-0x10000:Aj;}case Kv:return Ae['_$UiqARy']();case KR:return Ae['_$Ke83V2']();case Ka:return Ae['_$u3IYfE']();case Kn:return BigInt(Ae['_$u3IYfE']());case KP:{let AB=Ae['_$u3IYfE'](),Az=Ae['_$u3IYfE']();return new RegExp(AB,Az);}case KF:{let Ag=Ae['_$cjn71F'](),AI=new Uint8Array(Ag);for(let Ab=0x0;Ab<Ag;Ab++){AI[Ab]=Ae['_$eCD1zF']();}return A2(AI);}default:return null;}}function A2(Ae){let AS;if(Ae&&Ae['_$2Ayjnh']!==undefined)AS=Ae;else{let AC=typeof Ae==='string'?A0(Ae):Ae;AS=new Kw(AC);}let AU=AS['_$eCD1zF'](),Aj=AS['_$yhNuD3'](),AB=AS['_$cjn71F'](),Az=AS['_$cjn71F'](),Ag=[];Ag[0x0]=AB,Ag[0x10]=Az;Aj&Kp&&(Ag[0x2]=AS['_$cjn71F']());if(Aj&Kt){let Ay=AS['_$cjn71F'](),Av={};for(let AR=0x0;AR<Ay;AR++){let Aa=AS['_$cjn71F'](),An=AS['_$cjn71F']();Av[Aa]=An;}Ag[0x13]=Av;}Aj&KL&&(Ag[0x12]=AS['_$yhNuD3']());Aj&KD&&(Ag[0x11]=AS['_$yhNuD3']());Aj&Ks&&(Ag[0xd]=AS['_$yhNuD3']());Aj&Kf&&(Ag[0x5]=AS['_$cjn71F']());Aj&Km&&(Ag[0x16]=AS['_$yhNuD3']());Aj&KT&&(Ag[0x15]=AS['_$cjn71F']());Aj&KQ&&(Ag[0x7]=AS['_$cjn71F']());Aj&KG&&(Ag[0x3]=0x1);Aj&KN&&(Ag[0xf]=0x1);Aj&KV&&(Ag[0x6]=0x1);Aj&KM&&(Ag[0x9]=0x1);Aj&Kr&&(Ag[0x1]=0x1);Aj&Kd&&(Ag[0x4]=0x1);Aj&Kh&&(Ag[0xe]=0x1);Aj&Kx&&(Ag[0x14]=0x1);Aj&KH&&(Ag[0xc]=0x1);let AI=AS['_$cjn71F'](),Ab=new Array(AI);for(let AP=0x0;AP<AI;AP++){Ab[AP]=A1(AS);}Ag[0x8]=Ab;function AO(AF){let AG=AF['_$eCD1zF']();switch(AG){case Kc:return-0x1;case KC:{let AN=AF['_$eCD1zF']();return AN>0x7f?AN-0x100:AN;}case Ky:{let AV=AF['_$b1NfTW']();return AV>0x7fff?AV-0x10000:AV;}case Kv:return AF['_$UiqARy']();case KR:return AF['_$Ke83V2']();case Ka:return AF['_$u3IYfE']();default:return-0x1;}}let Ao=AS['_$cjn71F'](),Ac=Ao<<0x1,AX=new Int32Array(Ac),AE=0x0,Au=(AB*0x1f^Az*0x11^Ao*0xd^AI*0x7)>>>0x0&0x3;switch(Au){case 0x1:for(let AF=0x0;AF<Ao;AF++){let AG=AO(AS),AN=AS['_$cjn71F']();AX[AE++]=AG,AX[AE++]=AN;}break;case 0x2:{let AV=new Int32Array(Ao);for(let Ap=0x0;Ap<Ao;Ap++){AV[Ap]=AS['_$cjn71F']();}for(let At=0x0;At<Ao;At++){AX[AE++]=AV[At];}for(let AL=0x0;AL<Ao;AL++){AX[AE++]=AO(AS);}break;}case 0x3:{let AD=new Int32Array(Ao);for(let As=0x0;As<Ao;As++){AD[As]=AO(AS);}for(let Af=0x0;Af<Ao;Af++){AX[AE++]=AD[Af];}for(let Am=0x0;Am<Ao;Am++){AX[AE++]=AS['_$cjn71F']();}break;}case 0x0:default:for(let Ak=0x0;Ak<Ao;Ak++){AX[AE++]=AS['_$cjn71F'](),AX[AE++]=AO(AS);}break;}Ag[0xa]=AX;if(Aj&Kk){let AJ=AS['_$cjn71F'](),AH={};for(let AM=0x0;AM<AJ;AM++){let Ar=AS['_$cjn71F'](),Ad=AS['_$cjn71F']();AH[Ar]=Ad;}Ag[0xb]=AH;}if(Aj&KJ){let Ah=AS['_$cjn71F'](),Ax={};for(let AT=0x0;AT<Ah;AT++){let AQ=AS['_$cjn71F'](),Aw=AS['_$cjn71F']()-0x1,Ai=AS['_$cjn71F']()-0x1,AY=AS['_$cjn71F']()-0x1;Ax[AQ]=[Aw,Ai,AY];}Ag[0x17]=Ax;}return Ag;}let A3=function(Ae,AS){let AU={};return function(Aj){let AB=AS?AS[Aj]:Aj;if(AU[AB])return AU[AB];let Az=Ae[AB];return typeof Az==='string'?AU[AB]=A2(Az):AU[AB]=Az,AU[AB];};},A4=A3(c,null);c=null;let A5=A3(X,null);X=null;let A6=async function(Ae,AS,AU,Aj,AB,Az,Ag){let AI=typeof Ae==='object'?Ae:A4(Ae),Ab=KO(AI,AS,AU,Aj,AB,Ag),AO=Ab['next']();while(!AO['done']){if(AO['value']['_$lX6gOD']!==u)throw new Error('Unexpected\x20yield\x20in\x20async\x20context');try{let Ao=await AO['value']['_$nEKuKe'];vme_fa36e1['_$HL1Tk0']=Az,AO=Ab['next'](Ao);}catch(Ac){vme_fa36e1['_$HL1Tk0']=Az,AO=Ab['throw'](Ac);}}return AO['value'];},A7=function(Ae,AS,AU,Aj,AB,Az){let Ag=typeof Ae==='object'?Ae:A4(Ae),AI=KO(Ag,AS,AU,Aj,undefined,Az),Ab=Ag&&Ag[0x6]&&!Ag[0x4],AO=null;Ab&&(AO=AI['next']());let Ao=![],Ac=![],AX=null,AE=undefined,Au=![];function AC(AN,AV){if(Ao)return{'value':undefined,'done':!![]};Ac=!![],vme_fa36e1['_$HL1Tk0']=AB;if(AX){let At,AL,AD;try{if(AV){if(typeof AX['throw']==='function')At=AX['throw'](AN);else{typeof AX['return']==='function'&&AX['return']();AX=null;throw new TypeError('The\x20iterator\x20does\x20not\x20provide\x20a\x20\x27throw\x27\x20method.');}}else At=AX['next'](AN);try{K3(At);}catch(Af){AX=null;throw Af;}let As=K4(At);AL=As['done'],AD=As['value'];}catch(Am){AX=null;try{let Ak=AI['throw'](Am);return Ay(Ak);}catch(AJ){Ao=!![];throw AJ;}}if(!AL)return At;AX=null,AN=AD,AV=![];}let Ap;if(AO!==null)Ap=AO,AO=null;else try{Ap=AV?AI['throw'](AN):AI['next'](AN);}catch(AH){Ao=!![];throw AH;}return Ay(Ap);}function Ay(AN){if(AN['done']){Ao=!![];if(Au)return Au=![],{'value':AE,'done':!![]};return{'value':AN['value'],'done':!![]};}let AV=AN['value'];if(AV['_$lX6gOD']===C)return{'value':AV['_$nEKuKe'],'done':![]};if(AV['_$lX6gOD']===y){let Ap=AV['_$nEKuKe'],At;try{if(Ap==null)throw new TypeError(Ap+'\x20is\x20not\x20iterable');let Af=Ap[Symbol['iterator']];if(typeof Af!=='function')throw new TypeError(Ap+'\x20is\x20not\x20iterable');At=Af['call'](Ap),K3(At);if(typeof At['next']!=='function')throw new TypeError('Iterator\x20next\x20is\x20not\x20a\x20function');}catch(Am){try{let Ak=AI['throw'](Am);return Ay(Ak);}catch(AJ){Ao=!![];throw AJ;}}let AL,AD,As;try{AL=At['next'](undefined),K3(AL);let AH=K4(AL);AD=AH['done'],As=AH['value'];}catch(AM){try{let Ar=AI['throw'](AM);return Ay(Ar);}catch(Ad){Ao=!![];throw Ad;}}if(!AD)return AX=At,AL;return AC(As,![]);}throw new Error('Unexpected\x20signal\x20in\x20generator');}let Av=Ag&&Ag[0xf],AR=async function(AN){if(Ao)return{'value':AN,'done':!![]};if(!Ac)return Ao=!![],{'value':AN,'done':!![]};if(AX){let Ap=AX,At;try{At=K2(Ap['iter'],'return');}catch(AL){AX=null,Ao=!![];throw AL;}if(At===undefined){AX=null;try{AN=await Promise['resolve'](AN);}catch(AD){Ao=!![];throw AD;}}else{let As;try{As=z(At,Ap['iter'],[AN]),!Ap['isSync']&&(As=await As);}catch(AJ){AX=null,Ao=!![];throw AJ;}if(As===null||typeof As!=='object'){AX=null,Ao=!![];throw new TypeError('Iterator\x20result\x20is\x20not\x20an\x20object');}let Af,Am,Ak;try{Af=As['done'],!Af?Am=As['value']:Am=As['value'];}catch(AH){Ak=AH;}if(Ak!==undefined){AX=null;let AM;try{vme_fa36e1['_$HL1Tk0']=AB,AM=AI['throw'](Ak);}catch(Ar){Ao=!![];throw Ar;}while(!AM['done']){let Ad=AM['value'];if(Ad&&Ad['_$lX6gOD']===u){let Ah;try{Ah=await Ad['_$nEKuKe'],vme_fa36e1['_$HL1Tk0']=AB,AM=AI['next'](Ah);}catch(Ax){vme_fa36e1['_$HL1Tk0']=AB,AM=AI['throw'](Ax);}continue;}if(Ad&&Ad['_$lX6gOD']===C){let AT;try{AT=await Promise['resolve'](Ad['_$nEKuKe']);}catch(AQ){Ao=!![];throw AQ;}return{'value':AT,'done':![]};}break;}return Ao=!![],{'value':AM['value'],'done':!![]};}if(!Af){let Aw;try{Aw=await Promise['resolve'](Am);}catch(Ai){AX=null,Ao=!![];throw Ai;}return{'value':Aw,'done':![]};}AX=null;try{AN=await Promise['resolve'](Am);}catch(AY){Ao=!![];throw AY;}}}let AV;try{vme_fa36e1['_$HL1Tk0']=AB,AV=AI['next']({['_$lX6gOD']:v,['_$nEKuKe']:AN});}catch(AW){Ao=!![];throw AW;}while(!AV['done']){let Z0=AV['value'];if(Z0['_$lX6gOD']===u)try{let Z1=await Z0['_$nEKuKe'];vme_fa36e1['_$HL1Tk0']=AB,AV=AI['next'](Z1);}catch(Z2){vme_fa36e1['_$HL1Tk0']=AB,AV=AI['throw'](Z2);}else{if(Z0['_$lX6gOD']===C){let Z3;try{Z3=await Promise['resolve'](Z0['_$nEKuKe']);}catch(Z4){Ao=!![];throw Z4;}return{'value':Z3,'done':![]};}else break;}}return Ao=!![],{'value':AV['value'],'done':!![]};},Aa=function(AN){if(Ao)return{'value':AN,'done':!![]};if(!Ac)return Ao=!![],{'value':AN,'done':!![]};if(AX){let Ap,At=![];try{let AL=AX['return'];typeof AL==='function'&&(At=!![],Ap=AL['call'](AX,AN),K3(Ap));}catch(AD){AX=null;let As;try{As=AI['throw'](AD);}catch(Af){Ao=!![];throw Af;}return Ay(As);}if(At){let Am;try{Am=Ap['done'];}catch(AJ){AX=null;let AH;try{AH=AI['throw'](AJ);}catch(AM){Ao=!![];throw AM;}return Ay(AH);}if(!Am)return Ap;let Ak;try{Ak=Ap['value'];}catch(Ar){AX=null;let Ad;try{Ad=AI['throw'](Ar);}catch(Ah){Ao=!![];throw Ah;}return Ay(Ad);}AX=null,AN=Ak;}}AE=AN,Au=!![];let AV;try{vme_fa36e1['_$HL1Tk0']=AB,AV=AI['next']({['_$lX6gOD']:v,['_$nEKuKe']:AN});}catch(Ax){Ao=!![],Au=![];throw Ax;}if(!AV['done']&&AV['value']&&AV['value']['_$lX6gOD']===C)return{'value':AV['value']['_$nEKuKe'],'done':![]};return Ao=!![],Au=![],{'value':AV['value'],'done':!![]};};if(Av){async function AN(AD,As){let Af=AX,Am;try{if(As){let Ar;try{Ar=K2(Af['iter'],'throw');}catch(Ad){AX=null;try{return vme_fa36e1['_$HL1Tk0']=AB,AV(AI['throw'](Ad));}catch(Ah){Ao=!![];throw Ah;}}if(Ar===undefined){let Ax;try{Ax=K2(Af['iter'],'return');}catch(AT){AX=null;try{return vme_fa36e1['_$HL1Tk0']=AB,AV(AI['throw'](AT));}catch(AQ){Ao=!![];throw AQ;}}if(Ax!==undefined)try{let Aw=z(Ax,Af['iter'],[]);!Af['isSync']&&(Aw=await Aw);if(Aw!==null&&typeof Aw!=='object')throw new TypeError('Iterator\x20result\x20is\x20not\x20an\x20object');}catch(Ai){}AX=null;try{return vme_fa36e1['_$HL1Tk0']=AB,AV(AI['throw'](new TypeError('The\x20iterator\x20does\x20not\x20provide\x20a\x20throw\x20method')));}catch(AY){Ao=!![];throw AY;}}Am=z(Ar,Af['iter'],[AD]),!Af['isSync']&&(Am=await Am);}else Am=z(Af['nextMethod'],Af['iter'],[AD]),!Af['isSync']&&(Am=await Am);}catch(AW){AX=null;try{return vme_fa36e1['_$HL1Tk0']=AB,AV(AI['throw'](AW));}catch(Z0){Ao=!![];throw Z0;}}if(Am===null||typeof Am!=='object'){AX=null;try{return vme_fa36e1['_$HL1Tk0']=AB,AV(AI['throw'](new TypeError('Iterator\x20result\x20is\x20not\x20an\x20object')));}catch(Z1){Ao=!![];throw Z1;}}let Ak,AJ;try{Ak=Am['done'],AJ=Am['value'];}catch(Z2){AX=null;try{return vme_fa36e1['_$HL1Tk0']=AB,AV(AI['throw'](Z2));}catch(Z3){Ao=!![];throw Z3;}}if(!Ak){let Z4;try{Z4=await AJ;}catch(Z5){AX=null,Ao=!![];throw Z5;}return{'value':Z4,'done':![]};}AX=null;let AH;try{AH=await AJ;}catch(Z6){try{return vme_fa36e1['_$HL1Tk0']=AB,AV(AI['throw'](Z6));}catch(Z7){Ao=!![];throw Z7;}}let AM;try{vme_fa36e1['_$HL1Tk0']=AB,AM=AI['next'](AH);}catch(Z8){Ao=!![];throw Z8;}return AV(AM);}function AG(AD,As){if(Ao)return Promise['resolve']({'value':undefined,'done':!![]});Ac=!![],vme_fa36e1['_$HL1Tk0']=AB;if(AX)return AN(AD,As);let Af;if(AO!==null)Af=AO,AO=null;else try{Af=As?AI['throw'](AD):AI['next'](AD);}catch(Am){return Ao=!![],Promise['reject'](Am);}if(!Af['done']){let Ak=Af['value'];if(Ak&&Ak['_$lX6gOD']===C)return Promise['resolve'](Ak['_$nEKuKe'])['then'](function(AJ){return{'value':AJ,'done':![]};},function(AJ){Ao=!![];throw AJ;});}return AV(Af);}async function AV(AD){while(!AD['done']){let As=AD['value'];if(As['_$lX6gOD']===u){let Af;try{Af=await As['_$nEKuKe'],vme_fa36e1['_$HL1Tk0']=AB,AD=AI['next'](Af);}catch(Am){vme_fa36e1['_$HL1Tk0']=AB,AD=AI['throw'](Am);}continue;}if(As['_$lX6gOD']===C){let Ak;try{Ak=await As['_$nEKuKe'];}catch(AJ){Ao=!![];throw AJ;}return{'value':Ak,'done':![]};}if(As['_$lX6gOD']===y){let AH=As['_$nEKuKe'],AM;try{AM=K5(AH);}catch(Aw){vme_fa36e1['_$HL1Tk0']=AB;try{AD=AI['throw'](Aw);}catch(Ai){Ao=!![];throw Ai;}continue;}let Ar=AM['iter'],Ad=AM['nextMethod'],Ah=AM['isSync'],Ax;try{Ax=z(Ad,Ar,[undefined]),!Ah&&(Ax=await Ax);}catch(AY){vme_fa36e1['_$HL1Tk0']=AB;try{AD=AI['throw'](AY);}catch(AW){Ao=!![];throw AW;}continue;}if(Ax===null||typeof Ax!=='object'){vme_fa36e1['_$HL1Tk0']=AB;try{AD=AI['throw'](new TypeError('Iterator\x20result\x20is\x20not\x20an\x20object'));}catch(Z0){Ao=!![];throw Z0;}continue;}let AT,AQ;try{AT=Ax['done'],AQ=Ax['value'];}catch(Z1){vme_fa36e1['_$HL1Tk0']=AB;try{AD=AI['throw'](Z1);}catch(Z2){Ao=!![];throw Z2;}continue;}if(AT){let Z3;try{Z3=await Promise['resolve'](AQ);}catch(Z4){vme_fa36e1['_$HL1Tk0']=AB;try{AD=AI['throw'](Z4);}catch(Z5){Ao=!![];throw Z5;}continue;}vme_fa36e1['_$HL1Tk0']=AB,AD=AI['next'](Z3);continue;}AX={'iter':Ar,'nextMethod':Ad,'isSync':Ah};if(Ah){let Z6;try{Z6=await Promise['resolve'](AQ);}catch(Z7){AX=null,Ao=!![];throw Z7;}return{'value':Z6,'done':![]};}return{'value':AQ,'done':![]};}throw new Error('Unexpected\x20signal\x20in\x20async\x20generator');}Ao=!![];if(Au)return Au=![],{'value':AE,'done':!![]};return{'value':AD['value'],'done':!![]};}let Ap=null,At=0x0;function AF(){}function AP(){At--;if(At===0x0)Ap=null;}function An(AD){let As;if(At===0x0)try{As=AD();}catch(Af){As=Promise['reject'](Af);}else As=Ap['then'](AD,AD);return At++,Ap=As,As['then'](AP,AP),As;}let AL=K0(Aj&&Aj['prototype'],x);return AL?A(AL,{'next':W(function(AD){return An(function(){return AG(AD,![]);});}),'return':W(function(AD){return An(function(){return AR(AD);});}),'throw':W(function(AD){return An(function(){if(Ao)return Promise['reject'](AD);return AG(AD,!![]);});}),[Symbol['asyncIterator']]:W(function(){return this;})}):{'next':function(AD){return An(function(){return AG(AD,![]);});},'return':function(AD){return An(function(){return AR(AD);});},'throw':function(AD){return An(function(){if(Ao)return Promise['reject'](AD);return AG(AD,!![]);});},[Symbol['asyncIterator']]:function(){return this;}};}else{let AD=K0(Aj&&Aj['prototype'],d);return AD?A(AD,{'next':W(function(As){return AC(As,![]);}),'return':W(Aa),'throw':W(function(As){if(Ao)throw As;return AC(As,!![]);}),[Symbol['iterator']]:W(function(){return this;})}):{'next':function(As){return AC(As,![]);},'return':Aa,'throw':function(As){if(Ao)throw As;return AC(As,!![]);},[Symbol['iterator']]:function(){return this;}};}};var A8=function(Ae,AS,AU,Aj,AB,Az){let Ag=A4(Ae),AI=Az;if(Ag&&Ag[0x6]){let Ab=vme_fa36e1['_$HL1Tk0'];return A7(Ag,AS,AU,Aj,Ab,AI);}if(Ag&&Ag[0xf]){let AO=vme_fa36e1['_$HL1Tk0'];return A6(Ag,AS,AU,Aj,AB,AO,AI);}return Ko(Ag,AS,AU,Aj,AB,AI);};return A8['_$BZPr3C']=function(Ae,AS){if(!Ae)return;var AU=A4(AS);if(!AU||AU[0xf]||AU[0x6]||AU[0x3])return;!m(Ae)&&s(Ae,{'b':AU,'e':undefined,'c':AU});},A8;}());vml_9501e1['_$BZPr3C'](closeDownloadPage,0x4),vml_9501e1['_$BZPr3C'](openMenu,0x6),vml_9501e1['_$BZPr3C'](closeMenu,0x7),vml_9501e1['_$BZPr3C'](closeAboutPage,0xa),vml_9501e1['_$BZPr3C'](closePopup,0xb),vml_9501e1['_$BZPr3C'](joinChannel,0xc),vml_9501e1['_$BZPr3C'](closeDisclaimerPage,0x11),delete vml_9501e1['_$BZPr3C'];try{document,Object['defineProperty'](vme_fa36e1,'document',{'get':function(){return document;},'set':function(K){document=K;},'configurable':!![]});}catch(vmeS){}try{window,Object['defineProperty'](vme_fa36e1,'window',{'get':function(){return window;},'set':function(K){window=K;},'configurable':!![]});}catch(vmeU){}try{sessionStorage,Object['defineProperty'](vme_fa36e1,'sessionStorage',{'get':function(){return sessionStorage;},'set':function(K){sessionStorage=K;},'configurable':!![]});}catch(vmej){}try{setTimeout,Object['defineProperty'](vme_fa36e1,'setTimeout',{'get':function(){return setTimeout;},'set':function(K){setTimeout=K;},'configurable':!![]});}catch(vmeB){}try{history,Object['defineProperty'](vme_fa36e1,'history',{'get':function(){return history;},'set':function(K){history=K;},'configurable':!![]});}catch(vmez){}try{navigator,Object['defineProperty'](vme_fa36e1,'navigator',{'get':function(){return navigator;},'set':function(K){navigator=K;},'configurable':!![]});}catch(vmeg){}try{alert,Object['defineProperty'](vme_fa36e1,'alert',{'get':function(){return alert;},'set':function(K){alert=K;},'configurable':!![]});}catch(vmeI){}try{URLSearchParams,Object['defineProperty'](vme_fa36e1,'URLSearchParams',{'get':function(){return URLSearchParams;},'set':function(K){URLSearchParams=K;},'configurable':!![]});}catch(vmeb){}try{console,Object['defineProperty'](vme_fa36e1,'console',{'get':function(){return console;},'set':function(K){console=K;},'configurable':!![]});}catch(vmeO){}vme_fa36e1['closeDisclaimerPage']=closeDisclaimerPage;globalThis['closeDisclaimerPage']=vme_fa36e1['closeDisclaimerPage'];vme_fa36e1['openDisclaimerPage']=openDisclaimerPage;globalThis['openDisclaimerPage']=vme_fa36e1['openDisclaimerPage'];vme_fa36e1['joinChannel']=joinChannel;globalThis['joinChannel']=vme_fa36e1['joinChannel'];vme_fa36e1['closePopup']=closePopup;globalThis['closePopup']=vme_fa36e1['closePopup'];vme_fa36e1['closeAboutPage']=closeAboutPage;globalThis['closeAboutPage']=vme_fa36e1['closeAboutPage'];vme_fa36e1['openAboutPage']=openAboutPage;globalThis['openAboutPage']=vme_fa36e1['openAboutPage'];vme_fa36e1['goHome']=goHome;globalThis['goHome']=vme_fa36e1['goHome'];vme_fa36e1['closeMenu']=closeMenu;globalThis['closeMenu']=vme_fa36e1['closeMenu'];vme_fa36e1['openMenu']=openMenu;globalThis['openMenu']=vme_fa36e1['openMenu'];vme_fa36e1['shareBook']=shareBook;globalThis['shareBook']=vme_fa36e1['shareBook'];vme_fa36e1['closeDownloadPage']=closeDownloadPage;globalThis['closeDownloadPage']=vme_fa36e1['closeDownloadPage'];vme_fa36e1['openDownloadPage']=openDownloadPage;globalThis['openDownloadPage']=vme_fa36e1['openDownloadPage'];vme_fa36e1['renderBooks']=renderBooks;globalThis['renderBooks']=vme_fa36e1['renderBooks'];vme_fa36e1['_$6q9N3P']={'hexGrid':!![],'books':!![],'searchInput':!![],'currentBookTitle':!![],'currentPdfLink':!![],'currentBookId':!![]};const hexGrid=document['getElementById']('hexGrid');vme_fa36e1['hexGrid']=hexGrid;globalThis['hexGrid']=vme_fa36e1['hexGrid'];vme_fa36e1['hexGrid']=hexGrid;globalThis['hexGrid']=vme_fa36e1['hexGrid'];delete vme_fa36e1['_$6q9N3P']['hexGrid'];for(let i=0x0;i<0xdc;i++){const hex=document['createElement']('div');hex['classList']['add']('hex');const light=document['createElement']('span');hex['appendChild'](light),vme_fa36e1['hexGrid']['appendChild'](hex);}window['addEventListener']('load',()=>{return vml_9501e1(0x0,[],{['_$bQrsS0']:[renderBooks],['_$nSPtWf']:undefined},undefined,undefined,this);});const books=[{'id':'MxP1','title':'Mahabharata\x20-\x20महाभारत','image':'https://i.postimg.cc/j5KpsYmr/shopping.webp','size':'247\x20MB','pdf':'https://drive.google.com/file/d/1ydEWq4_M2UFqxqiG_1MfR9xiyNAVrQSm/view?usp=drivesdk','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP2','title':'Ramayana\x20-\x20रामायण','image':'https://i.postimg.cc/N060SDPp/ramayan-c77a1f6e-9928-40f8-acf9-e3c14bbc0707.jpg','size':'15\x20MB','pdf':'https://drive.google.com/file/d/1VO_f4uGHVn_n4hdgLF376FxvwCLp_jgG/view?usp=drivesdk','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP3','title':'Bhagavad\x20Gita\x20-\x20श्रीमद्भगवद्गीता','image':'https://i.postimg.cc/2j0sfJxG/shopping-(2).webp','size':'50\x20MB','pdf':'https://drive.google.com/file/d/1Q4E6g5SVrkX6PVZp2JOOO1xfu6Fu-MWk/view?usp=drivesdk','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP4','title':'Hanuman\x20Chalisa\x20-\x20हनुमान\x20चालीसा','image':'https://i.postimg.cc/6qz2HwsS/Hanuman-Chalisa-2361-2344-2369-2350-2366-2344-2330-2366-2354-2368-2360-2366-Paperback-9789394598836.jpg','size':'10\x20MB','pdf':'https://drive.google.com/file/d/1K2Cd-C6GvPM4PI95sp5FecX6AfdxvNZq/view?usp=drivesdk','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP5','title':'Vishnu\x20Purana\x20—\x20विष्णु\x20पुराण','image':'https://i.postimg.cc/QdwqK7g2/1000098816.jpg','size':'10\x20MB','pdf':'https://drive.google.com/file/d/1kvg-nKI4Wgq5qi5zSsFRwyrzb2f5LHZe/view?usp=drivesdk','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP6','title':'Shiva\x20Purana\x20—\x20शिव\x20पुराण','image':'https://i.postimg.cc/wj7VB2NX/1000098815.jpg','size':'10\x20MB','pdf':'https://drive.google.com/file/d/1OKTiI9hhUnSTNGEoAcRt_Cb5WF78I9Zt/view?usp=drivesdk','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP7','title':'ज्ञान\x20बिन्दु\x20जी.\x20एस.\x20एकेडमी\x20-\x20BIOLOGY\x20by\x20Raushan\x20anand\x20sir','image':'https://i.postimg.cc/TY310Zt4/1000098933.jpg','size':'18.8\x20MB','pdf':'https://arolinks.com/xZxe','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP8','title':'ज्ञान\x20बिन्दु\x20जी.\x20एस.\x20एकेडमी\x20-\x20Chemistry\x20by\x20Raushan\x20anand\x20sir','image':'https://i.postimg.cc/6pDQ9Ttb/1000098934.jpg','size':'19.9\x20MB','pdf':'https://arolinks.com/bif90B','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP9','title':'ज्ञान\x20बिन्दु\x20जी.\x20एस.\x20एकेडमी\x20-\x20Physics\x20by\x20Raushan\x20anand\x20sir','image':'https://i.postimg.cc/mryW0rD8/IMG-20260530-WA0021.jpg','size':'10\x20MB','pdf':'https://arolinks.com/WPly','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP10','title':'भारतीय\x20अर्थव्यवस्था\x20By\x20Raushan\x20Anand\x20Sir','image':'https://i.postimg.cc/0yfbC9vv/IMG-20260521-121655-296.jpg','size':'10\x20MB','pdf':'https://arolinks.com/eoPn','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP11','title':'भारत\x20का\x20भुगोल\x20By\x20Raushan\x20Anand\x20Sir','image':'https://i.postimg.cc/7LHqPzjR/1000098768.jpg','size':'10\x20MB','pdf':'https://arolinks.com/ZY7oW','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP12','title':'भारतीय\x20राज्य\x20व्यवस्था\x20By\x20Raushan\x20Anand\x20Sir','image':'https://i.postimg.cc/sfqfPvZD/IMG-20260530-WA0027.jpg','size':'10\x20MB','pdf':'https://arolinks.com/c6ig','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP13','title':'प्राचीन\x20भारतीय\x20इतिहास\x20By\x20Raushan\x20Anand\x20Sir','image':'https://i.postimg.cc/gchRZwMK/IMG-20260530-122357-683.jpg','size':'10\x20MB','pdf':'https://arolinks.com/cR9enn','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP14','title':'मध्यकालीन\x20भारत\x20का\x20इतिहास\x20By\x20Raushan\x20Anand\x20Sir','image':'https://i.postimg.cc/HnbyDKJ9/IMG-20260530-122355-849.jpg','size':'10\x20MB','pdf':'https://arolinks.com/RSWZ','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP15','title':'आधुनिक\x20भारत\x20का\x20इतिहास\x20By\x20Raushan\x20Anand\x20Sir','image':'https://i.postimg.cc/MTCQLxG2/IMG-20260530-122353-921.jpg','size':'10\x20MB','pdf':'https://arolinks.com/mLy0Me','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP16','title':'SSC\x20MATHS\x208000+\x20QUESTIONS\x20BY\x20GAGAN\x20PRATAP\x20SIR','image':'https://i.postimg.cc/52bw1xS0/IMG-20260521-133032-739.jpg','size':'10\x20MB','pdf':'https://arolinks.com/sieGSm','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP17','title':'The\x20Complete\x20Classnotes\x20Arithmetic\x20BY\x20GAGAN\x20PRATAP\x20SIR','image':'https://i.postimg.cc/Vs09WZNd/IMG-20260521-133017-336.jpg','size':'10\x20MB','pdf':'https://arolinks.com/lKRjhk','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP18','title':'Complete\x20Classnotes\x20Advance\x20Maths\x20BY\x20GAGAN\x20PRATAP\x20SIR','image':'https://i.postimg.cc/3RVXHmns/IMG-20260521-133015-736.jpg','size':'10\x20MB','pdf':'https://arolinks.com/uEXPb4','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP19','title':'Reasoning\x20Concept\x20King\x20BY\x20GAGAN\x20PRATAP\x20SIR','image':'https://i.postimg.cc/bw992Gw5/IMG-20260521-133013-178.jpg','size':'10\x20MB','pdf':'https://arolinks.com/Z3dd','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP20','title':'CGL\x20&\x20CHSL\x20Mains\x20PRACTICE\x20KING\x20BY\x20GAGANPRATAP\x20SIR','image':'https://i.postimg.cc/dQg6MPfQ/IMG-20260521-133009-635.jpg','size':'10\x20MB','pdf':'https://arolinks.com/0nGnJ','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP21','title':'CGL\x20PRACTICE\x20KING\x20BY\x20GAGANPRATAP\x20SIR','image':'https://i.postimg.cc/cCtv7z72/IMG-20260521-133008-541.jpg','size':'10\x20MB','pdf':'https://arolinks.com/qYsb','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP22','title':'MATHS\x20CONCEPT\x20KING\x20BY\x20GAGANPRATAP\x20SIR','image':'https://i.postimg.cc/yNn37cYT/IMG-20260521-133006-196.jpg','size':'10\x20MB','pdf':'https://arolinks.com/baSkTM','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP23','title':'GEOGRAPHY\x20BY\x20KHAN\x20SIR\x20(Question\x20Killer)','image':'https://i.postimg.cc/T3MD0T4J/IMG-20260520-114000-475.jpg','size':'10\x20MB','pdf':'https://arolinks.com/TxkD','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP24','title':'ECONOMICS\x20BY\x20KHAN\x20SIR\x20(Question\x20Killer)','image':'https://i.postimg.cc/FzwJ2vsS/IMG-20260520-113957-296.jpg','size':'10\x20MB','pdf':'https://arolinks.com/NvFh','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP25','title':'POLITY\x20BY\x20KHAN\x20SIR\x20(Question\x20Killer)','image':'https://i.postimg.cc/KzqTDL6r/IMG-20260519-023331-148.jpg','size':'10\x20MB','pdf':'https://arolinks.com/R9Gb','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP26','title':'HISTORY\x20BY\x20KHAN\x20SIR\x20(Question\x20Killer)','image':'https://i.postimg.cc/q7GygWQW/IMG-20260519-023326-636.jpg','size':'10\x20MB','pdf':'https://arolinks.com/4ATE','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP27','title':'BIOLOGY\x20BY\x20KHAN\x20SIR','image':'https://i.postimg.cc/8zMnXPPf/IMG-20260521-120802-974.jpg','size':'10\x20MB','pdf':'https://arolinks.com/TMKY7z','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP28','title':'CHEMISTRY\x20BY\x20KHAN\x20SIR','image':'https://i.postimg.cc/SNwvGz4P/IMG-20260521-120757-062.jpg','size':'10\x20MB','pdf':'https://arolinks.com/AIuGM','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP29','title':'PHYSICS\x20BY\x20KHAN\x20SIR','image':'https://i.postimg.cc/gjjTgVnx/IMG-20260521-120747-221.jpg','size':'10\x20MB','pdf':'https://arolinks.com/faVU1g','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP30','title':'POLITY\x20BOOK\x20BY\x20KHAN\x20SIR','image':'https://i.postimg.cc/y8jrCpcJ/IMG-20260530-WA0026.jpg','size':'10\x20MB','pdf':'https://arolinks.com/uKv6','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP31','title':'History\x20book\x20by\x20Khan\x20sir','image':'https://i.postimg.cc/GpzK6B0v/1000098937.jpg','size':'10\x20MB','pdf':'https://arolinks.com/uu4E3','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP32','title':'Economics\x20book\x20by\x20Khan\x20sir','image':'https://i.postimg.cc/rsR9dQDw/1000098935.jpg','size':'10\x20MB','pdf':'https://arolinks.com/2rT1t','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP33','title':'Indian\x20Geography\x20by\x20Khan\x20sir','image':'https://i.postimg.cc/v81RLy95/1000098939.jpg','size':'10\x20MB','pdf':'https://arolinks.com/tpps','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP34','title':'World\x20Geography\x20By\x20Khan\x20Sir','image':'https://i.postimg.cc/v81RLy95/1000098939.jpg','size':'10\x20MB','pdf':'https://arolinks.com/slpecU','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP35','title':'Delhi\x20Police\x20Reasoning\x20(RWA)','image':'https://i.postimg.cc/1XFJ8Bjp/1000098832.jpg','size':'10\x20MB','pdf':'https://arolinks.com/Hos6aY','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP36','title':'Delhi\x20Police\x20General\x20Knowledge\x20(RWA)','image':'https://i.postimg.cc/7Y7WhPvf/1000098830.jpg','size':'10\x20MB','pdf':'https://arolinks.com/h20mz','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP37','title':'Delhi\x20Police\x20Driver\x20(RWA)','image':'https://i.postimg.cc/L4J7dBNm/1000098829.jpg','size':'10\x20MB','pdf':'https://arolinks.com/Dv0GR','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP38','title':'Delhi\x20Police\x20Mathematics\x20(RWA)','image':'https://i.postimg.cc/g2s4LngW/1000098833.jpg','size':'10\x20MB','pdf':'https://arolinks.com/1IHkh','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP39','title':'SSC\x20GD\x20MATHS\x20(\x20RWA)','image':'https://i.postimg.cc/1XDrmt8K/1000098836.jpg','size':'10\x20MB','pdf':'https://arolinks.com/z3EvJ0','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP40','title':'SSC\x20GD\x20REASONING\x20(\x20RWA)','image':'https://i.postimg.cc/15ZKWpTQ/1000098837.jpg','size':'10\x20MB','pdf':'https://arolinks.com/yCBoX','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP41','title':'SSC\x20GD\x20HINDI\x20(\x20RWA)','image':'https://i.postimg.cc/RZgQV20W/IMG-20260530-WA0019.jpg','size':'10\x20MB','pdf':'https://arolinks.com/L4Fr0A','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP42','title':'SSC\x20GD\x20GK/GS\x20(\x20RWA)','image':'https://i.postimg.cc/xd7vLHHR/IMG-20260530-WA0020.jpg','size':'10\x20MB','pdf':'https://arolinks.com/dq9h','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP43','title':'UP\x20POLICE\x20CONSTABLE\x20MATHS\x20(RWA)','image':'https://i.postimg.cc/MHJ1FS9C/1000098842.jpg','size':'10\x20MB','pdf':'https://arolinks.com/bz4e','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP44','title':'UP\x20POLICE\x20CONSTABLE\x20GK/GS\x20(RWA)','image':'https://i.postimg.cc/5tw4mWFN/IMG-20260530-120307-791.jpg','size':'10\x20MB','pdf':'https://arolinks.com/D9WdSr','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP45','title':'UP\x20POLICE\x20CONSTABLE\x20HINDI\x20(RWA)','image':'https://i.postimg.cc/HsDFm8Jd/IMG-20260530-120308-900.jpg','size':'10\x20MB','pdf':'https://arolinks.com/BlwKcX','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP46','title':'CAPF\x20HCM\x20REASONING\x20(RWA)','image':'https://i.postimg.cc/L6nmb1ZG/IMG-20260530-120206-044.jpg','size':'10\x20MB','pdf':'https://arolinks.com/TgEngj','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP47','title':'CAPF\x20HCM\x20Clerical\x20Aptitude\x20\x20(RWA)','image':'https://i.postimg.cc/QMrsCYnX/IMG-20260530-120207-091.jpg','size':'10\x20MB','pdf':'https://arolinks.com/y4Ks','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP48','title':'CAPF\x20HCM\x20COMPUTER\x20(RWA)','image':'https://i.postimg.cc/661Xnp1p/IMG-20260530-120209-160.jpg','size':'10\x20MB','pdf':'https://arolinks.com/UlMLN','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP49','title':'CAPF\x20HCM\x20HINDI\x20(RWA)','image':'https://i.postimg.cc/nLZbpjCH/IMG-20260530-120211-484.jpg','size':'10\x20MB','pdf':'https://arolinks.com/gC8gww','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP50','title':'रेल\x20Maths\x20(RWA)','image':'https://i.postimg.cc/cLR29xXS/IMG-20260530-115602-989.jpg','size':'10\x20MB','pdf':'https://arolinks.com/qO5IGh','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP51','title':'रेल\x20GK/GS\x20(RWA)','image':'https://i.postimg.cc/50XMRcXx/IMG-20260530-115605-969.jpg','size':'10\x20MB','pdf':'https://arolinks.com/1uVI','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP52','title':'रेल\x20Science\x20(RWA)','image':'https://i.postimg.cc/G3sCPC0z/IMG-20260530-115607-920.jpg','size':'10\x20MB','pdf':'https://arolinks.com/mHuitJ','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP53','title':'रेल\x20Reasoning\x20(RWA)','image':'https://i.postimg.cc/YS9cvcf1/IMG-20260530-115610-172.jpg','size':'10\x20MB','pdf':'https://arolinks.com/UHsSO','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP54','title':'PARMAR\x20SSC\x20FATMAN\x20(Polity)','image':'https://i.postimg.cc/J7KjGmGP/1000099062.jpg','size':'10\x20MB','pdf':'https://arolinks.com/Kse18p','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP55','title':'PARMAR\x20SSC\x20FATMAN\x20(Geography)','image':'https://i.postimg.cc/J7KjGmGP/1000099062.jpg','size':'10\x20MB','pdf':'https://arolinks.com/EY5i','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP56','title':'PARMAR\x20SSC\x20FATMAN\x20(History)','image':'https://i.postimg.cc/J7KjGmGP/1000099062.jpg','size':'10\x20MB','pdf':'https://arolinks.com/qY0FC3','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP57','title':'PARMAR\x20SSC\x20FATMAN\x20(Economics)','image':'https://i.postimg.cc/J7KjGmGP/1000099062.jpg','size':'10\x20MB','pdf':'https://arolinks.com/nEagMy','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP58','title':'Railway\x20Maths\x20Smart\x20Book\x20By\x20Aditya\x20Ranjan\x20Sir','image':'https://i.postimg.cc/057H3zXN/IMG-20260525-WA0004-(1).jpg','size':'10\x20MB','pdf':'https://arolinks.com/QWcfkM','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP59','title':'COMPLETE\x20MATHS\x20ब्रह्मास्त्र\x20FORMULA\x20BOOK\x20By\x20ADITYA\x20RANJAN\x20SIR','image':'https://i.postimg.cc/CxxPzmhb/IMG-20260525-WA0002-(1).jpg','size':'10\x20MB','pdf':'https://arolinks.com/fJWun','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP60','title':'PARMAR\x20SSC\x20REASONING','image':'https://i.postimg.cc/qBGxyyZj/1000099060.jpg','size':'10\x20MB','pdf':'https://arolinks.com/x1oL','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP61','title':'PARMAR\x20SSC\x20MATHS','image':'https://i.postimg.cc/B69Bcg3f/1000099059.jpg','size':'10\x20MB','pdf':'https://arolinks.com/YxDeW','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP62','title':'BLACKBOOK\x20of\x20सामान्य\x20जागरूकता\x20BY\x20NIKHIL\x20GUPTA','image':'https://i.postimg.cc/sD9qBMpj/IMG-20260602-000221-448.jpg','size':'10\x20MB','pdf':'https://arolinks.com/l72BM9','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP63','title':'BLACKBOOK\x20of\x20ENGLISH\x20VOCABULARY\x20NIKHIL\x20GUPTA','image':'https://i.postimg.cc/nVm6JRrV/IMG-20260602-000322-021.jpg','size':'10\x20MB','pdf':'https://arolinks.com/Zj5W','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP64','title':'The\x20Complete\x20English\x20Grammar\x20By\x20jaideep\x20sir\x20(CW)','image':'https://i.postimg.cc/85mMdgwF/1000099115.jpg','size':'10\x20MB','pdf':'https://arolinks.com/IATfmM','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP65','title':'The\x20Complete\x20Vocabulary\x20By\x20jaideep\x20sir\x20(CW)','image':'https://i.postimg.cc/fR1cDKJM/1000099108.jpg','size':'10\x20MB','pdf':'https://arolinks.com/NEg3N','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP66','title':'KD\x20Publication\x20Volume\x20:\x202\x20By\x20Neetu\x20Singh','image':'https://i.postimg.cc/yNqZw8b8/1000099122.jpg','size':'10\x20MB','pdf':'https://arolinks.com/l7BR','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP67','title':'VOCAB\x20BY\x20NEETU\x20SINGH','image':'https://i.postimg.cc/Zq0MDjXr/IMG-20260601-235855-151.jpg','size':'10\x20MB','pdf':'https://arolinks.com/cnBaK','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP68','title':'Plinth\x20to\x20paramount\x20By\x20Neetu\x20Singh','image':'https://i.postimg.cc/ht2YrNyw/IMG-20260601-235910-187.jpg','size':'10\x20MB','pdf':'https://arolinks.com/Tb3tkU','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP69','title':'ब्रह्मास्त्र\x20STATIC\x20GK\x201000+\x20mcq\x20By\x20ADITYA\x20RANJAN\x20SIR','image':'https://i.postimg.cc/GmtKctzw/1000098851.jpg','size':'10\x20MB','pdf':'https://arolinks.com/SOAN2N','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP70','title':'ब्रह्मास्त्र\x20STATIC\x20GK\x201000+\x20mcq\x20By\x20ADITYA\x20RANJAN\x20SIR','image':'https://i.postimg.cc/595ngZjq/1000098850.jpg','size':'10\x20MB','pdf':'https://arolinks.com/3vTs','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP71','title':'THE\x20COMPLETE\x20ब्रह्मास्त्र\x20FORMULA\x20BOOK\x20By\x20ADITYA\x20RANJAN\x20SIR','image':'https://i.postimg.cc/cCWTZckt/1000098849.jpg','size':'10\x20MB','pdf':'https://arolinks.com/RC97f','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'},{'id':'MxP72','title':'SSC\x20MATHS\x206500+\x20PYQs\x20BY\x20ADITYA\x20RANJAN\x20SIR','image':'https://i.postimg.cc/Y9Wyt0pR/IMG-20260601-232627-689.jpg','size':'10\x20MB','pdf':'https://arolinks.com/Ly4Pam','youtube':'https://youtube.com/shorts/YjGfSA0Yn_0?si=LsWCiWOgCT-JfGS2'}];vme_fa36e1['books']=books;globalThis['books']=vme_fa36e1['books'];vme_fa36e1['books']=books;globalThis['books']=books;delete vme_fa36e1['_$6q9N3P']['books'];function renderBooks(){return vml_9501e1(0x1,arguments,{['_$bQrsS0']:[books],['_$nSPtWf']:undefined,['_$dPxYjd']:[0x1]},undefined,new.target,this);}const searchInput=document['getElementById']('searchInput');vme_fa36e1['searchInput']=searchInput;globalThis['searchInput']=vme_fa36e1['searchInput'];vme_fa36e1['searchInput']=searchInput;globalThis['searchInput']=searchInput;delete vme_fa36e1['_$6q9N3P']['searchInput'],searchInput['addEventListener']('keyup',()=>{return vml_9501e1(0x2,[],{['_$bQrsS0']:[searchInput],['_$nSPtWf']:undefined,['_$dPxYjd']:[0x1]},undefined,undefined,this);});let currentBookTitle='';vme_fa36e1['currentBookTitle']=currentBookTitle;globalThis['currentBookTitle']=vme_fa36e1['currentBookTitle'];vme_fa36e1['currentBookTitle']=currentBookTitle;globalThis['currentBookTitle']=currentBookTitle;delete vme_fa36e1['_$6q9N3P']['currentBookTitle'];let currentPdfLink='';vme_fa36e1['currentPdfLink']=currentPdfLink;globalThis['currentPdfLink']=vme_fa36e1['currentPdfLink'];vme_fa36e1['currentPdfLink']=currentPdfLink;globalThis['currentPdfLink']=currentPdfLink;delete vme_fa36e1['_$6q9N3P']['currentPdfLink'];let currentBookId='';vme_fa36e1['currentBookId']=currentBookId;globalThis['currentBookId']=vme_fa36e1['currentBookId'];vme_fa36e1['currentBookId']=currentBookId;globalThis['currentBookId']=currentBookId;delete vme_fa36e1['_$6q9N3P']['currentBookId'];function openDownloadPage(K,A,Z,q,l,S){return vml_9501e1(0x3,arguments,{['_$bQrsS0']:Object['defineProperties']({},{['0']:{'get':function(){return currentBookId;},'enumerable':!![],'set':function(U){currentBookId=U;}},['1']:{'get':function(){return currentBookTitle;},'enumerable':!![],'set':function(U){currentBookTitle=U;}},['2']:{'get':function(){return currentPdfLink;},'enumerable':!![],'set':function(U){currentPdfLink=U;}}}),['_$nSPtWf']:undefined},undefined,new.target,this);}function closeDownloadPage(){return vml_9501e1(0x4,arguments,undefined,undefined,new.target,this);}function shareBook(){return vml_9501e1(0x5,arguments,{['_$bQrsS0']:Object['defineProperties']({},{['0']:{'get':function(){return currentBookId;},'enumerable':!![],'set':function(K){currentBookId=K;}},['1']:{'get':function(){return currentBookTitle;},'enumerable':!![],'set':function(K){currentBookTitle=K;}}}),['_$nSPtWf']:undefined},undefined,new.target,this);}function openMenu(){return vml_9501e1(0x6,arguments,undefined,undefined,new.target,this);}function closeMenu(){return vml_9501e1(0x7,arguments,undefined,undefined,new.target,this);}function goHome(){return vml_9501e1(0x8,arguments,{['_$bQrsS0']:[closeMenu],['_$nSPtWf']:undefined},undefined,new.target,this);}function openAboutPage(){return vml_9501e1(0x9,arguments,{['_$bQrsS0']:[closeMenu],['_$nSPtWf']:undefined},undefined,new.target,this);}function closeAboutPage(){return vml_9501e1(0xa,arguments,undefined,undefined,new.target,this);}function closePopup(){return vml_9501e1(0xb,arguments,undefined,undefined,new.target,this);}function joinChannel(){return vml_9501e1(0xc,arguments,undefined,undefined,new.target,this);}window['addEventListener']('popstate',()=>{return vml_9501e1(0xd,[],undefined,undefined,undefined,this);}),setTimeout(()=>{return vml_9501e1(0xe,[],undefined,undefined,undefined,this);},0xc80),window['addEventListener']('load',()=>{return vml_9501e1(0xf,[],{['_$bQrsS0']:[books,openDownloadPage],['_$nSPtWf']:undefined,['_$dPxYjd']:[0x1,0x0]},undefined,undefined,this);});function openDisclaimerPage(){return vml_9501e1(0x10,arguments,{['_$bQrsS0']:[closeMenu],['_$nSPtWf']:undefined},undefined,new.target,this);}function closeDisclaimerPage(){return vml_9501e1(0x11,arguments,undefined,undefined,new.target,this);}document['querySelector']('.telegram-link')?.['addEventListener']('click',()=>{return vml_9501e1(0x12,[],undefined,undefined,undefined,this);});
-
-
-</script>
-
+    <script type="module" src="./app.js"></script>
 </body>
-    </html>
+                </html>
